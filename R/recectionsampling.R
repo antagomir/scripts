@@ -1,0 +1,1 @@
+http://www4.stat.ncsu.edu/~reich/st740/RejectionSampling.R

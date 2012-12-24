@@ -1,0 +1,14 @@
+citHeader("To cite A2R in publications use:")
+
+citEntry(entry="Misc",
+         title = "A2R: Romain Francois misc functions", 
+         author = personList(as.person("Romain Francois")),
+         year         = "2005",
+         url          = "http://addictedtor.free.fr",
+
+         textVersion =
+         paste("Romain Francois (2005).",
+               "A2R: Romain Francois misc functions.",
+               "URL http://addictedtor.free.fr")
+)
+

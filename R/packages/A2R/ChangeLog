@@ -1,0 +1,30 @@
+============= version 0.0-1
+2005-08-06 : ((new function)) A2Rplot : generic
+             ((new function)) A2Rplot.hclust
+
+2005-08-07 : A2Rplot.hclust
+             |-------   + fact.sup
+             |-------   + criteria
+             |-------   + only.tree
+             `-------   examples in documentation
+             
+             cutree.order ((new function))
+             `-------   examples in doc 
+             
+             
+             
+============= version 0.0-2
+2005-09-03 : A2Rplot.hclust
+             `-------   + members
+2005-09-18 : A2Rplot.hclust
+             |-------   add more examples to documentation
+             `-------   add R Graph Gallery, graph 98
+             
+============= version 0.0-3
+2005-09-25 : spie ((new function))
+             plot.spie ((new function))
+             the package depends on grid for plot.spie
+             
+============= version 0.0-4
+2006-01-02 : arimaSelect ((new function))
+             plot.arimaSelect ((new function))

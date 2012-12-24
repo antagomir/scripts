@@ -1,0 +1,15 @@
+www.fury.fi/~raven/irssi-opas/#032
+
+9.1. Autolog.
+
+/set autolog_level ALL -CRAP -CLIENTCRAP -CTCPS
+/set autolog_path ~/irclogs/%Y/$tag/$0.%m-%d.log
+/set autolog on
+#~/irclogs/<servertag>/<target>.log
+
+#Voit myös "logata" näin.
+#/log open <tiedostopolku> <logattavat_asiat> <asiat_joita_ei_logata>
+#esim.
+#/log open ~/logit/messaget.log MSGS
+
+#Lisätietoja komennolla /help log 

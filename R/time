@@ -1,0 +1,10 @@
+# Time in seconds:
+start <- Sys.time()
+Sys.time() - start
+
+# Formatting tools for system time 
+format.POSIXct
+
+# Example
+format(Sys.time(), "%a %b %d %X %Y %Z")
+#esim. ?striptime kertoo ton formaatin/koodit

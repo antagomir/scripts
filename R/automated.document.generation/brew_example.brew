@@ -1,0 +1,97 @@
+\documentclass[a4paper]{article}
+
+%Run with
+%library(brew); source("~/scripts/R/brewHelp.R"); brew("brew_example.brew","brew_example.tex",envir=new.env()); system("pdflatex brew_example.tex")
+%Author: Leo Lahti
+%Date: 2009-2011
+
+\title{Brew example}
+\author{Leo Lahti}
+\date{}
+
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{amsthm,amsmath,amssymb,amsfonts}
+% Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage{subfig}
+\usepackage{float}
+\usepackage{afterpage}
+\usepackage{graphicx}
+
+\setlength{\parskip}{4pt}
+\parindent 0pt            % sets leading space for paragraphs
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+% The default values that cause so much trouble are set in the class
+%file that's invoked by the argument of the \documentclass statement
+%at the beginning of your *.tex file. (For example, if that argument
+%is article, the file that's called in is
+%/usr/share/texmf/tex/latex/base/article.cls.)
+
+%To override the values that cause the offensive behavior, you use the
+% \setcounter{} command to reset integer values, and \renewcommand{} to
+% reset floating-point values. Like this:
+
+% Alter some LaTeX defaults for better treatment of figures:
+    % See p.105 of "TeX Unbound" for suggested values.
+    % See pp. 199-200 of Lamport's "LaTeX" book for details.
+    %   General parameters, for ALL pages:
+    \renewcommand{\topfraction}{0.9}    % max fraction of floats at top
+    \renewcommand{\bottomfraction}{0.8} % max fraction of floats at bottom
+    %   Parameters for TEXT pages (not float pages):
+    \setcounter{topnumber}{2}
+    \setcounter{bottomnumber}{2}
+    \setcounter{totalnumber}{4}     % 2 may work better
+    \setcounter{dbltopnumber}{2}    % for 2-column pages
+    \renewcommand{\dbltopfraction}{0.9} % fit big float above 2-col. text
+    \renewcommand{\textfraction}{0.07}  % allow minimal text w. figs
+    %   Parameters for FLOAT pages (not text pages):
+    \renewcommand{\floatpagefraction}{0.7}      % require fuller float pages
+        % N.B.: floatpagefraction MUST be less than topfraction !!
+    \renewcommand{\dblfloatpagefraction}{0.7}   % require fuller float pages
+       % remember to use [htp] or [htpb] for placement
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% More brew examples:
+%/share/mi/exp/pathway/hotSubNets/human/GSE3526/PathwayExperiment/validate/supplement.brew
+
+
+\begin{document}
+
+\maketitle 
+
+\newpage
+
+<%
+
+#cat("\\section*{Chrs}")
+
+for (i in 1:2) {
+
+  fname <- paste("topregion-", i, ".pdf", sep = "")
+  pdf(fname)
+  par(mfrow = c(2,1))
+  plot(seq(5))
+  dev.off()
+
+  captiontext <- paste("Something here")
+  include.fig(fname, captiontext, rotate=0, width="10cm", height="10cm")
+
+  #The \clearpage command ends the current page and causes all figures
+  # and tables that have so far appeared in the input to be printed
+  # Very useful, otherwise floating problems may occur with tex files
+  cat("\\clearpage")
+
+
+}
+
+%>
+
+\end{document}

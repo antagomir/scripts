@@ -1,0 +1,12 @@
+Package: A2R
+Type: Package
+Title: Romain Francois misc functions
+Version: 0.0-4
+Date: 2005-08-05
+Author: Romain Francois <francoisromain@free.fr>
+Maintainer: Romain Francois <francoisromain@free.fr>
+Description: Some functions of Romain Francois collection
+License: GPL version 2 or newer
+Depends: R (>= 2.1.1), grid
+URL: http://addictedtor.free.fr/packages
+Packaged: Wed Jan  4 23:28:34 2006; root

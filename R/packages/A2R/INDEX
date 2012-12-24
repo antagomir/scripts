@@ -1,0 +1,4 @@
+A2Rplot                      Generic plot function for package A2R
+A2Rplot.hclust               Customised plot function for class hclust
+cutree.order                 Cut a tree into groups of data in the order of the tree
+

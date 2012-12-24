@@ -1,0 +1,81 @@
+
+% This file can be converted to a LaTex document by typing
+%Sweave('howtoSweave.rnw') 
+%in R.
+
+%Author: Leo Lahti
+%Date: fall 2005
+%Purpose: basic example of Sweave for LaTeX-document generation in R.
+
+
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{epsf,epsfig}
+\usepackage{graphicx}
+
+\title{Sweave basics - a tool for combining R and LaTex}
+\author{Leo Lahti}
+\begin{document}
+\maketitle
+
+This document is located at
+\texttt{/share/mi/mi/doc/sweave/howtoSweave.rnw}. A more extensive
+documentation of Sweave is available at\\
+http://www.ci.tuwien.ac.at/\(\thicksim\)leisch/Sweave.
+
+\section*{How to use Sweave}
+
+\begin{enumerate}
+\item write ordinary LaTex code but name it as *.rnw (e.g. howtoSweave.rnw) 
+\item add R code, marking chunks with '\(<<>>=\)' and '@' tags
+\item go to R and run Sweave('howtoSweave.rnw')
+\item this produces an ordinary LaTex file 'howtoSweave.tex' with R
+output included
+\end{enumerate}
+
+\section*{Mathematics in Figure labels}
+
+See package pgfSweave on how to include \LaTeX code into Figure labels
+and get figure text style synchronized with main text:
+http://crantastic.org/packages/pgfSweave
+
+The package also saves document generation time by caching the
+generated figures.
+
+\section*{Sweave examples}
+
+Here is my Latex stuff. But this is produced with R:
+%This is an R chunk: 
+<<>>=
+A<-c(1,2,3)
+@
+
+We sometimes want only output visible:
+<<echo=FALSE>>=
+A<-c(1,2,3)
+B<-c(5,6,7)
+B
+@
+
+Or draw figures, like the one in Figure~\ref{fig:myfig}.
+\begin{figure}
+<<fig=TRUE,echo=FALSE>>=
+plot(c(2,3,2,1))
+@
+\caption{This is my figure.}
+\label{fig:myfig}
+\end{figure}
+
+We can even hide all R...
+<<echo=FALSE,results=hide>>=
+C<-3
+D<-4
+@
+
+... for later use- we just defined that C has value \Sexpr{C} and
+D=\Sexpr{D}. We then have
+ 
+<<>>=
+C+D
+@
+\end{document}

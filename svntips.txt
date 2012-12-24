@@ -1,0 +1,8 @@
+erot revikoiden v‰lil pystyy kattoo svn diff -r REV_NUMERO pint
+REV_NUMERON voi katella vaik tol login avulla
+
+tuol muuten n‰ytt‰‰ olevan ihan hyv‰‰ matskuu nois Advanced R Programming for Bioconductor kalvoissa
+http://bioconductor.fhcrc.org/workshops/2010/AdvancedR/
+k‰ytt‰m‰l esim svn log --limit 10 saa 10 uusinta revisiota n‰kyviin pvm:ien ja kommenttien kanssa
+
+
