@@ -11,11 +11,14 @@ source("~/Rpackages/scripts/R/HITChip/atlas.R")
 allowed.projects <- ListAtlasProjects();                                        
 #allowed.projects <- sample(ListAtlasProjects(), 5);
 dbuser <- 'root';
-dbpwd <- 'fidipro';
+#dbpwd <- 'fidipro';
+dbpwd <- ''
 dbname <- 'phyloarray';
-host <- '127.0.0.1'
-port <- 3307
-result.path <- "~/tmp/";
+host <- NULL
+port <- NULL
+#host <- '127.0.0.1'
+#port <- 3307
+result.path <- "/Volumes/h901/fidipro/HITChip/Leo/";
 my.scaling <- "minmax";
 mc.cores <- 3;
 remove.nonspecific.oligos <- FALSE
@@ -89,7 +92,7 @@ rmoligos <- rm.phylotypes$oligos
   message("Remove outliers")
   rawdata$spatNormSignal[as.logical(rawdata$isOutlier)] <- NA
 
-  message("Split data into arrays")
+  message("Split data into arrays") # SLOW - FIXME - speedups?
   rawdata.esplit <- split(rawdata, rawdata$hybridisationID)
 
   message("Remove NAs")
@@ -194,15 +197,14 @@ rmoligos <- rm.phylotypes$oligos
   save(atlas, atlas.sampleinfo, file = full.data.file, compress = "xz")
 
   # Save parameters
-  session.info <- sessionInfo()
   params <- list(dbuser = dbuser, dbpwd = NA, dbname = dbname, host = host, port = port,
   	         my.scaling = my.scaling, # minmax.quantiles = minmax.quantiles, 
 		 minmax.points = minmax.points, 
 		 result.path = result.path, 
 		 allowed.projects = allowed.projects, 
 		 rm.oligos = rm.phylotypes$oligos, rm.phylotypes = rm.phylotypes, 
-		 files = list(full.data.file, training.data.file, test.data.file, parameter.data.file),
-		 session.info = session.info, minmax.points = minmax.points, date = date())
+		 files = list(full.data.file, parameter.data.file),
+		 session.info = sessionInfo(), minmax.points = minmax.points, date = date())
 
   # Save version info
   save(phylogeny.info, params, file = parameter.data.file, compress = "xz")
