@@ -352,16 +352,12 @@ install.packages("randomForest")
 install.packages("mixtools")
 install.packages(c("gpclib", "maps", "spdep"))
 install.packages("rworldmap")
-
-library(devtools)
-install_github(repo = "sorvi", username = "louhos", branch = "develop")
-#install_github(repo = "sorvi", username = "louhos", type = "source", branch = "develop")
 install.packages("Rd2roxygen")
 
 # See also ~/scripts/R/twalk-examples.R
 # http://www.cimat.mx/~jac/twalk/examples.R
-system("wget http://www.cimat.mx/%7Ejac/twalk/Rtwalk_1.5.1.tar.gz")
-install.packages("Rtwalk_1.5.1.tar.gz")
+#system("wget http://www.cimat.mx/%7Ejac/twalk/Rtwalk_1.5.1.tar.gz")
+#install.packages("Rtwalk_1.5.1.tar.gz")
 
 install.packages("akima")
 install.packages("googleViz")
@@ -413,12 +409,14 @@ install("staticdocs")
 # microbiome
 source("http://www.bioconductor.org/biocLite.R")
 biocLite(c("affy", "limma", "preprocessCore", "qvalue", "RPA", "brew","DBI","fields","ggplot2","gplots","MASS","minet","mixOmics","netresponse","nlme","outliers","plyr","RColorBrewer","reshape2","R2HTML","svDialogs","vegan","WGCNA"))
-library(devtools)
 install_github(repo = "microbiome", username = "microbiome")
+install_github(repo = "HITChipDB", username = "microbiome")
 
-# sorvi
-install_github(repo = "louhos", username = "sorvi", ref="develop")
 
 install.packages("raster")
 install.packages("rjson")
 install.packages("rgeos") # install GEOS first from http://trac.osgeo.org/geos/
+
+library(devtools)
+install_github(repo = "sorvi", username = "louhos", branch = "develop")
+#install_github(repo = "sorvi", username = "louhos", type = "source", ref = "develop")
