@@ -77,7 +77,7 @@ install.packages("glmnet")
 #biocLite("oligo")
 biocLite("altcdfenvs")
 #biocLite("CustomCDF")
-
+biocLite("hgu133ahsensgcdf")
 
 #### CGH analysis ####
 biocLite("CGHcall")
@@ -282,27 +282,13 @@ biocLite("SPIA")
 # Gene set enrichment analysis                                        
 biocLite("GSA")
 
-# Probe reliability
+# My ow packages
 biocLite("RPA")
 biocLite("netresponse")
-
-
-##############################################################
-
-# Integration
-#biocLite("SIM") #http://bioconductor.org/packages/2.6/bioc/vignettes/SIM/inst/doc/SIM.pdf
-#biocLite("PMA") #http://cran.r-project.org/web/packages/PMA/index.html
-
-#biocLite("bitops")
-#install.packages("~/local/R/packages/RCurl_1.5-0.tar.gz", repos = NULL)
-#biocLite("biomaRt")
 
 # Pairwise integration
 #install.packages("~/local/R/packages/edira_1.0.2.tar.gz", repos = NULL)
 install.packages("~/local/R/packages/intCNGEan_0.53.tar.gz", repos = NULL)
-#install.packages("~/local/R/packages/intCNGEan_0.50.tar.gz", repos = NULL)
-#install.packages("~/local/R/packages/intCNGEan_0.33.tar.gz", repos = NULL)
-
 #install.packages("DRI") # DR-Integrator
 
 #############################################################
@@ -393,6 +379,7 @@ install.packages("WGCNA")
 install.packages(c("dmt"))
 install.packages(c("ggm"))
 install.packages(c("WDI"))
+install.packages(c("fastcluster"))
 
 # Remove batch effects:
 biocLite(c("sva"))
