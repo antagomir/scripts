@@ -1,5 +1,5 @@
 #!/bin/sh
-mysql -ulmlahti -ppassu Phyloarray < /home/lei/data/HITChip/phylo_backup_15_02_12.sql
-# 21.2.2012
+mysql -ulmlahti -ppassu Phyloarray < /home/lei/data/HITChip/backup051212.sql
+# 9.1.2013; 14Gb -> 14 hours
 
 
