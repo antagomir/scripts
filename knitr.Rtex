@@ -1,0 +1,40 @@
+\documentclass[a4paper,11pt]{article}
+%\usepackage[T1]{fontenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{tabularx}
+\usepackage{graphicx}
+%\usepackage{booktabs}
+\usepackage{natbib}
+\usepackage{color}
+\setlength{\textwidth}{430pt}
+\setlength{\oddsidemargin}{7pt}
+\setlength{\marginparwidth}{7pt}
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{3mm}
+\setlength{\topmargin}{2pt}
+\usepackage{listings}
+\usepackage{inconsolata}
+
+\begin{document}
+
+\section*{Summary \\ \today{}}. 
+
+<<echo=FALSE>>=
+  options(width=60)
+
+  listing <- function(x, options) {
+    paste("\\begin{lstlisting}[basicstyle=\\ttfamily,breaklines=true]\n",
+      x, "\\end{lstlisting}\n", sep = "")
+  }
+  knit_hooks$set(source=listing, output=listing)
+@
+
+% Investigate each group separately
+<<groupcheck, message=FALSE, warning=FALSE, cache=FALSE, echo=FALSE, fig=true, fig.width=7, fig.height=7, out.width='.6\\linewidth', fig.path='figure-univariate/', fig.align='center'>>=
+
+}
+@
+
+\end{document}
