@@ -401,6 +401,7 @@ install_github(repo = "HITChipDB", username = "microbiome")
 
 
 install.packages("raster")
+install.packages("xtable")
 install.packages("rjson")
 install.packages("rgeos") # install GEOS first from http://trac.osgeo.org/geos/
 
