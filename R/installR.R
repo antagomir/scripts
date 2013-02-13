@@ -385,26 +385,26 @@ install.packages(c("fastcluster"))
 biocLite(c("sva"))
 install.packages(c("ber"))
 
-system("git clone https://github.com/hadley/staticdocs.git")
-install.packages(c("testthat", "evaluate", "whisker", "highlight", "parser", "markdown"))
-library(devtools)
-document("staticdocs")
-check("staticdocs")
-build("staticdocs")
-install("staticdocs")
-
-# microbiome
-source("http://www.bioconductor.org/biocLite.R")
-biocLite(c("affy", "limma", "preprocessCore", "qvalue", "RPA", "brew","DBI","fields","ggplot2","gplots","MASS","minet","mixOmics","netresponse","nlme","outliers","plyr","RColorBrewer","reshape2","R2HTML","svDialogs","vegan","WGCNA"))
-install_github(repo = "microbiome", username = "microbiome")
-install_github(repo = "HITChipDB", username = "microbiome")
-
-
 install.packages("raster")
 install.packages("xtable")
 install.packages("rjson")
 install.packages("rgeos") # install GEOS first from http://trac.osgeo.org/geos/
 
+#system("git clone https://github.com/hadley/staticdocs.git")
+#install.packages(c("testthat", "evaluate", "whisker", "highlight", "parser", "markdown"))
+#library(devtools)
+#document("staticdocs")
+#check("staticdocs")
+#build("staticdocs")
+#install("staticdocs")
+# Did not work any more as highlight package was missing
+
+# microbiome
+source("http://www.bioconductor.org/biocLite.R")
+biocLite(c("affy", "limma", "preprocessCore", "qvalue", "RPA", "brew","DBI","fields","ggplot2","gplots","MASS","minet","netresponse","nlme","outliers","plyr","RColorBrewer","reshape2","R2HTML","svDialogs","vegan","WGCNA"))
+install_github(repo = "microbiome", username = "microbiome")
+install_github(repo = "HITChipDB", username = "microbiome")
+
 library(devtools)
-install_github(repo = "sorvi", username = "louhos", branch = "develop")
+install_github(repo = "sorvi", username = "louhos", ref = "develop")
 #install_github(repo = "sorvi", username = "louhos", type = "source", ref = "develop")
