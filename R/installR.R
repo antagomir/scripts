@@ -50,8 +50,8 @@ biocLite("hgu133aprobe")
 biocLite("hgu133plus2.db")
 biocLite("hgu133plus2probe") 
 #biocLite("mgu74a.db")
-biocLite("org.Hs.eg.db")
-biocLite("hom.Hs.inp.db")
+#biocLite("org.Hs.eg.db")
+#biocLite("hom.Hs.inp.db")
 #biocLite("org.Mm.eg.db")
 
 # Orthologs
@@ -66,7 +66,6 @@ install.packages("samr")
 
 # Misc
 install.packages("glmnet")
-
 
 #### Probe-level analysis ####
 
@@ -86,14 +85,9 @@ install.packages("packages/CGHcall_2.8.0.tar.gz",repos=NULL)
 install.packages("packages/CGHbase_1.6.0.tar.gz",repos=NULL)
 biocLite("CGHregions")
 
-#install.packages("/share/mi/bin/BioCondPackages/arrayQuality_1.0.11.tar.gz",repos=NULL)
-#install.packages("/share/mi/bin/BioCondPackages/cghMCR_1.14.0.tar.gz",repos=NULL)
-
 #### micro-RNA ####
-
 biocLite("miRNApath")
 biocLite("microRNA")
-#biocLite("RmiR.Hs.miRNA")
 biocLite("RmiR")
 
 #####################################################
@@ -177,31 +171,26 @@ biocLite("biomaRt")# Requires RCurl
 
 # Pairwise integration
 biocLite("tilingArray")
-install.packages("~/local/R/packages/edira_1.1.0.tar.gz", repos = NULL)
-install.packages("~/local/R/packages/ediraAMLdata_1.0.2.tar.gz")
+#install.packages("~/local/R/packages/edira_1.1.0.tar.gz", repos = NULL)
+#install.packages("~/local/R/packages/ediraAMLdata_1.0.2.tar.gz")
 
-
-install.packages("DRI") # DR-Integrator
-install.packages("iCluster") 
+#install.packages("DRI") # DR-Integrator
+#install.packages("iCluster") 
 #source("http://www.xlab.unimo.it/PREDA/PREDAinstall.R") # SODEGIR Bicciato et al
-biocLite("SIM")
-biocLite("PMA")
+#biocLite("SIM")
+#biocLite("PMA")
 biocLite("lokern")
-install.packages("packages/PREDA_0.2.14.tar.gz")
-install.packages("packages/PREDAsampledata_0.1.7.tar.gz")
-install.packages("~/local/R/packages/pint_1.3.67.tar.gz", repos = NULL)
-
-#DRI edira intCNGEan SIM pint PMA
+#install.packages("packages/PREDA_0.2.14.tar.gz")
+#install.packages("packages/PREDAsampledata_0.1.7.tar.gz")
 
 # Excel reading utilities                                        
 #install.packages("RODBC")
 #install.packages("gregmisc")
 install.packages("gdata")
 
-
 # Get R.matlab using custom commands from the author
-source("http://www.braju.com/R/hbLite.R")  
-hbLite(c("R.methodsS3","R.oo", "R.matlab")) #hbLite()
+#source("http://www.braju.com/R/hbLite.R")  
+#hbLite(c("R.methodsS3","R.oo", "R.matlab")) #hbLite()
 
 ######################################################################
 
@@ -216,10 +205,7 @@ biocLite("NCIgraph")
 # delivering end results to biomedical guys
 biocLite("RSVGTipsDevice")  
 biocLite("tikzDevice")
-
 biocLite("ape") # circular hclust dendrograms etc
-
-#install.packages("ellipse")
 
 #### Graphs ####
 
@@ -253,9 +239,7 @@ install.packages("igraph" ) #see http://cneurocvs.rmki.kfki.hu/igraph/download.h
 install.packages("brew")
 install.packages("stashR") 
 install.packages("cacheSweave")
-
 #install.packages("pgfSweave") # cool graphics for Sweave. Did not install to R211, try later.
-#biocLite("pgfSweave")
 
 # Parallel computation #
 install.packages("foreach")
@@ -269,18 +253,16 @@ install.packages("nws")
 #####################################################
 
 ### Gene Ontologies and pathways ####
-
-biocLite(c("GOstats","goTools","topGO"))
-biocLite("KEGGSOAP")
-#biocLite("AmpAffyExample")
-biocLite("globaltest")
+#biocLite(c("GOstats","goTools"))
+#biocLite("KEGGSOAP")
+#biocLite("globaltest")
 
 # Tarca 2009 Signaling pathway impact analysis
 #install.packages("/share/mi/bin/BioCondPackages/SPIA_0.1.0.tar.gz",repos=NULL)
-biocLite("SPIA")
+#biocLite("SPIA")
 
 # Gene set enrichment analysis                                        
-biocLite("GSA")
+#biocLite("GSA")
 
 # My ow packages
 biocLite("RPA")
@@ -288,7 +270,7 @@ biocLite("netresponse")
 
 # Pairwise integration
 #install.packages("~/local/R/packages/edira_1.0.2.tar.gz", repos = NULL)
-install.packages("~/local/R/packages/intCNGEan_0.53.tar.gz", repos = NULL)
+#install.packages("~/local/R/packages/intCNGEan_0.53.tar.gz", repos = NULL)
 #install.packages("DRI") # DR-Integrator
 
 #############################################################
@@ -311,9 +293,7 @@ install.packages("RgoogleMaps")
 install.packages("ReadImages")
 install.packages("sp")
 install.packages("maptools")
-
 install.packages(c("outliers", "R2HTML", "svDialogs", "vegan"))
-
 
 ##########################################################
 
@@ -329,7 +309,6 @@ install.packages(c("outliers", "R2HTML", "svDialogs", "vegan"))
 # See also
 # http://bayes.bgsu.edu/bcwr/R%20scripts/index.html
 #install.packages("LearnBayes")
-
 install.packages("devtools")
 install.packages("pxR")
 install.packages(c("stringr", "formatR", "roxygen2"))
@@ -356,7 +335,6 @@ install.packages("knitr")
 install_github('whisker', 'edwindj')
 install_github('markdown', 'rstudio')
 
-
 # Required for rgl which is mixOmics dependency
 system("sudo apt-get install libglu1-mesa-dev")
 #system("sudo apt-get build-dep r-cran-rgl")
@@ -374,7 +352,7 @@ install.packages(c("wordcloud"))
 install.packages("fields")
 install.packages("ggplot2")
 install.packages("gplots")
-install.packages("mixOmics")
+#install.packages("mixOmics")
 install.packages("WGCNA")
 install.packages(c("dmt"))
 install.packages(c("ggm"))
@@ -384,7 +362,6 @@ install.packages(c("fastcluster"))
 # Remove batch effects:
 biocLite(c("sva"))
 install.packages(c("ber"))
-
 install.packages("raster")
 install.packages("xtable")
 install.packages("rjson")
@@ -400,8 +377,7 @@ install.packages("rgeos") # install GEOS first from http://trac.osgeo.org/geos/
 # Did not work any more as highlight package was missing
 
 # microbiome
-source("http://www.bioconductor.org/biocLite.R")
-biocLite(c("affy", "limma", "preprocessCore", "qvalue", "RPA", "brew","DBI","fields","ggplot2","gplots","MASS","minet","netresponse","nlme","outliers","plyr","RColorBrewer","reshape2","R2HTML","svDialogs","vegan","WGCNA"))
+biocLite(c("affy", "limma", "preprocessCore", "qvalue", "gplots","MASS","minet","netresponse","nlme","outliers","plyr","RColorBrewer","reshape2","R2HTML","svDialogs","vegan","WGCNA"))
 install_github(repo = "microbiome", username = "microbiome")
 install_github(repo = "HITChipDB", username = "microbiome")
 
@@ -422,3 +398,6 @@ install.packages("sapa")
 install.packages("wmtsa")
 install.packages("scatterplot3d")
 install.packages("http://cran.r-project.org/src/contrib/Archive/fractal/fractal_1.1-1.tar.gz", repos = NULL)
+
+biocLite("frmaTool")
+biocLite("frma")

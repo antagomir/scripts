@@ -8,16 +8,12 @@ params <- run.profiling.script(dbuser = "root", dbpwd = "fidipro", dbname = "phy
 
 #plot(as.vector(finaldata[["L2"]][["rpa"]]), as.vector(finaldata[["L2"]][["frpa"]]));abline(0,1)
 
-
 level <- "L2"
 esets <- list()
 for (method in c("sum", "rpa", "frpa")) {
   esets[[method]] <- read.profiling(level = level, method = method, data.dir = "~/tmp/testing/", log10 = TRUE)
 }
-
-
-
-
+ 
 # names(which(is.na(eset[,1])))
 
 load("~/data/Atlas/20120328/atlas.full.RData")
