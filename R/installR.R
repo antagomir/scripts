@@ -404,3 +404,10 @@ biocLite("frma")
 biocLite("hgu133afrmavecs")
 biocLite("aroma.light")
 install.packages("aroma.affymetrix")
+
+# RStan
+install.packages('inline')
+install.packages('Rcpp')
+options(repos = c(getOption("repos"), rstan = "http://wiki.stan.googlecode.com/git/R"))
+install.packages('rstan', type = 'source')
+
