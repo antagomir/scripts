@@ -412,3 +412,5 @@ install.packages('Rcpp')
 options(repos = c(getOption("repos"), rstan = "http://wiki.stan.googlecode.com/git/R"))
 install.packages('rstan', type = 'source')
 
+# NMF
+install.packages("NMFN")
