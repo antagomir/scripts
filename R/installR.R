@@ -414,3 +414,6 @@ install.packages('rstan', type = 'source')
 
 # NMF
 install.packages("NMFN")
+
+# Modality tests
+install.packages("diptest")
