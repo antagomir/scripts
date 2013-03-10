@@ -418,4 +418,5 @@ install.packages("NMFN")
 # Modality tests
 install.packages("diptest")
 install.packages('shiny')
+install.packages('mixtools')
 
