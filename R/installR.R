@@ -419,4 +419,6 @@ install.packages("NMFN")
 install.packages("diptest")
 install.packages('shiny')
 install.packages('mixtools')
+install.packages('VGAM')
+
 
