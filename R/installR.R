@@ -416,5 +416,10 @@ install.packages('rstan', type = 'source')
 # NMF
 install.packages("NMFN")
 
-
+# Modality tests
+install.packages("diptest")
 install.packages('shiny')
+install.packages('mixtools')
+install.packages('VGAM')
+
+
