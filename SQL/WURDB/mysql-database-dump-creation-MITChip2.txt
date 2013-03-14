@@ -1,0 +1,40 @@
+1. login
+
+mysql -u root -p passu
+
+2. Create a new user and password with the following command:
+
+CREATE USER 'mit'@'localhost' IDENTIFIED BY 'passu';
+
+3. Assign privileges to the new user, enter the command:
+
+drop user 'mit'@'localhost';
+flush privileges;
+select host, user, password from mysql.user;
+GRANT ALL ON *.* TO 'mit'@'localhost';
+exit;
+
+4. Create database. I needed to remove old version with the drop command before installation succeeds!
+
+mysql -u mit -p
+drop database `pitchipdb`;
+CREATE DATABASE IF NOT EXISTS Phyloarray_MIT;
+
+5. Exit MySQL interface, enter:
+
+exit;
+
+6. Load the dump into the database. Note: "pitchipdb" database name was already defined in SQL dump (phyloarray_pit2nd_20120323_0844.sql) and trying to change it here caused failures in R package
+mysql -umit -ppassu Phyloarray_MIT < /home/leo/data/MITChip/MITChip20042012.sql # 13.3.2013 LL WURDB2
+
+7. Test R package
+
+library(microbiome)
+library(HITChipDB)
+# Tested 13.3.2013 LL WURDB2 OK SUDO R (R-2.15.1 from usr/bin/R)
+params <- run.profiling.script(dbuser = "mit", dbpwd = "passu", dbname = "phyloarray_mit") 
+
+
+
+
+
