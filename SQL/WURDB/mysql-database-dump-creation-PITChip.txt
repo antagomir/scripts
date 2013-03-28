@@ -1,10 +1,10 @@
 1. login
 
-mysql -u root -p passu
+sudo mysql -u root -p passu
 
 2. Create a new user and password with the following command:
 
-CREATE USER 'pit' IDENTIFIED BY 'passu';
+CREATE USER 'pit'@'localhost' IDENTIFIED BY 'passu';
 
 3. Assign privileges to the new user, enter the command:
 
