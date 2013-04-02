@@ -421,5 +421,6 @@ install.packages("diptest")
 install.packages('shiny')
 install.packages('mixtools')
 install.packages('VGAM')
+install.packages('psych') # factor analysis with BIC & RMSEA
 
 
