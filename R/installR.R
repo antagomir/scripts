@@ -421,6 +421,8 @@ install.packages("diptest")
 install.packages('shiny')
 install.packages('mixtools')
 install.packages('VGAM')
+install.packages('GPArotation') # required by psych pkg
 install.packages('psych') # factor analysis with BIC & RMSEA
+
 
 
