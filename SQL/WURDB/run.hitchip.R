@@ -1,12 +1,12 @@
 # DB installation scripts:
 #~/scripts/SQL/WURDB$ less install.dump.sh
-
-# TODO
-# ChickChip
-#library(HITChipDB); params <- run.profiling.script(dbuser = "pit", dbpwd = "passu", dbname = "chickchipdb")
-
+#fs <- list.files("~/Rpackages/HITChipDB/R/", full.names = T); for (f in fs) {source(f)}
+#fs <- list.files("~/Rpackages/microbiome/R/", full.names = T); for (f in fs) {source(f)}
 
 # LOCAL
+
+# ChickChip OK 2.4.2013
+library(HITChipDB); params <- run.profiling.script(dbuser = "pit", dbpwd = "passu", dbname = "chickchipdb")
 
 # MITChip OK 28.3.2013
 library(HITChipDB); params <- run.profiling.script(dbuser = "mit", dbpwd = "passu", dbname = "phyloarray_mit")
@@ -17,7 +17,7 @@ library(HITChipDB); params <- run.profiling.script(dbuser = "pit", dbpwd = "pass
 # PITChip2 OK 28.3.2013
 library(HITChipDB); params <- run.profiling.script(dbuser = "pit", dbpwd = "passu", dbname = "phyloarray_pit")
 
-# OK 28.3.2013 (phylogeny.full still empty but otherwise OK)
+# OK 28.3.2013 
 # FTP SERVER
 # ssh -L 3307:128.214.222.203:3306 wageningen@128.214.222.203 # + salas.
 library(HITChipDB)
