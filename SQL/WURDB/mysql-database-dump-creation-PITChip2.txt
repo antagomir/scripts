@@ -1,0 +1,42 @@
+1. login
+
+sudo mysql -u root -p 
+passu
+
+2. Create a new user and password with the following command:
+
+CREATE USER 'pit2'@'localhost' IDENTIFIED BY 'passu';
+
+3. Assign privileges to the new user, enter the command:
+
+#drop user 'pit2'@'localhost';
+#flush privileges;
+select host, user, password from mysql.user;
+GRANT ALL ON *.* TO 'pit2'@'localhost';
+exit;
+
+4. Create Phyloarray database. I also needed to remove old version with the drop command before installation succeeds!
+
+mysql -u pit2
+#drop database `pitchipdb2`;
+CREATE DATABASE IF NOT EXISTS Phyloarray_PIT2;
+
+5. Exit MySQL interface, enter:
+
+exit;
+
+
+6. Load the dump into the database. Note: "pitchipdb" database name was already defined in SQL dump (phyloarray_pit2nd_20120323_0844.sql) and trying to change it here caused failures in R package
+
+# Running 13.3.2013 LL
+#####mysql -upit -ppassu Phyloarray_PIT2 < /home/leo/data/PITChip/phyloarray_pit2nd_20120323_0844.sql
+#See install.dump.sh for the latest dump installations
+
+7. Test R package
+#TODO
+#library(microbiome)
+#params <- run.profiling.script(dbuser = "pit", dbpwd = "passu", dbname = "pitchipdb")
+
+
+
+
