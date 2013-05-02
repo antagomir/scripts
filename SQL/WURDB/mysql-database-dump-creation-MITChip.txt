@@ -1,6 +1,6 @@
 1. login
 
-mysql -u root -p passu
+sudo mysql -u root -p passu
 
 2. Create a new user and password with the following command:
 
@@ -17,7 +17,7 @@ exit;
 4. Create database. I needed to remove old version with the drop command before installation succeeds!
 
 mysql -u mit -p
-drop database `pitchipdb`;
+drop database 'Phyloarray_MIT';
 CREATE DATABASE IF NOT EXISTS Phyloarray_MIT;
 
 5. Exit MySQL interface, enter:
@@ -25,7 +25,9 @@ CREATE DATABASE IF NOT EXISTS Phyloarray_MIT;
 exit;
 
 6. Load the dump into the database. Note: "pitchipdb" database name was already defined in SQL dump (phyloarray_pit2nd_20120323_0844.sql) and trying to change it here caused failures in R package
-mysql -umit -ppassu Phyloarray_MIT < /home/leo/data/MITChip/MITChip20042012.sql # 13.3.2013 LL WURDB2
+#mysql -umit -ppassu Phyloarray_MIT < /home/leo/data/MITChip/MITChip20042012.sql # 13.3.2013 LL WURDB2
+##See install.dump.sh for the latest dump installations
+
 
 7. Test R package
 
