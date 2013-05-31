@@ -41,3 +41,4 @@ filled.contour(k)
 dens <- kde2d(df$x, df$y, n = nrow(df), lims = seq(min(df), max(df), 0.1))
 densdf <- data.frame(expand.grid(x = df$x, y = df$y), z = as.vector(dens$z)) 
 p <- ggplot(densdf, aes(x, y, z = z)) + stat_contour(bins = 2)
+
