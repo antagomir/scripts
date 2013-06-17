@@ -309,6 +309,7 @@ install.packages("randomForest")
 install.packages("mixtools")
 install.packages(c("gpclib", "maps", "spdep"))
 install.packages("rworldmap")
+install.packages("rworldxtra")
 install.packages("Rd2roxygen")
 
 # See also ~/scripts/R/twalk-examples.R
