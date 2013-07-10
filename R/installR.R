@@ -414,5 +414,6 @@ install.packages('psych') # factor analysis with BIC & RMSEA
 install.packages('compositions')
 install.packages('mapproj')
 install.packages('googleVis')
+install.packages('ade4')
 
 
