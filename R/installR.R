@@ -415,5 +415,11 @@ install.packages('compositions')
 install.packages('mapproj')
 install.packages('googleVis')
 install.packages('ade4')
+install.packages('highlight')
+
+library(devtools)
+install_github(repo = "staticdocs", username = "hadley")
+
+
 
 
