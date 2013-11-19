@@ -259,6 +259,7 @@ install.packages("nws")
 # My ow packages
 biocLite("RPA")
 biocLite("netresponse")
+install.packages("ade4")
 
 # Pairwise integration
 #install.packages("~/local/R/packages/edira_1.0.2.tar.gz", repos = NULL)
@@ -420,6 +421,7 @@ install.packages('highlight')
 library(devtools)
 install_github(repo = "staticdocs", username = "hadley")
 
+require(devtools)
+install_github('rCharts', 'ramnathv')
 
-
-
+biocLite("df2json")
