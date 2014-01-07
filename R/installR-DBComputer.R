@@ -19,16 +19,21 @@ install.packages("ReadImages")
 install.packages(c("outliers", "R2HTML", "svDialogs", "vegan"))
 install.packages("devtools")
 
-#system("wget http://cran.r-project.org/src/contrib/RMySQL_0.9-3.tar.gz")
-install.packages(c("RMySQL"))
-biocLite("DBI") #RMySQL is a dependency?, AnnBuilder
+install.packages("RMySQL")
+biocLite("DBI") 
 install.packages("ggplot2")
 
 # microbiome
-biocLite(c("affy", "limma", "preprocessCore", "qvalue", "gplots","MASS","minet","netresponse","nlme","outliers","plyr","RColorBrewer","reshape2","R2HTML","svDialogs","vegan","WGCNA"))
-install_github(repo = "microbiome", username = "microbiome")
-install_github(repo = "HITChipDB", username = "microbiome")
+biocLite(c("affy", "limma", "preprocessCore", "fields", "gplots","MASS","minet","netresponse","nlme","outliers","RColorBrewer","reshape","R2HTML","svDialogs","vegan","WGCNA"))
+
+install.packages(fields)
+
+# ReadImages not any more in CRAN, install manually
+system("wget http://cran.r-project.org/src/contrib/Archive/ReadImages/ReadImages_0.1.3.3.tar.gz")
+install.packages("ReadImages_0.1.3.3.tar.gz", repos = NULL)
 
 library(devtools)
+install_github(repo = "microbiome", username = "microbiome")
+install_github(repo = "HITChipDB", username = "microbiome")
 install_github(repo = "sorvi", username = "louhos", ref = "develop")
 
