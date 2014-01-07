@@ -45,28 +45,20 @@ biocLite()
 ################################################################################
 
 #### Gene expression arrays ####
-#biocLite("hgu95a.db")
 biocLite("hgu133a.db")
 biocLite("hgu133aprobe")
 biocLite("hgu133plus2.db")
 biocLite("hgu133plus2probe") 
-#biocLite("mgu74a.db")
 #biocLite("org.Hs.eg.db")
 #biocLite("hom.Hs.inp.db")
-#biocLite("org.Mm.eg.db")
 
 # Orthologs
-#biocLite("org.HsMm.ortholog.db")
-
+# biocLite("org.HsMm.ortholog.db")
 # Annotations
-#install.packages("~/local/R/packages/AnnotationDbi_1.13.13.tar.gz", repos = NULL)
-install.packages("/share/mi/data/CMG/integration-review-2010/Mullighan/hgu133ahsentrezg.db_13.0.0.tar.gz")
+# install.packages("/share/mi/data/CMG/integration-review-2010/Mullighan/hgu133ahsentrezg.db_13.0.0.tar.gz")
 
 # Differential expression with SAM                                        
 install.packages("samr")
-
-# Misc
-install.packages("glmnet")
 
 #### Probe-level analysis ####
 
@@ -82,8 +74,8 @@ biocLite("hgu133ahsensgcdf")
 #### CGH analysis ####
 biocLite("CGHcall")
 biocLite("DNAcopy")
-install.packages("packages/CGHcall_2.8.0.tar.gz",repos=NULL)
-install.packages("packages/CGHbase_1.6.0.tar.gz",repos=NULL)
+#install.packages("packages/CGHcall_2.8.0.tar.gz",repos=NULL)
+#install.packages("packages/CGHbase_1.6.0.tar.gz",repos=NULL)
 biocLite("CGHregions")
 
 #### micro-RNA ####
@@ -147,7 +139,6 @@ biocLite("Matrix")  # boosting matrix calculations
 
 # ddply for generating tables for various statistical summaries of given data
 install.packages("plyr")
-
 install.packages("ellipse")
 
 #### Public databases ###
@@ -268,6 +259,7 @@ install.packages("nws")
 # My ow packages
 biocLite("RPA")
 biocLite("netresponse")
+install.packages("ade4")
 
 # Pairwise integration
 #install.packages("~/local/R/packages/edira_1.0.2.tar.gz", repos = NULL)
@@ -318,6 +310,7 @@ install.packages("randomForest")
 install.packages("mixtools")
 install.packages(c("gpclib", "maps", "spdep"))
 install.packages("rworldmap")
+install.packages("rworldxtra")
 install.packages("Rd2roxygen")
 
 # See also ~/scripts/R/twalk-examples.R
@@ -400,10 +393,6 @@ install.packages("wmtsa")
 install.packages("scatterplot3d")
 #system("wget http://cran.r-project.org/src/contrib/Archive/fractal/fractal_1.1-1.tar.gz")
 install.packages("fractal_1.1-1.tar.gz", repos = NULL)
-
-#biocLite("frmaTool")
-biocLite("frma")
-biocLite("hgu133afrmavecs")
 biocLite("aroma.light")
 install.packages("aroma.affymetrix")
 
@@ -423,6 +412,16 @@ install.packages('mixtools')
 install.packages('VGAM')
 install.packages('GPArotation') # required by psych pkg
 install.packages('psych') # factor analysis with BIC & RMSEA
+install.packages('compositions')
+install.packages('mapproj')
+install.packages('googleVis')
+install.packages('ade4')
+install.packages('highlight')
 
+library(devtools)
+install_github(repo = "staticdocs", username = "hadley")
 
+require(devtools)
+install_github('rCharts', 'ramnathv')
 
+biocLite("df2json")

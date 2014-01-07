@@ -69,6 +69,61 @@ slideAverage2 <- function (dat,interval,step=1) {
 	list(slidemean=slidemean,stepcenters=stepcenters)
 }
 
+
+slideAverage3 <- function (vec, evaluation.points, w) {
+
+  # Compute sliding average over observations
+  # at evaluation points
+
+  slidemean <- c()
+  
+  vec <- na.omit(sort(vec))
+  evaluation.points <- na.omit(sort(evaluation.points))
+  evaluation.inds <- list()
+
+  cnt <- 0
+  for (x in evaluation.points) {
+
+    min.ind <- min(which(vec > (x - w)))
+    max.ind <- max(which(vec < (x + w)))
+
+    if(sum(vec > (x - w)) == 0) {min.ind <- NA}
+    if(sum(vec < (x + w)) == 0) {min.ind <- NA}
+
+    cnt <- cnt + 1
+    
+    if (!is.na(min.ind) & !is.na(max.ind)) {
+      evaluation.inds[[cnt]] <- min.ind:max.ind
+      slidemean[[cnt]] <- mean(vec[min.ind:max.ind])
+    } else {
+      evaluation.inds[[cnt]] <- NA
+      slidemean[[cnt]] <- NA
+    }
+  }
+ 
+  list(res = data.frame(cbind(mean = slidemean, evaluation.points = evaluation.points)), evaluation.inds = evaluation.inds)
+
+}
+
+slideAverage4 <- function (vec, evaluation.inds) {
+
+  # Compute sliding average over observations
+  # at evaluation indices
+
+  slidemean <- c()
+  
+  for (cnt in 1:length(evaluation.inds)) {
+
+    slidemean[[cnt]] <- mean(vec[evaluation.inds[[cnt]]])
+    
+  }
+ 
+ slidemean
+
+}
+
+
+
 unitize <- function(vec) {
   # normalize vector to unit length
   u <- vec/sqrt(sum(vec^2))
@@ -76,6 +131,8 @@ unitize <- function(vec) {
   u
 
 }
+
+
 
 pick.continuous.regions <- function (v, min.dist = 1, return.names = FALSE) {
 
