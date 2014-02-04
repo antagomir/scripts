@@ -316,6 +316,10 @@ install_github('rCharts', 'ramnathv')
 
 biocLite("df2json")
 
-install.packages('slidify')
-install_github("slidifyLibraries", "ramnathv")
+
+require(devtools)
+install_github(c('slidify', 'slidifyLibraries'), 'ramnathv', ref = 'dev')
+install_github('rCharts', 'ramnathv')
+install_github('shiny', 'rstudio')
+
 
