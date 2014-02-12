@@ -285,6 +285,10 @@ install.packages("ifultools")
 install.packages("sapa")
 install.packages("wmtsa")
 install.packages("scatterplot3d")
+library(devtools)
+install_github(repo = "earlywarnings-R", username = "earlywarningtoolbox", subdir = "earlywarnings")
+install.packages("fpc")
+
 
 # RStan
 install.packages('inline')
@@ -312,8 +316,10 @@ install_github('rCharts', 'ramnathv')
 
 biocLite("df2json")
 
+
 require(devtools)
 install_github(c('slidify', 'slidifyLibraries'), 'ramnathv', ref = 'dev')
 install_github('rCharts', 'ramnathv')
 install_github('shiny', 'rstudio')
+
 
