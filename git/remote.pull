@@ -1,0 +1,4 @@
+# Example on how to sync local git repo with remote repo
+git remote add bret git://github.com/bret/watir.git
+git pull bret master
+git push
