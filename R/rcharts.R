@@ -1,9 +1,8 @@
 # rChart Examples from 
 # https://github.com/ramnathv/rCharts
 
-
-require(devtools)
-install_github('rCharts', 'ramnathv')
+#require(devtools)
+#install_github('rCharts', 'ramnathv')
 
 require(rCharts)
 
