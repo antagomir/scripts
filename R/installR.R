@@ -1,5 +1,3 @@
-
-
 # Author: Leo Lahti
 
 # This script installs default BioConductor packages to R.  Then it
@@ -40,11 +38,10 @@ biocLite()
 # Microarrays
 
 #### Gene expression 
-biocLite("hgu133a.db")
-biocLite("hgu133aprobe")
-biocLite("hgu133plus2.db")
-biocLite("hgu133plus2probe") 
-
+#biocLite("hgu133a.db")
+#biocLite("hgu133aprobe")
+#biocLite("hgu133plus2.db")
+#biocLite("hgu133plus2probe") 
 
 #### Probe-level analysis ####
 #The oligo package handles oligonucleotide
@@ -52,12 +49,12 @@ biocLite("hgu133plus2probe")
 #manufacturers are Affymetrix and NimbleGen. The package provides tools
 #for preprocessing.
 biocLite("oligo")
-biocLite("altcdfenvs")
+#biocLite("altcdfenvs")
 
 #### CGH analysis ####
-biocLite("CGHcall")
-biocLite("DNAcopy")
-biocLite("CGHregions")
+#biocLite("CGHcall")
+#biocLite("DNAcopy")
+#biocLite("CGHregions")
 
 #### micro-RNA ####
 #biocLite("miRNApath")
@@ -69,7 +66,7 @@ biocLite("CGHregions")
 # Machine learning
 
 #### Graphical gaussian models ####
-install.packages(c("corpcor","longitudinal","fdrtool","locfdr","GeneNet"))  
+install.packages(c("corpcor","longitudinal","GeneNet"))  
 
 # multivariate stats
 install.packages("mvtnorm") #contains rmvnorm for multivariate normal sampling 
@@ -103,16 +100,16 @@ biocLite("DPpackage")          # Dirichlet Processes / topic models etc
 install.packages("lme4")
 biocLite("glmnet")             # Lasso, elastic net, regularized generalized linear models
 
-# Statistics
 biocLite("qvalue")
+install.packages("NMFN")  # NMF
+install.packages("randomForest")
+
 
 ################################################################
 
 #### Utilities
 
 ################################################################
-
-#apt-get install revolution-r? # Revolution enhancements
 
 # matrix operations 
 biocLite("Matrix")  # boosting matrix calculations
@@ -137,7 +134,6 @@ biocLite("XML") # libxml2-dev, xml2 with synaptic
 # and isntalling "libcurl-ocaml-dev" with synaptic
 #I got RCurl installed with:
 #~/local/R/R-2.12.0/bin/R CMD INSTALL ~/local/R/packages/RCurl_1.5-0.tar.gz
-
 biocLite("biomaRt")# Requires RCurl
 
 # Excel reading utilities                                        
@@ -181,14 +177,6 @@ install.packages("nws")
 
 #####################################################
 
-### Gene Ontologies and pathways ####
-#biocLite(c("GOstats","goTools"))
-#biocLite("KEGGSOAP")
-
-# Tarca 2009 Signaling pathway impact analysis
-#install.packages("/share/mi/bin/BioCondPackages/SPIA_0.1.0.tar.gz",repos=NULL)
-#biocLite("SPIA")
-
 # My ow packages
 biocLite("RPA")
 biocLite("netresponse")
@@ -216,14 +204,9 @@ install.packages(c("outliers", "R2HTML", "svDialogs", "vegan"))
 
 ##########################################################
 
-# Venn diagrams
-#install.packages("/share/mi/bin/BioCondPackages/venn_1.6.tar.gz",repos=NULL)
-#install.packages("venn")
-
 install.packages("devtools")
 install.packages("pxR")
 install.packages(c("stringr", "formatR", "roxygen2"))
-install.packages("randomForest")
 install.packages("rworldmap")
 install.packages("rworldxtra")
 install.packages("Rd2roxygen")
@@ -289,15 +272,11 @@ library(devtools)
 install_github(repo = "earlywarnings-R", username = "earlywarningtoolbox", subdir = "earlywarnings")
 install.packages("fpc")
 
-
 # RStan
 install.packages('inline')
 install.packages('Rcpp')
 options(repos = c(getOption("repos"), rstan = "http://wiki.stan.googlecode.com/git/R"))
 install.packages('rstan', type = 'source')
-
-# NMF
-install.packages("NMFN")
 
 # Modality tests
 install.packages("diptest")
@@ -310,16 +289,24 @@ install.packages('mapproj')
 install.packages('googleVis')
 install.packages('ade4')
 install.packages('highlight')
-
-require(devtools)
-install_github('rCharts', 'ramnathv')
-
 biocLite("df2json")
-
 
 require(devtools)
 install_github(c('slidify', 'slidifyLibraries'), 'ramnathv', ref = 'dev')
 install_github('rCharts', 'ramnathv')
 install_github('shiny', 'rstudio')
 
+#-----------------------------
+
+### Gene Ontologies and pathways ####
+#biocLite(c("GOstats","goTools"))
+#biocLite("KEGGSOAP")
+
+# Tarca 2009 Signaling pathway impact analysis
+#install.packages("/share/mi/bin/BioCondPackages/SPIA_0.1.0.tar.gz",repos=NULL)
+#biocLite("SPIA")
+
+# Venn diagrams
+#install.packages("/share/mi/bin/BioCondPackages/venn_1.6.tar.gz",repos=NULL)
+#install.packages("venn")
 
