@@ -296,6 +296,9 @@ install_github(c('slidify', 'slidifyLibraries'), 'ramnathv', ref = 'dev')
 install_github('rCharts', 'ramnathv')
 install_github('shiny', 'rstudio')
 
+biocLite("impute")
+install.packages("WGCNA")
+
 #-----------------------------
 
 ### Gene Ontologies and pathways ####
