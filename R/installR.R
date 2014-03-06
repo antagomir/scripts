@@ -298,6 +298,7 @@ install_github('shiny', 'rstudio')
 
 biocLite("impute")
 install.packages("WGCNA")
+install.packages("lawstat")
 
 #-----------------------------
 
