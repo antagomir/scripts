@@ -299,6 +299,9 @@ install_github('shiny', 'rstudio')
 biocLite("impute")
 install.packages("WGCNA")
 
+# earlywarnings deps
+install.packages(c("Kendall", "moments", "nortest", "quadprog", "som", "tgp", "tseries"))
+
 #-----------------------------
 
 ### Gene Ontologies and pathways ####
