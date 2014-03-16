@@ -299,6 +299,8 @@ install_github('shiny', 'rstudio')
 biocLite("impute")
 install.packages("WGCNA")
 install.packages("lawstat")
+install.packages("fpc") # Prediction strength
+install.packages("animation") 
 
 # earlywarnings deps
 install.packages(c("Kendall", "moments", "nortest", "quadprog", "som", "tgp", "tseries"))
