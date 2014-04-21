@@ -301,6 +301,7 @@ install.packages("WGCNA")
 install.packages("lawstat")
 install.packages("fpc") # Prediction strength
 install.packages("animation") 
+install.packages("psych") # factor analyses
 
 # earlywarnings deps
 install.packages(c("Kendall", "moments", "nortest", "quadprog", "som", "tgp", "tseries"))
