@@ -214,8 +214,11 @@ install.packages("googleViz")
 
 #########################################################
 
+
 library(devtools)
 install_github('slidify', 'ramnathv')
+install_github('slidifyLibraries', 'ramnathv')
+
 install.packages("knitr")
 install_github('whisker', 'edwindj')
 install_github('markdown', 'rstudio')
