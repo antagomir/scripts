@@ -305,6 +305,9 @@ install.packages("animation")
 # earlywarnings deps
 install.packages(c("Kendall", "moments", "nortest", "quadprog", "som", "tgp", "tseries"))
 
+# Unifrac
+install.packages("GUniFrac")
+
 #-----------------------------
 
 ### Gene Ontologies and pathways ####
