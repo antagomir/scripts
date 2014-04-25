@@ -61,6 +61,9 @@ biocLite("oligo")
 #biocLite("microRNA")
 #biocLite("RmiR")
 
+# Misc
+biocLite("genefilter")
+
 #####################################################
 
 # Machine learning
