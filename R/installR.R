@@ -317,6 +317,8 @@ install.packages(c("Kendall", "moments", "nortest", "quadprog", "som", "tgp", "t
 # Unifrac
 install.packages("GUniFrac")
 
+install.packages( c( "memisc" , "httr" ) )
+
 #-----------------------------
 
 ### Gene Ontologies and pathways ####
