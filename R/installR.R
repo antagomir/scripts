@@ -317,6 +317,7 @@ install.packages(c("Kendall", "moments", "nortest", "quadprog", "som", "tgp", "t
 # Unifrac
 install.packages("GUniFrac")
 
+install.packages("downloader")
 install.packages( c( "memisc" , "httr" ) )
 
 #-----------------------------
