@@ -290,7 +290,6 @@ install.packages('shiny')
 install.packages('VGAM')
 install.packages('GPArotation') # required by psych pkg
 install.packages('psych') # factor analysis with BIC & RMSEA
-install.packages('compositions')
 install.packages('mapproj')
 install.packages('googleVis')
 install.packages('ade4')
@@ -319,6 +318,11 @@ install.packages("GUniFrac")
 
 install.packages("downloader")
 install.packages( c( "memisc" , "httr" ) )
+
+# Compositions and its deps
+install.packages(c("tensorA", "robustbase", "energy", "bayesm"))
+install.packages("compositions_1.40-0.tar.gz", repos = NULL)
+
 
 #-----------------------------
 
