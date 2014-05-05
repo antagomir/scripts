@@ -260,8 +260,8 @@ install_github(repo = "HITChipDB", username = "microbiome")
 
 #library(devtools)
 #install_github(repo = "sorvi", username = "louhos", ref = "develop")
-#install_github(repo = "sorvi", username = "louhos", type = "source", ref = "develop")
-install_github(repo = "sorvi", username = "ropengov", type = "source", ref = "antagomir")
+#install_github(repo = "sorvi", username = "louhos", ref = "develop")
+install_github(repo = "sorvi", username = "ropengov", ref = "antagomir")
 
 # Needed for earlywarnings
 install.packages("moments")
