@@ -326,7 +326,7 @@ install.packages(c("tensorA", "robustbase", "energy", "bayesm"))
 install.packages("compositions_1.40-0.tar.gz", repos = NULL)
 
 # Misc
-install.packages(c("xlsx", "rJava", "xlsxjars"))
+install.packages(c("xlsx", "xlsxjars"))
 
 #-----------------------------
 
