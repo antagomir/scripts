@@ -319,10 +319,14 @@ install.packages("GUniFrac")
 install.packages("downloader")
 install.packages( c( "memisc" , "httr" ) )
 
+install.packages("abind")
+
 # Compositions and its deps
 install.packages(c("tensorA", "robustbase", "energy", "bayesm"))
 install.packages("compositions_1.40-0.tar.gz", repos = NULL)
 
+# Misc
+install.packages(c("xlsx", "rJava", "xlsxjars"))
 
 #-----------------------------
 
