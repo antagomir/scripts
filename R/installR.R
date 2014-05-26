@@ -254,13 +254,11 @@ install.packages("rjson")
 install.packages("rgeos") # install GEOS first from http://trac.osgeo.org/geos/
 
 # microbiome
-biocLite(c("affy", "limma", "preprocessCore", "MASS","minet","nlme","outliers","plyr","RColorBrewer","reshape","R2HTML","svDialogs","vegan"))
+biocLite(c("affy", "limma", "preprocessCore", "MASS","minet","nlme","outliers","plyr","RColorBrewer","reshape","R2HTML","svDialogs","vegan", "WGCNA"))
 install_github(repo = "microbiome", username = "microbiome")
 install_github(repo = "HITChipDB", username = "microbiome")
 
 #library(devtools)
-#install_github(repo = "sorvi", username = "louhos", ref = "develop")
-#install_github(repo = "sorvi", username = "louhos", ref = "develop")
 install_github(repo = "sorvi", username = "ropengov", ref = "antagomir")
 
 # Needed for earlywarnings
@@ -276,7 +274,7 @@ install.packages("wmtsa")
 install.packages("scatterplot3d")
 library(devtools)
 install_github(repo = "earlywarnings-R", username = "earlywarningtoolbox", subdir = "earlywarnings")
-install.packages("fpc")
+install.packages("fpc") # Prediction strength
 
 # RStan
 install.packages('inline')
@@ -303,9 +301,7 @@ install_github('rCharts', 'ramnathv')
 install_github('shiny', 'rstudio')
 
 biocLite("impute")
-install.packages("WGCNA")
 install.packages("lawstat")
-install.packages("fpc") # Prediction strength
 install.packages("animation") 
 install.packages(c("psych", "GPArotation")) # factor analyses
 
@@ -328,11 +324,13 @@ install.packages("compositions_1.40-0.tar.gz", repos = NULL)
 
 # Misc
 install.packages(c("xlsx", "xlsxjars"))
-
+install.packages("getopt")
 
 install.packages("extrafont")
 library(extrafont)
 font_import()
+
+
 
 #-----------------------------
 
