@@ -329,6 +329,10 @@ install.packages("compositions_1.40-0.tar.gz", repos = NULL)
 # Misc
 install.packages(c("xlsx", "xlsxjars"))
 
+
+install.packages("extrafont")
+font_import()
+
 #-----------------------------
 
 ### Gene Ontologies and pathways ####
