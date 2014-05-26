@@ -331,6 +331,7 @@ install.packages(c("xlsx", "xlsxjars"))
 
 
 install.packages("extrafont")
+library(extrafont)
 font_import()
 
 #-----------------------------
