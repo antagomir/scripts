@@ -305,8 +305,6 @@ install.packages("lawstat")
 install.packages("animation") 
 install.packages(c("psych", "GPArotation")) # factor analyses
 
-
-
 # earlywarnings deps
 install.packages(c("Kendall", "moments", "nortest", "quadprog", "som", "tgp", "tseries"))
 
@@ -325,12 +323,11 @@ install.packages("compositions_1.40-0.tar.gz", repos = NULL)
 # Misc
 install.packages(c("xlsx", "xlsxjars"))
 install.packages("getopt")
+install.packages("XLConnect")
 
 install.packages("extrafont")
 library(extrafont)
 font_import()
-
-
 
 #-----------------------------
 
