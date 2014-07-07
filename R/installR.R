@@ -260,6 +260,7 @@ install_github(repo = "HITChipDB", username = "microbiome")
 
 #library(devtools)
 #install_github(repo = "sorvi", username = "ropengov", ref = "master")
+install.packages(c("countrycode", "plotrix"))
 install.packages("statfi")
 
 # Needed for earlywarnings
