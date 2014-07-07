@@ -259,7 +259,8 @@ install_github(repo = "microbiome", username = "microbiome")
 install_github(repo = "HITChipDB", username = "microbiome")
 
 #library(devtools)
-install_github(repo = "sorvi", username = "ropengov", ref = "antagomir")
+#install_github(repo = "sorvi", username = "ropengov", ref = "master")
+install.packages("statfi")
 
 # Needed for earlywarnings
 install.packages("moments")
