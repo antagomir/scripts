@@ -326,6 +326,7 @@ install.packages("compositions_1.40-0.tar.gz", repos = NULL)
 install.packages(c("xlsx", "xlsxjars"))
 install.packages("getopt")
 install.packages("XLConnect")
+install.packages("tidyr")
 
 install.packages("extrafont")
 library(extrafont)
