@@ -327,6 +327,7 @@ install.packages(c("xlsx", "xlsxjars"))
 install.packages("getopt")
 install.packages("XLConnect")
 install.packages("tidyr")
+install.packages("data.table")
 
 install.packages("extrafont")
 library(extrafont)
