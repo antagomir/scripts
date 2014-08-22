@@ -333,6 +333,8 @@ install.packages("extrafont")
 library(extrafont)
 font_import()
 
+devtools::install_github("rstudio/rmarkdown")
+
 #-----------------------------
 
 ### Gene Ontologies and pathways ####
