@@ -148,6 +148,8 @@ install.packages("gdata")
 # Networks
 biocLite("NCIgraph")
 
+
+
 #######################################################################
 
 # Visualization / graphics
@@ -162,6 +164,7 @@ biocLite("graph")
 biocLite("RbcBook1")
 biocLite("Rgraphviz") # graphviz and its dependencies
 install.packages("igraph" ) #see http://cneurocvs.rmki.kfki.hu/igraph/download.html
+install.packages("plotrix")
 
 ################################################################
 
