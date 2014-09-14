@@ -33,6 +33,8 @@
 source('http://www.bioconductor.org/biocLite.R')
 biocLite()
 
+biocLite("BiocCheck")
+
 ################################################################################
 
 # Microarrays
