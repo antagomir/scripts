@@ -335,6 +335,7 @@ install.packages("getopt")
 install.packages("XLConnect")
 install.packages("tidyr")
 install.packages("data.table")
+install.packages("multcomp")
 
 install.packages("extrafont")
 library(extrafont)
