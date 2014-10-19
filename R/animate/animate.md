@@ -2,41 +2,31 @@
 ```r
 quartzFonts(mei = quartzFont(rep("Meiryo", 4)))
 par(family="mei")
-load("tokyog2.Rda") # データ読み込み
-```
-
-```
-## Warning: cannot open compressed file 'tokyog2.Rda', probable reason 'No
-## such file or directory'
-```
-
-```
-## Error: cannot open the connection
-```
-
-```r
 library(ggplot2)
 library(scales)
 
+data(iris)
+d <- iris
+d$t <- 1:nrow(iris)
+d$av <- iris$Sepal.Length
+d <- d[, c("t", "av")]
+
 tts <- sort(unique(d$t))
-```
-
-```
-## Error: object 'd' not found
-```
-
-```r
 for (ts in tts[rev(seq(length(tts), 1, by = -12))][-1]) {
-  p <- ggplot(subset(d, t <= ts), aes(t, av, colour = N)) + geom_line() +
-    scale_x_datetime(limits = range(d$t),  labels = date_format("%m月%d日")) +
-    ylim(0, max(d$av*1.05)) +
-    theme_bw(base_family = "mei") +
-    labs(x = "", y = "Radiation (uGy/h)", colour = "計測地") +
-    geom_point(aes(size = av), data = subset(d, t==ts), show_guide = F)
+
+  p <- ggplot(subset(d, t <= ts), aes(t, av, colour = N)) 
+
+  p <- p + geom_line() 
+  p <- p + scale_x_datetime(limits = range(d$t)) 
+  #p <- p + scale_x_datetime(limits = range(d$t), labels = date_format("%m月%d日")) 
+  p <- p + ylim(0, max(d$av*1.05)) 
+  p <- p + theme_bw(base_family = "mei") 
+  p <- p + labs(x = "", y = "Radiation (uGy/h)", colour = "blue") 
+  p <- p + geom_point(aes(size = av), data = subset(d, t==ts), show_guide = F)
   print(p)
-  }
+}
 ```
 
 ```
-## Error: object 'tts' not found
+## Error: Invalid input: time_trans works with objects of class POSIXct only
 ```
