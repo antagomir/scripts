@@ -1,7 +1,5 @@
 
 ```r
-quartzFonts(mei = quartzFont(rep("Meiryo", 4)))
-par(family="mei")
 library(ggplot2)
 library(scales)
 
@@ -15,12 +13,8 @@ d <- d[, c("t", "av", "N")]
 
 tts <- sort(unique(d$t))
 for (ts in tts[rev(seq(length(tts), 1, by = -12))][-1]) {
-
   p <- ggplot(subset(d, t <= ts), aes(t, av, colour = N)) 
-
   p <- p + geom_line() 
-  #p <- p + scale_x_datetime(limits = range(d$t)) 
-  #p <- p + scale_x_datetime(limits = range(d$t), labels = date_format("%m月%d日")) 
   p <- p + ylim(0, max(d$av*1.05)) 
   p <- p + theme_bw(base_family = "mei") 
   p <- p + labs(x = "", y = "Radiation (uGy/h)", colour = "blue") 
