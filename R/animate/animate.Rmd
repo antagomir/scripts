@@ -8,7 +8,9 @@ data(iris)
 d <- iris
 d$t <- 1:nrow(iris)
 d$av <- iris$Sepal.Length
-d <- d[, c("t", "av")]
+d$N <- round(1000*runif(nrow(d)))
+
+d <- d[, c("t", "av", "N")]
 
 tts <- sort(unique(d$t))
 for (ts in tts[rev(seq(length(tts), 1, by = -12))][-1]) {
