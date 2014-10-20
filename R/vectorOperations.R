@@ -40,6 +40,19 @@ get.ranks <- function (v, decreasing = FALSE) {
 	    
 }
 	    
+slidemean <- function (x, t, step, window) {
+
+  ts <- seq(min(t), max(t), step)
+  means <- c()
+
+  for (i in 1:length(ts)) {
+    inds <- which((t >= (ts[[i]] - window/2)) & (t < (ts[[i]] + window/2)))
+    means[[as.character(ts[[i]])]] <- mean(x[inds])
+  }
+
+  data.frame(list(mean = means, time = as.numeric(names(means))))
+}
+
 	    
 
 slideAverage <- function (dat,interval,step=1) {
