@@ -1,3 +1,12 @@
+# Useful discussion at
+# http://r.789695.n4.nabble.com/Ornstein-Uhlenbeck-td2991060.html
+
+library(SMFI5)
+r <- sim.vasicek(alpha = 0.5, beta = 2.55, sigma = 0.365, r0 = 2.55, n = 1000, h = 1/360)
+
+# ------------------------------------------------------
+
+
 # http://quant.stackexchange.com/questions/1260/r-code-for-ornstein-uhlenbeck-process -> Euler-Maruyama method
 # http://en.wikipedia.org/wiki/Euler%E2%80%93Maruyama_method
 # nu is long run mean, lambda is mean reversion speed
@@ -23,4 +32,6 @@ sigma <- 1
 x0 <- 10
 ou <- ornstein_uhlenbeck(T,n,nu,lambda,sigma,x0)
 plot(ou, pch = ".")
+
+# -------------------------
 
