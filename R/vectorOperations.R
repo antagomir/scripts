@@ -1,4 +1,3 @@
-
 interpolate <- function (v) {
 
   # Fill start and end if NAs (using the first real value from each end)
