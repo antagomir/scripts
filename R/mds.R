@@ -1,3 +1,4 @@
+#
 # Classical MDS
 # N rows (objects) x p columns (variables)
 # each row identified by a unique row name
