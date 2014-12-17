@@ -338,6 +338,11 @@ install.packages("tidyr")
 install.packages("data.table")
 install.packages("multcomp")
 
+install.packages("Rwave")
+install.packages("fractal")
+install.packages("fractaldim")
+install.packages("pracma")
+
 install.packages("extrafont")
 library(extrafont)
 font_import()
