@@ -343,6 +343,9 @@ install.packages("fractal")
 install.packages("fractaldim")
 install.packages("pracma")
 
+install.packages("rdryad")
+install.packages("knitcitations")
+
 install.packages("extrafont")
 library(extrafont)
 font_import()
