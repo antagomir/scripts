@@ -1,3 +1,6 @@
-private.scripts
+
+.RData
+.Rhistory
+../private.scripts
 *.csv
 *.png
