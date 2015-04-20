@@ -256,7 +256,6 @@ biocLite(c("sva"))
 install.packages(c("ber"))
 install.packages("raster")
 install.packages("xtable")
-install.packages("rjson")
 install.packages("rgeos") # install GEOS first from http://trac.osgeo.org/geos/
 
 # microbiome
@@ -358,6 +357,7 @@ font_import()
 
 devtools::install_github("rstudio/rmarkdown")
 devtools::install_github("hadley/babynames")
+install.packages("rjson")
 
 #-----------------------------
 
