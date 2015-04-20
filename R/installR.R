@@ -347,6 +347,7 @@ install.packages("pracma")
 install.packages("rdryad")
 install.packages("knitcitations")
 install.packages("rmarkdown")
+install.packages("testthat")
 
 install.packages("extrafont")
 library(extrafont)
