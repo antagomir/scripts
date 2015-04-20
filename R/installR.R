@@ -260,14 +260,15 @@ install.packages("rjson")
 install.packages("rgeos") # install GEOS first from http://trac.osgeo.org/geos/
 
 # microbiome
-biocLite(c("affy", "limma", "preprocessCore", "MASS","minet","nlme","outliers","plyr","RColorBrewer","reshape","R2HTML","svDialogs","vegan", "WGCNA"))
+biocLite(c("affy", "limma", "preprocessCore", "MASS","minet","nlme","outliers","plyr","RColorBrewer","R2HTML","svDialogs","vegan", "WGCNA"))
 install_github(repo = "microbiome", username = "microbiome")
 install_github(repo = "HITChipDB", username = "microbiome")
 
 #library(devtools)
 #install_github(repo = "sorvi", username = "ropengov", ref = "master")
 install.packages(c("countrycode", "plotrix"))
-install.packages("statfi")
+install.packages("reshape2")
+#install.packages("statfi")
 
 # Needed for earlywarnings
 install.packages("moments")
@@ -275,10 +276,12 @@ install.packages("nortest")
 install.packages("Kendall")
 install.packages("som")
 install.packages("tseries")
+install.packages("fNonlinear")
 install.packages("splus2R")
 install.packages("ifultools")
 install.packages("sapa")
 install.packages("wmtsa")
+install.packages("gender")
 install.packages("scatterplot3d")
 library(devtools)
 install_github(repo = "earlywarnings-R", username = "earlywarningtoolbox", subdir = "earlywarnings")
@@ -354,6 +357,7 @@ library(extrafont)
 font_import()
 
 devtools::install_github("rstudio/rmarkdown")
+devtools::install_github("hadley/babynames")
 
 #-----------------------------
 
