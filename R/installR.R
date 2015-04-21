@@ -32,6 +32,7 @@
 
 source('http://www.bioconductor.org/biocLite.R')
 biocLite()
+install.packages("devtools")
 
 ################################################################################
 
@@ -209,7 +210,6 @@ install.packages(c("outliers", "R2HTML", "svDialogs"))
 
 ##########################################################
 
-install.packages("devtools")
 install.packages("pxR")
 install.packages(c("stringr", "formatR", "roxygen2"))
 install.packages("rworldmap")
