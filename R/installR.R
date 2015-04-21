@@ -33,8 +33,6 @@
 source('http://www.bioconductor.org/biocLite.R')
 biocLite()
 
-biocLite("BiocCheck")
-
 ################################################################################
 
 # Microarrays
@@ -207,7 +205,7 @@ install.packages("RgoogleMaps")
 install.packages("sp")
 install.packages("maptools")
 install.packages(c("gpclib", "maps", "spdep"))
-install.packages(c("outliers", "R2HTML", "svDialogs", "vegan"))
+install.packages(c("outliers", "R2HTML", "svDialogs"))
 
 ##########################################################
 
@@ -251,7 +249,6 @@ install.packages("WGCNA")
 install.packages(c("dmt"))
 install.packages(c("ggm"))
 install.packages(c("WDI"))
-install.packages(c("fastcluster"))
 biocLite(c("sva"))
 install.packages(c("ber"))
 install.packages("raster")
@@ -301,9 +298,7 @@ install.packages('GPArotation') # required by psych pkg
 install.packages('psych') # factor analysis with BIC & RMSEA
 install.packages('mapproj')
 install.packages('googleVis')
-install.packages('ade4')
 install.packages('highlight')
-biocLite("df2json")
 
 require(devtools)
 install_github(c('slidify', 'slidifyLibraries'), 'ramnathv', ref = 'dev')
@@ -358,6 +353,13 @@ font_import()
 devtools::install_github("rstudio/rmarkdown")
 devtools::install_github("hadley/babynames")
 install.packages("rjson")
+install.packages("permute")
+install.packages("ade4")
+biocLite("df2json")
+install.packages("fastcluster")
+install.packages("vegan")
+biocLite("BiocCheck")
+biocLite("phyloseq")
 
 #-----------------------------
 
