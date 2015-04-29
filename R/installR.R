@@ -34,6 +34,9 @@ source('http://www.bioconductor.org/biocLite.R')
 biocLite()
 install.packages("devtools")
 
+# Install all R deps
+system("sudo apt-get build-dep r-base-dev")
+
 ################################################################################
 
 # Microarrays
