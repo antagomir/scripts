@@ -35,7 +35,7 @@ biocLite()
 install.packages("devtools")
 
 # Install all R deps
-system("sudo apt-get build-dep r-base-dev")
+# system("sudo apt-get build-dep r-base-dev")
 
 ################################################################################
 
@@ -260,8 +260,10 @@ install.packages("rgeos") # install GEOS first from http://trac.osgeo.org/geos/
 
 # microbiome
 biocLite(c("affy", "limma", "preprocessCore", "MASS","minet","nlme","outliers","plyr","RColorBrewer","R2HTML","svDialogs","vegan", "WGCNA"))
-install_github(repo = "microbiome", username = "microbiome")
-install_github(repo = "HITChipDB", username = "microbiome")
+install.packages("devtools")
+library(devtools)
+install_github("microbiome/microbiome")
+install_github("microbiome/HITChipDB")
 
 #library(devtools)
 #install_github(repo = "sorvi", username = "ropengov", ref = "master")
