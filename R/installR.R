@@ -32,6 +32,8 @@
 
 source('http://www.bioconductor.org/biocLite.R')
 biocLite()
+
+install.packages("httr")
 install.packages("devtools")
 
 # Install all R deps
@@ -41,12 +43,6 @@ install.packages("devtools")
 
 # Microarrays
 
-#### Gene expression 
-#biocLite("hgu133a.db")
-#biocLite("hgu133aprobe")
-#biocLite("hgu133plus2.db")
-#biocLite("hgu133plus2probe") 
-
 #### Probe-level analysis ####
 #The oligo package handles oligonucleotide
 #arrays: expression, tiling, SNP and exon chips. The supported
@@ -54,16 +50,6 @@ install.packages("devtools")
 #for preprocessing.
 biocLite("oligo")
 #biocLite("altcdfenvs")
-
-#### CGH analysis ####
-#biocLite("CGHcall")
-#biocLite("DNAcopy")
-#biocLite("CGHregions")
-
-#### micro-RNA ####
-#biocLite("miRNApath")
-#biocLite("microRNA")
-#biocLite("RmiR")
 
 # Misc
 biocLite("genefilter")
@@ -122,12 +108,10 @@ install.packages("randomForest")
 biocLite("Matrix")  # boosting matrix calculations
 
 # ddply for generating tables for various statistical summaries of given data
-install.packages("plyr")
 install.packages("ellipse")
 
 #### Public databases ###
 biocLite("Biobase")
-#biocLite("Resourcerer") 
 biocLite("XML") # libxml2-dev, xml2 with synaptic
 
 # Requires installing curl and setting curl-config path
@@ -149,8 +133,6 @@ install.packages("gdata")
 
 # Networks
 biocLite("NCIgraph")
-
-
 
 #######################################################################
 
@@ -209,7 +191,7 @@ install.packages("RgoogleMaps")
 install.packages("sp")
 install.packages("maptools")
 install.packages(c("gpclib", "maps", "spdep"))
-install.packages(c("outliers", "R2HTML", "svDialogs"))
+install.packages("outliers")
 
 ##########################################################
 
@@ -222,7 +204,6 @@ install.packages("akima")
 install.packages("googleViz")
 
 #########################################################
-
 
 library(devtools)
 install_github('slidify', 'ramnathv')
@@ -249,17 +230,29 @@ install.packages("ggplot2")
 install.packages("ggthemes")
 install.packages("gplots")
 install.packages("WGCNA")
-install.packages(c("dmt"))
-install.packages(c("ggm"))
-install.packages(c("WDI"))
-biocLite(c("sva"))
-install.packages(c("ber"))
+install.packages("dmt")
+install.packages("ggm"))
+install.packages("WDI")
+install.packages("ber")
 install.packages("raster")
 install.packages("xtable")
 install.packages("rgeos") # install GEOS first from http://trac.osgeo.org/geos/
 
 # microbiome
-biocLite(c("affy", "limma", "preprocessCore", "MASS","minet","nlme","outliers","plyr","RColorBrewer","R2HTML","svDialogs","vegan", "WGCNA"))
+biocLite("sva")
+biocLite("affy")
+biocLite("limma")
+biocLite("preprocessCore")
+biocLite("MASS")
+biocLite("minet")
+biocLite("nlme")
+biocLite("outliers")
+biocLite("RColorBrewer")
+biocLite("R2HTML")
+biocLite("svDialogs")
+biocLite("vegan")
+biocLite("WGCNA")
+
 install.packages("devtools")
 library(devtools)
 install_github("microbiome/microbiome")
