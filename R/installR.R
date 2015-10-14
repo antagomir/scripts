@@ -359,6 +359,8 @@ install.packages("vegan")
 biocLite("BiocCheck")
 biocLite("phyloseq")
 
+install.packages("tau")
+
 #-----------------------------
 
 ### Gene Ontologies and pathways ####
