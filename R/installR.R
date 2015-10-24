@@ -374,6 +374,7 @@ install.packages("tau")
 # Venn diagrams
 #install.packages("/share/mi/bin/BioCondPackages/venn_1.6.tar.gz",repos=NULL)
 #install.packages("venn")
+install.packages("ggmap")
 
 
 install.packages("scimapClient", repos="http://scisoft-net-map.isri.cmu.edu/static/R")
