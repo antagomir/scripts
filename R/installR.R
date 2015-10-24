@@ -257,11 +257,13 @@ install.packages("devtools")
 library(devtools)
 install_github("microbiome/microbiome")
 install_github("microbiome/HITChipDB")
+install_github("ropengov/gisfin")
 
 #library(devtools)
 #install_github(repo = "sorvi", username = "ropengov", ref = "master")
 install.packages(c("countrycode", "plotrix"))
 install.packages("reshape2")
+install.packages("ggthemes")
 #install.packages("statfi")
 
 # Needed for earlywarnings
