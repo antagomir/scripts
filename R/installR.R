@@ -53,6 +53,7 @@ biocLite("oligo")
 
 # Misc
 biocLite("genefilter")
+biocLite("BiocStyle)
 
 #####################################################
 
