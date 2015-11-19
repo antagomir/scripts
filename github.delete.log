@@ -1,0 +1,15 @@
+# First delete all other than master branch from remote and locally
+# git push origin :branch-to-delete # remote
+# git branch -d branch-to-delete # local
+
+rm -rf .git/
+git init
+git add .
+git commit -m 'first commit'
+
+git remote add origin git@github.com:rOpenGov/sorvi.git
+git push -u --force origin master
+
+#git remote add stash ssh://git@myserver:7999/myproject/user-repo.git
+#git push --force stash master
+

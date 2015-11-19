@@ -1,0 +1,2 @@
+git branch --set-upstream develop origin/develop
+git branch --set-upstream dev-antagomir origin/dev-antagomir
