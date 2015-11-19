@@ -1,91 +1,53 @@
-#* top.barplots: Barplot of top findings from pairwise.comparisons function
-#* PlotTopComparisons: Visualize top findings from pairwise.comparisons 
 
-na.filter <- function (mat, ind) {
+mml.koodit <- function (which = "1_milj_koodit.txt") { 
 
-  # Remove rows or columns with exlusively NAs
-  library(plyr)
-  all.nas <- function(x) all(is.na(x))
-  mat[!rowwise(all.nas)(mat), !colwise(all.nas)(mat)]
+  # Lue MML-datan tulkintakoodit
+  # 1_milj_koodit.txt / 4_5_milj_koodit.txt
+
+  tab <- readLines(system.file(paste("extdata/Maanmittauslaitos/1_milj_Shape_etrs_shape/", which, sep = ""), package = "sorvi"))
+
 
 }
 
-variance.contribution <- function (x, subset) {
 
-  m <- rowMeans(x)
-  total.variance <- sum((x - m)^2)
-  subset.variance <- sum((x[, subset] - m)^2)
+#p <- p + coord_map(project = "mercator") 
+# projection = ... see ?mapproject for complete list
+#p <- p + coord_map(project="cylindrical") 
+#p <- p + coord_map(project='azequalarea',orientation=c(-36.92,174.6,0)) 
+#p <- p + coord_map(project= "gilbert") 
+#p <- p + coord_map(project= "lagrange") 
+#p <- p + coord_map(project= "orthographic") 
+#p <- p + coord_map(project= "stereographic") 
+#p <- p + coord_map(project= "conic", lat0 = 30)
+#p <- p + coord_map(project= "bonne", lat0 = 50) 
+#p <- p + coord_map(project= "gilbert") + xlab(NULL) + ylab(NULL) + scale_colour_discrete(name = "EUR per asukas")
+print(p)
 
-  subset.variance/total.variance
-}
+#################################################
 
+# Create a lat-long dataframe from the maps package 
+# http://had.co.nz/ggplot2/coord_map.html
+#(finmap <- qplot(x, y, data=nz, geom="path")) 
+#qplot(x = long, y = lat, col = mediaanitulo, data = finmap, geom = "path")
+#try_require("maps") 
+#nz <- data.frame(map("nz", plot=FALSE)[c("x","y")]) 
+#(nzmap <- qplot(x, y, data=nz, geom="path")) 
+#p <- ggplot(finmap, aes(x = long, y = lat)) 
+#df <- data.frame(list(x = finmap$long, y = finmap$lat))
+#p <- qplot(x, y, data = df) + geom_polygon(aes(group=group, fill = x))
+#q <- p + geom_polygon(aes(group=group, fill=mediaanitulo), colour="black")
+#q <- p + coord_map(project = "gilbert") 
+#print(q)
 
+#################################################
+nams <- list()
+for (shape.file in c("AVI1_p.shp", "dcont_p.shp", "hcont_p.shp", "lake_p.shp", "pelto.shp", "suot.shp", "coast_p.shp", "forest.shp", "kunta1_p.shp", "maaku1_p.shp", "rivera_p.shp", "taajama.shp")) {
+  sp2 <- readShapePoly(system.file(paste("extdata/Maanmittauslaitos/1_milj_Shape_etrs_shape/", shape.file, sep = ""), package = "sorvi"))
 
-parseBands <- function (bands,uniq=FALSE) {
-
-        #Go through list of chromosomal band names of form '1q11.1' and convert them to form '1q11
-
-        #if uniq, return unique list of parsed bands
-        parsedBands<-c()
-        for (band in bands) {
-                parsedBands<-c(parsedBands,strsplit(band,"\\.")[[1]][[1]])
-        }
-        if (uniq) {parsedBands<-unique(parsedBands)}
-        parsedBands
-}
-
-source.dir <- function (dir = NULL, pattern = NULL) {
-
-  # Run source for R scripts (*.R) in given directory.
-  # By default, working dir.
-
-  if (is.null(dir)) {dir = getwd()}
-
-  fils <- list.files(dir, full.names = TRUE, pattern = pattern)
-  print(fils)
-  
-  tmp <- lapply(fils, function (f) {source(f)})
-  
-}
-
-
-month2numeric = function (month) {
-
-	months = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
-
-	which(months == month)
-
-}
-
-omit.na = function (vec) {vec[!is.na(vec)]}
-
-
-printCounter = function (ind,seqlength,interval) {
-	# print counter information at each interval 
-	myseq = seq(0,1,interval)
-	frac1 = ind/seqlength
-	frac0 = (ind-1)/seqlength
-	if (!sum(frac1>myseq)==sum(frac0>myseq))
-	{print(ind/seqlength)}
-}
-
-split.date = function (d) {
-
-	# Author: Leo Lahti
-
-	dd = unlist(strsplit(d," "))
-
-	day = dd[[1]]
-	year = dd[[5]]
-	month = dd[[2]]
-	datum = dd[[3]]
-	
-	ddd = unlist(strsplit(dd[[4]],":"))
-	hour = ddd[[1]]
-	min = ddd[[2]]
-	sec = ddd[[3]]
-
-	list(day=day, year=year, month=month, datum=datum, hour=hour, min=min, sec=sec)
+  print(shape.file)
+  #print(names(sp2))
+  print(head(sp2@data))
+  nams[[shape.file]] <- names(sp2)
 
 }
 
