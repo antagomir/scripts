@@ -53,14 +53,13 @@ biocLite("oligo")
 
 # Misc
 biocLite("genefilter")
-biocLite("BiocStyle)
+biocLite("BiocStyle")
 
 #####################################################
 
 # Machine learning
 
 #### Graphical gaussian models ####
-install.packages(c("corpcor","longitudinal","GeneNet"))  
 
 # multivariate stats
 install.packages("mvtnorm") #contains rmvnorm for multivariate normal sampling 
@@ -225,14 +224,14 @@ install.packages("RMySQL")
 biocLite("DBI") #RMySQL is a dependency?, AnnBuilder
 
 install.packages(c("vars"))
-install.packages(c("wordcloud"))
+install.packages("wordcloud")
 install.packages("fields")
 install.packages("ggplot2")
 install.packages("ggthemes")
 install.packages("gplots")
 install.packages("WGCNA")
 install.packages("dmt")
-install.packages("ggm"))
+install.packages("ggm")
 install.packages("WDI")
 install.packages("ber")
 install.packages("raster")
