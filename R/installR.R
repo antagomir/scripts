@@ -381,5 +381,6 @@ install.packages("ggmap")
 
 install.packages("scimapClient", repos="http://scisoft-net-map.isri.cmu.edu/static/R")
 
-install.packages("genderdata")
-install.packages("gender")
+install.packages(c("gender", "genderdata"),
+                 repos = "http://packages.ropensci.org",
+                 type = "source")
