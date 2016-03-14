@@ -87,7 +87,8 @@ install.packages("mixtools")
 biocLite("pamr")
 
 # Topic models #
-biocLite("DPpackage")          # Dirichlet Processes / topic models etc
+biocLite("DPpackage")          # Dirichlet Processes / topic models et
+biocLite("DirichletMultinomial") # DMMs
 
 #### Linear models ####
 install.packages("lme4")
