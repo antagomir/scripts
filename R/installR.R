@@ -361,27 +361,9 @@ install.packages("fastcluster")
 install.packages("vegan")
 biocLite("BiocCheck")
 biocLite("phyloseq")
-
 install.packages("tau")
-
-#-----------------------------
-
-### Gene Ontologies and pathways ####
-#biocLite(c("GOstats","goTools"))
-#biocLite("KEGGSOAP")
-
-# Tarca 2009 Signaling pathway impact analysis
-#install.packages("/share/mi/bin/BioCondPackages/SPIA_0.1.0.tar.gz",repos=NULL)
-#biocLite("SPIA")
-
-# Venn diagrams
-#install.packages("/share/mi/bin/BioCondPackages/venn_1.6.tar.gz",repos=NULL)
-#install.packages("venn")
 install.packages("ggmap")
 install.packages("pROC")
-
-install_github("davidgohel/gdtools")
-install_github("davidgohel/ggiraph")
 
 install.packages("scimapClient", repos="http://scisoft-net-map.isri.cmu.edu/static/R")
 
