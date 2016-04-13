@@ -368,7 +368,10 @@ install.packages("pROC")
 install.packages("scimapClient", repos="http://scisoft-net-map.isri.cmu.edu/static/R")
 
 install.packages("tm")
-
+install.packages("funModeling")
+install.packages("GGally")
+install.packages("intergraph")
+install_github("briatte/ggnet")
 install.packages(c("gender", "genderdata"),
                  repos = "http://packages.ropensci.org",
                  type = "source")
