@@ -366,6 +366,8 @@ install.packages("tau")
 install.packages("ggmap")
 install.packages("pROC")
 install.packages("tibble")
+install.packages("rvg")
+install.packages("FD")
 
 install.packages("scimapClient", repos="http://scisoft-net-map.isri.cmu.edu/static/R")
 
