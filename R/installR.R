@@ -375,6 +375,7 @@ install.packages("tm")
 install.packages("funModeling")
 install.packages("GGally")
 install.packages("intergraph")
+install.packages("ggigraph")
 install_github("briatte/ggnet")
 install.packages(c("gender", "genderdata"),
                  repos = "http://packages.ropensci.org",
