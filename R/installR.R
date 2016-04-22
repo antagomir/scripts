@@ -88,7 +88,6 @@ biocLite("pamr")
 
 # Topic models #
 biocLite("DPpackage")          # Dirichlet Processes / topic models et
-biocLite("DirichletMultinomial") # DMMs
 
 #### Linear models ####
 install.packages("lme4")
@@ -169,10 +168,6 @@ install.packages("PerformanceAnalytics")
 install.packages("nws")
 
 #####################################################
-
-# My ow packages
-biocLite("RPA")
-biocLite("netresponse")
 
 # Geographical information
 # required installation of 
@@ -256,8 +251,6 @@ biocLite("WGCNA")
 
 install.packages("devtools")
 library(devtools)
-install_github("microbiome/microbiome")
-install_github("microbiome/HITChipDB")
 install_github("ropengov/gisfin")
 
 #library(devtools)
@@ -381,3 +374,10 @@ install.packages(c("gender", "genderdata"),
                  repos = "http://packages.ropensci.org",
                  type = "source")
 
+install_github("antagomir/netresponse")
+install_github("antagomir/RPA")
+install_github("microbiome/microbiome")
+install_github("microbiome/HITChipDB")
+
+# Some problem
+# biocLite("DirichletMultinomial") # DMMs
