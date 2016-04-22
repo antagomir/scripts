@@ -319,7 +319,7 @@ install.packages("RUnit")
 
 # Compositions and its deps
 install.packages(c("tensorA", "robustbase", "energy", "bayesm"))
-install.packages("compositions_1.40-0.tar.gz", repos = NULL)
+install.packages("compositions")
 install.packages("robCompositions")
 
 # Misc
