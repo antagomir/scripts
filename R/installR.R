@@ -88,7 +88,6 @@ biocLite("pamr")
 
 # Topic models #
 biocLite("DPpackage")          # Dirichlet Processes / topic models et
-biocLite("DirichletMultinomial") # DMMs
 
 #### Linear models ####
 install.packages("lme4")
@@ -170,10 +169,6 @@ install.packages("nws")
 
 #####################################################
 
-# My ow packages
-biocLite("RPA")
-biocLite("netresponse")
-
 # Geographical information
 # required installation of 
 # geos-dev with synaptic and 
@@ -219,11 +214,6 @@ install.packages("rgl")
 install.packages("flexmix")
 install.packages("mixOmics")
 
-# RMySQL
-#system("wget http://cran.r-project.org/src/contrib/RMySQL_0.9-3.tar.gz")
-install.packages("RMySQL")
-biocLite("DBI") #RMySQL is a dependency?, AnnBuilder
-
 install.packages(c("vars"))
 install.packages("wordcloud")
 install.packages("fields")
@@ -256,8 +246,6 @@ biocLite("WGCNA")
 
 install.packages("devtools")
 library(devtools)
-install_github("microbiome/microbiome")
-install_github("microbiome/HITChipDB")
 install_github("ropengov/gisfin")
 
 #library(devtools)
@@ -326,7 +314,8 @@ install.packages("RUnit")
 
 # Compositions and its deps
 install.packages(c("tensorA", "robustbase", "energy", "bayesm"))
-install.packages("compositions_1.40-0.tar.gz", repos = NULL)
+install.packages("compositions")
+install.packages("robCompositions")
 
 # Misc
 install.packages(c("xlsx", "xlsxjars"))
@@ -364,6 +353,9 @@ biocLite("phyloseq")
 install.packages("tau")
 install.packages("ggmap")
 install.packages("pROC")
+install.packages("tibble")
+install.packages("rvg")
+install.packages("FD")
 
 install.packages("scimapClient", repos="http://scisoft-net-map.isri.cmu.edu/static/R")
 
@@ -371,6 +363,7 @@ install.packages("tm")
 install.packages("funModeling")
 install.packages("GGally")
 install.packages("intergraph")
+install.packages("ggigraph")
 install_github("briatte/ggnet")
 install.packages(c("gender", "genderdata"),
                  repos = "http://packages.ropensci.org",
@@ -382,4 +375,17 @@ install.packages(c('rzmq','repr','IRkernel','IRdisplay'),
                   getOption('repos')),
                   type = 'source')
 IRkernel::installspec()
+
+# RMySQL
+#system("wget http://cran.r-project.org/src/contrib/RMySQL_0.9-3.tar.gz")
+install.packages("RMySQL")
+biocLite("DBI") #RMySQL is a dependency?, AnnBuilder
+
+install_github("antagomir/netresponse")
+install_github("antagomir/RPA")
+install_github("microbiome/microbiome")
+install_github("microbiome/HITChipDB")
+
+# Some problem
+# biocLite("DirichletMultinomial") # DMMs
 
