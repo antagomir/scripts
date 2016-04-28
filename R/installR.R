@@ -214,11 +214,6 @@ install.packages("rgl")
 install.packages("flexmix")
 install.packages("mixOmics")
 
-# RMySQL
-#system("wget http://cran.r-project.org/src/contrib/RMySQL_0.9-3.tar.gz")
-install.packages("RMySQL")
-biocLite("DBI") #RMySQL is a dependency?, AnnBuilder
-
 install.packages(c("vars"))
 install.packages("wordcloud")
 install.packages("fields")
@@ -374,6 +369,18 @@ install.packages(c("gender", "genderdata"),
                  repos = "http://packages.ropensci.org",
                  type = "source")
 
+# Jupyter
+install.packages(c('rzmq','repr','IRkernel','IRdisplay'),
+                  repos = c('http://irkernel.github.io/',     
+                  getOption('repos')),
+                  type = 'source')
+IRkernel::installspec()
+
+# RMySQL
+#system("wget http://cran.r-project.org/src/contrib/RMySQL_0.9-3.tar.gz")
+install.packages("RMySQL")
+biocLite("DBI") #RMySQL is a dependency?, AnnBuilder
+
 install_github("antagomir/netresponse")
 install_github("antagomir/RPA")
 install_github("microbiome/microbiome")
@@ -382,3 +389,4 @@ install.packages("Cairo")
 
 # Some problem
 # biocLite("DirichletMultinomial") # DMMs
+
