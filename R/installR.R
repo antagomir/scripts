@@ -378,6 +378,7 @@ install_github("antagomir/netresponse")
 install_github("antagomir/RPA")
 install_github("microbiome/microbiome")
 install_github("microbiome/HITChipDB")
+install.packages("Cairo")
 
 # Some problem
 # biocLite("DirichletMultinomial") # DMMs
