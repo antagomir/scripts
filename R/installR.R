@@ -386,6 +386,7 @@ install_github("antagomir/RPA")
 install_github("microbiome/microbiome")
 install_github("microbiome/HITChipDB")
 install.packages("Cairo")
+install.packages("openxlsx")
 
 # Some problem
 # biocLite("DirichletMultinomial") # DMMs
