@@ -266,7 +266,6 @@ install.packages("splus2R")
 install.packages("ifultools")
 install.packages("sapa")
 install.packages("wmtsa")
-install.packages("gender")
 install.packages("scatterplot3d")
 library(devtools)
 install_github(repo = "earlywarnings-R", username = "earlywarningtoolbox", subdir = "earlywarnings")
@@ -368,6 +367,9 @@ install_github("briatte/ggnet")
 install.packages(c("gender", "genderdata"),
                  repos = "http://packages.ropensci.org",
                  type = "source")
+install_github("kalimu/genderizeR")
+
+  
 
 # Jupyter
 install.packages(c('rzmq','repr','IRkernel','IRdisplay'),
@@ -387,6 +389,12 @@ install_github("microbiome/microbiome")
 install_github("microbiome/HITChipDB")
 install.packages("Cairo")
 install.packages("openxlsx")
+install.packages("FGN")
+install.packages("deSolve")
+install.packages("untb")
+install.packages("Voss")
+install.packages("stinepack")
+install.packages("geigen")
 
 # Some problem
 # biocLite("DirichletMultinomial") # DMMs
