@@ -395,6 +395,7 @@ install.packages("untb")
 install.packages("Voss")
 install.packages("stinepack")
 install.packages("geigen")
+install.packages("ggrepel")
 
 # Some problem
 # biocLite("DirichletMultinomial") # DMMs
