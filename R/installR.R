@@ -398,6 +398,7 @@ install.packages("Voss")
 install.packages("stinepack")
 install.packages("geigen")
 install.packages("ggrepel")
+install.packages("rio")
 
 # Some problem
 # biocLite("DirichletMultinomial") # DMMs
