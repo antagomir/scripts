@@ -373,13 +373,6 @@ install_github("kalimu/genderizeR")
 
   
 
-# Jupyter
-install.packages(c('rzmq','repr','IRkernel','IRdisplay'),
-                  repos = c('http://irkernel.github.io/',     
-                  getOption('repos')),
-                  type = 'source')
-IRkernel::installspec()
-
 # RMySQL
 #system("wget http://cran.r-project.org/src/contrib/RMySQL_0.9-3.tar.gz")
 install.packages("RMySQL")
@@ -387,8 +380,6 @@ biocLite("DBI") #RMySQL is a dependency?, AnnBuilder
 
 install_github("antagomir/netresponse")
 install_github("antagomir/RPA")
-install_github("microbiome/microbiome")
-install_github("microbiome/HITChipDB")
 install.packages("Cairo")
 install.packages("openxlsx")
 install.packages("FGN")
@@ -401,5 +392,7 @@ install.packages("ggrepel")
 install.packages("rio")
 
 # Some problem
+#install_github("microbiome/microbiome")
+#install_github("microbiome/HITChipDB")
 # biocLite("DirichletMultinomial") # DMMs
 
