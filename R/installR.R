@@ -320,6 +320,7 @@ install.packages("robCompositions")
 install.packages(c("xlsx", "xlsxjars"))
 install.packages("getopt")
 install.packages("XLConnect")
+install.packages("rJava")
 install.packages("tidyr")
 install.packages("data.table")
 install.packages("multcomp")
@@ -376,13 +377,6 @@ install_github("kalimu/genderizeR")
 # Jupyter
 
 install.packages(c('pbdZMQ', 'repr', 'devtools'))  # repr is already on CRAN
-# devtools::install_github('IRkernel/repr')        # or get the latest repr from master
-#devtools::install_github('IRkernel/IRdisplay')
-#devtools::install_github('IRkernel/IRkernel')
-#install.packages(c('repr'),
-#                  repos = c('http://irkernel.github.io/',     
-#                  getOption('repos')),
-#                  type = 'source')
 
 # RMySQL
 #system("wget http://cran.r-project.org/src/contrib/RMySQL_0.9-3.tar.gz")
@@ -391,8 +385,6 @@ biocLite("DBI") #RMySQL is a dependency?, AnnBuilder
 
 install_github("antagomir/netresponse")
 install_github("antagomir/RPA")
-install_github("microbiome/microbiome")
-install_github("microbiome/HITChipDB")
 install.packages("Cairo")
 install.packages("openxlsx")
 install.packages("FGN")
@@ -401,11 +393,12 @@ install.packages("untb")
 install.packages("Voss")
 install.packages("stinepack")
 install.packages("geigen")
-
-
-
+install.packages("ggrepel")
+install.packages("rio")
 
 # Some problem
+#install_github("microbiome/microbiome")
+#install_github("microbiome/HITChipDB")
 # biocLite("DirichletMultinomial") # DMMs
 install_github("ropensci/genderdata")
 install.packages("babynames")
