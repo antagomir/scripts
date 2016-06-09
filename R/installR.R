@@ -374,11 +374,15 @@ install_github("kalimu/genderizeR")
   
 
 # Jupyter
-install.packages(c('rzmq','repr','IRkernel','IRdisplay'),
-                  repos = c('http://irkernel.github.io/',     
-                  getOption('repos')),
-                  type = 'source')
-IRkernel::installspec()
+
+install.packages(c('pbdZMQ', 'repr', 'devtools'))  # repr is already on CRAN
+# devtools::install_github('IRkernel/repr')        # or get the latest repr from master
+#devtools::install_github('IRkernel/IRdisplay')
+#devtools::install_github('IRkernel/IRkernel')
+#install.packages(c('repr'),
+#                  repos = c('http://irkernel.github.io/',     
+#                  getOption('repos')),
+#                  type = 'source')
 
 # RMySQL
 #system("wget http://cran.r-project.org/src/contrib/RMySQL_0.9-3.tar.gz")
@@ -398,6 +402,23 @@ install.packages("Voss")
 install.packages("stinepack")
 install.packages("geigen")
 
+
+
+
 # Some problem
 # biocLite("DirichletMultinomial") # DMMs
+install_github("ropensci/genderdata")
+install.packages("babynames")
+install.packages("data.table")
+install.packages("dplyr")
+install.packages("ggplot2")
+install.packages("gender")
+install.packages("knitr")
+install.packages("magrittr")
+install.packages("sorvi")
+install.packages("stringr")
+install.packages("tau")
+install.packages("tibble")
+install.packages("tidyr")
+install.packages("tm")
 
