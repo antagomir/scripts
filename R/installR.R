@@ -414,6 +414,7 @@ install.packages("tau")
 install.packages("tibble")
 install.packages("tidyr")
 install.packages("tm")
+install.packages("DT")
 
 install_github("christophergandrud/networkD3")
 install_github("wch/webshot")
