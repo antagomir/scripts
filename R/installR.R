@@ -415,3 +415,5 @@ install.packages("tibble")
 install.packages("tidyr")
 install.packages("tm")
 
+install_github("christophergandrud/networkD3")
+
