@@ -416,6 +416,7 @@ install.packages("tidyr")
 install.packages("tm")
 install.packages("DT")
 install.packages("readr")
+install.packages("flexdashboard")
 
 install_github("christophergandrud/networkD3")
 install_github("wch/webshot")
