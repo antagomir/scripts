@@ -415,13 +415,10 @@ install.packages("tibble")
 install.packages("tidyr")
 install.packages("tm")
 install.packages("DT")
-<<<<<<< HEAD
 install.packages("cowplot")
 install.packages("plotly")
-=======
 install.packages("readr")
 install.packages("flexdashboard")
->>>>>>> 1b7c2abdbe9773278de4846ae018f86f2ecfd3d7
-
+install.packages("Cairo")
 install_github("christophergandrud/networkD3")
 install_github("wch/webshot")
