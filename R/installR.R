@@ -114,6 +114,9 @@ install.packages("ellipse")
 biocLite("Biobase")
 biocLite("XML") # libxml2-dev, xml2 with synaptic
 
+# Microbiome analysis
+biocLite("dada2") 
+
 # Requires installing curl and setting curl-config path
 # see locate libcurl and locate curl-config and
 # http://www.omegahat.org/RCurl/FAQ.html
@@ -423,3 +426,6 @@ install.packages("stringdist")
 install_github("christophergandrud/networkD3")
 install_github("wch/webshot")
 install.packages("Cairo")
+install_github("zdk123/SpiecEasi")
+
+
