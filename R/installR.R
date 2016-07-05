@@ -426,6 +426,7 @@ install.packages("stringdist")
 install_github("christophergandrud/networkD3")
 install_github("wch/webshot")
 install.packages("Cairo")
+install.packages("rvest")
 install_github("zdk123/SpiecEasi")
 
 
