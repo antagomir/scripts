@@ -427,5 +427,6 @@ install_github("christophergandrud/networkD3")
 install_github("wch/webshot")
 install.packages("Cairo")
 install_github("zdk123/SpiecEasi")
+biocLite("DESeq2")
 
 
