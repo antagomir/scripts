@@ -428,5 +428,7 @@ install_github("wch/webshot")
 install.packages("Cairo")
 install.packages("rvest")
 install_github("zdk123/SpiecEasi")
+install.packages("reldist")
+
 
 
