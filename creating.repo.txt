@@ -1,0 +1,5 @@
+git init
+git remote add origin git@github.com:ropengov/sorvi
+git add *
+git commit -am 'message'
+git push -f origin master
