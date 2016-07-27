@@ -429,6 +429,9 @@ install.packages("Cairo")
 install.packages("rvest")
 install_github("zdk123/SpiecEasi")
 install.packages("reldist")
+install.packages("leaflet")
+install.packages("highcharter")
+install.packages("dygraphs")
 biocLite("DESeq2")
 
 
