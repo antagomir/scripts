@@ -433,5 +433,7 @@ install.packages("leaflet")
 install.packages("highcharter")
 install.packages("dygraphs")
 biocLite("DESeq2")
+biocLite("classInt")
+
 
 
