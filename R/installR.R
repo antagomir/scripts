@@ -434,6 +434,6 @@ install.packages("highcharter")
 install.packages("dygraphs")
 biocLite("DESeq2")
 biocLite("classInt")
-
-
+install.packages("packfor", repos="http://R-Forge.R-project.org")
+install.packages("bookdown")
 
