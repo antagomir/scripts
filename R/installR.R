@@ -436,4 +436,5 @@ biocLite("DESeq2")
 biocLite("classInt")
 install.packages("packfor", repos="http://R-Forge.R-project.org")
 install.packages("bookdown")
-
+install.packages("plotROC")
+install.packages("phytools")
