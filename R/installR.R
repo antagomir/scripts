@@ -402,7 +402,6 @@ install.packages("rio")
 # Some problem
 #install_github("microbiome/microbiome")
 #install_github("microbiome/HITChipDB")
-# biocLite("DirichletMultinomial") # DMMs
 install_github("ropensci/genderdata")
 install.packages("babynames")
 install.packages("data.table")
@@ -438,3 +437,5 @@ install.packages("packfor", repos="http://R-Forge.R-project.org")
 install.packages("bookdown")
 install.packages("plotROC")
 install.packages("phytools")
+
+biocLite("DirichletMultinomial") # DMMs; may require libgsl0-dev
