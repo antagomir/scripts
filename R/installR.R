@@ -195,7 +195,8 @@ install.packages("outliers")
 ##########################################################
 
 install.packages("pxR")
-install.packages(c("stringr", "formatR", "roxygen2"))
+install.packages(c("stringr", "formatR"))
+install.packages("roxygen2")
 install.packages("rworldmap")
 install.packages("rworldxtra")
 install.packages("Rd2roxygen")
