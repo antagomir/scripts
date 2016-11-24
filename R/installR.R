@@ -441,6 +441,7 @@ install.packages("plotROC")
 install.packages("phytools")
 install.packages("mitools")
 install.packages("survey")
+install.packages("tm")
 install.packages("http://prof.beuth-hochschule.de/fileadmin/user/groemping/downloads/relaimpo_2.2-2.tar.gz", type = "source")
 biocLite("DirichletMultinomial") # DMMs; may require libgsl0-dev
 
