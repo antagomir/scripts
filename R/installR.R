@@ -195,7 +195,8 @@ install.packages("outliers")
 ##########################################################
 
 install.packages("pxR")
-install.packages(c("stringr", "formatR", "roxygen2"))
+install.packages(c("stringr", "formatR"))
+install.packages("roxygen2")
 install.packages("rworldmap")
 install.packages("rworldxtra")
 install.packages("Rd2roxygen")
@@ -436,7 +437,15 @@ biocLite("classInt")
 install.packages("packfor", repos="http://R-Forge.R-project.org")
 install.packages("bookdown")
 install.packages("plotROC")
-install.packages("phytools")
 
+install.packages("phytools")
+install.packages("mitools")
+install.packages("survey")
+install.packages("tm")
+install.packages("http://prof.beuth-hochschule.de/fileadmin/user/groemping/downloads/relaimpo_2.2-2.tar.gz", type = "source")
 biocLite("DirichletMultinomial") # DMMs; may require libgsl0-dev
+<<<<<<< HEAD
 biocLite("EMDomics")
+=======
+
+>>>>>>> 5631999b2bee40d0da838a8df802890922bab1e6
