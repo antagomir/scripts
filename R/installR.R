@@ -439,3 +439,4 @@ install.packages("plotROC")
 install.packages("phytools")
 
 biocLite("DirichletMultinomial") # DMMs; may require libgsl0-dev
+biocLite("EMDomics")
