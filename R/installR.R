@@ -444,8 +444,5 @@ install.packages("survey")
 install.packages("tm")
 install.packages("http://prof.beuth-hochschule.de/fileadmin/user/groemping/downloads/relaimpo_2.2-2.tar.gz", type = "source")
 biocLite("DirichletMultinomial") # DMMs; may require libgsl0-dev
-<<<<<<< HEAD
 biocLite("EMDomics")
-=======
-
->>>>>>> 5631999b2bee40d0da838a8df802890922bab1e6
+install.packages("readxl")
