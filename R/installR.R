@@ -437,7 +437,7 @@ biocLite("classInt")
 install.packages("packfor", repos="http://R-Forge.R-project.org")
 install.packages("bookdown")
 install.packages("plotROC")
-
+install.packages("dlstats")
 install.packages("phytools")
 install.packages("mitools")
 install.packages("survey")
