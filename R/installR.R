@@ -446,3 +446,4 @@ install.packages("http://prof.beuth-hochschule.de/fileadmin/user/groemping/downl
 biocLite("DirichletMultinomial") # DMMs; may require libgsl0-dev
 biocLite("EMDomics")
 install.packages("readxl")
+install.extras("NMF")
