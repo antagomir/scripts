@@ -43,7 +43,8 @@ comparison_test2$W.taxa
 
 
 # And test the alternative ANCOM implementation
-padj <- microbiome::ancom(pseq, "nationality")
+source("ancom_anotherimplementation.R")
+padj <- ancom(pseq, "nationality")
 ancom3 <- names(which(padj < 0.01))
 # Doesnt seem to match very well:
 #> mean(gsub(" ", ".", ancom3) %in% ancom1)

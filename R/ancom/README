@@ -1,0 +1,14 @@
+Around 10.3.2017
+
+Received ANCOM from the original authors and did some modifications to
+test with example data:
+main.R
+
+In addition, there is the second implementation from the
+Weiss review paper (code received from those authors) and
+my own comparisons:
+ancom_anotherimplementation.R
+ANCOM.Rmd
+
+The two implementations give somewhat different results. The version
+used in main.R is more similar to ANOVA and DESeq2.
