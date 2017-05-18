@@ -274,7 +274,6 @@ install.packages("wmtsa")
 install.packages("scatterplot3d")
 library(devtools)
 install_github(repo = "earlywarnings-R", username = "earlywarningtoolbox", subdir = "earlywarnings")
-install.packages("fpc") # Prediction strength
 
 # RStan
 install.packages('inline')
@@ -356,9 +355,7 @@ biocLite("BiocCheck", suppressUpdates = TRUE)
 biocLite("phyloseq", suppressUpdates = TRUE)
 install.packages("tau")
 install.packages("ggmap")
-install.packages("pROC")
 install.packages("plotROC")
-install.packages("ggROC")
 install.packages("tibble")
 install.packages("rvg")
 
@@ -470,3 +467,6 @@ install.packages("hrbrthemes")
 install.packages("intergraph")
 install.packages("prettydoc")
 install.packages("Rtsne")
+install.packages("pROC")
+install.packages("ggROC")
+install.packages("fpc") # Prediction strength
