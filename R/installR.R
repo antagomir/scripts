@@ -30,6 +30,8 @@
 
 # DEFAULT BIOCONDUCTOR INSTALLATION
 
+update.packages()
+
 source('http://www.bioconductor.org/biocLite.R')
 biocLite()
 
@@ -48,12 +50,12 @@ install.packages("devtools")
 #arrays: expression, tiling, SNP and exon chips. The supported
 #manufacturers are Affymetrix and NimbleGen. The package provides tools
 #for preprocessing.
-biocLite("oligo")
-#biocLite("altcdfenvs")
+biocLite("oligo", suppressUpdates = TRUE)
+#biocLite("altcdfenvs", suppressUpdates = TRUE)
 
 # Misc
-biocLite("genefilter")
-biocLite("BiocStyle")
+biocLite("genefilter", suppressUpdates = TRUE)
+biocLite("BiocStyle", suppressUpdates = TRUE)
 
 #####################################################
 
@@ -66,7 +68,7 @@ install.packages("mvtnorm") #contains rmvnorm for multivariate normal sampling
 install.packages("mvnormtest")
 
 # Self-organizing map (SOM)
-biocLite("kohonen") # better than 'som' package
+biocLite("kohonen", suppressUpdates = TRUE) # better than 'som' package
 
 # Kernel methods #
 #install.packages("kernlab") #includes kernelCCA function 'kcca'
@@ -84,16 +86,16 @@ install.packages("entropy")
 install.packages("mixtools")
 
 # Classification
-biocLite("pamr")
+biocLite("pamr", suppressUpdates = TRUE)
 
 # Topic models #
-biocLite("DPpackage")          # Dirichlet Processes / topic models et
+biocLite("DPpackage", suppressUpdates = TRUE)          # Dirichlet Processes / topic models et
 
 #### Linear models ####
 install.packages("lme4")
-biocLite("glmnet")             # Lasso, elastic net, regularized generalized linear models
+biocLite("glmnet", suppressUpdates = TRUE)             # Lasso, elastic net, regularized generalized linear models
 
-biocLite("qvalue")
+biocLite("qvalue", suppressUpdates = TRUE)
 install.packages("NMFN")  # NMF
 install.packages("randomForest")
 
@@ -105,17 +107,17 @@ install.packages("randomForest")
 ################################################################
 
 # matrix operations 
-biocLite("Matrix")  # boosting matrix calculations
+biocLite("Matrix", suppressUpdates = TRUE)  # boosting matrix calculations
 
 # ddply for generating tables for various statistical summaries of given data
 install.packages("ellipse")
 
 #### Public databases ###
-biocLite("Biobase")
-biocLite("XML") # libxml2-dev, xml2 with synaptic
+biocLite("Biobase", suppressUpdates = TRUE)
+biocLite("XML", suppressUpdates = TRUE) # libxml2-dev, xml2 with synaptic
 
 # Microbiome analysis
-biocLite("dada2") 
+biocLite("dada2", suppressUpdates = TRUE) 
 
 # Requires installing curl and setting curl-config path
 # see locate libcurl and locate curl-config and
@@ -128,14 +130,14 @@ biocLite("dada2")
 # and isntalling "libcurl-ocaml-dev" with synaptic
 #I got RCurl installed with:
 #~/local/R/R-2.12.0/bin/R CMD INSTALL ~/local/R/packages/RCurl_1.5-0.tar.gz
-biocLite("biomaRt")# Requires RCurl
+biocLite("biomaRt", suppressUpdates = TRUE)# Requires RCurl
 
 # Excel reading utilities                                        
 install.packages("RODBC")
 install.packages("gdata")
 
 # Networks
-biocLite("NCIgraph")
+biocLite("NCIgraph", suppressUpdates = TRUE)
 
 #######################################################################
 
@@ -143,14 +145,14 @@ biocLite("NCIgraph")
 
 # Including links and tips to plots, potentially useful in
 # delivering end results to biomedical guys
-biocLite("RSVGTipsDevice")  
-biocLite("tikzDevice")
-biocLite("ape") # circular hclust dendrograms etc
-biocLite("RSQLite")
-biocLite("graph")
-biocLite("RbcBook1")
-biocLite("Rgraphviz") # graphviz and its dependencies
-install.packages("igraph" ) #see http://cneurocvs.rmki.kfki.hu/igraph/download.html
+biocLite("RSVGTipsDevice", suppressUpdates = TRUE)  
+biocLite("tikzDevice", suppressUpdates = TRUE)
+biocLite("ape", suppressUpdates = TRUE) # circular hclust dendrograms etc
+biocLite("RSQLite", suppressUpdates = TRUE)
+biocLite("graph", suppressUpdates = TRUE)
+biocLite("RbcBook1", suppressUpdates = TRUE)
+biocLite("Rgraphviz", suppressUpdates = TRUE) # graphviz and its dependencies
+install.packages("igraph", suppressUpdates = TRUE) #see http://cneurocvs.rmki.kfki.hu/igraph/download.html
 install.packages("plotrix")
 
 ################################################################
@@ -183,7 +185,7 @@ install.packages("rgdal")
 ##############################################################
 
 # Misc
-biocLite("cMAP")
+biocLite("cMAP", suppressUpdates = TRUE)
 install.packages("R.utils")
 install.packages("gridExtra")
 install.packages("RgoogleMaps")
@@ -234,18 +236,18 @@ install.packages("xtable")
 install.packages("rgeos") # install GEOS first from http://trac.osgeo.org/geos/
 
 # microbiome
-biocLite("sva")
-biocLite("affy")
-biocLite("preprocessCore")
-biocLite("MASS")
-biocLite("minet")
-biocLite("nlme")
-biocLite("outliers")
-biocLite("RColorBrewer")
-biocLite("R2HTML")
-biocLite("svDialogs")
-biocLite("vegan")
-biocLite("WGCNA")
+biocLite("sva", suppressUpdates = TRUE)
+biocLite("affy", suppressUpdates = TRUE)
+biocLite("preprocessCore", suppressUpdates = TRUE)
+biocLite("MASS", suppressUpdates = TRUE)
+biocLite("minet", suppressUpdates = TRUE)
+biocLite("nlme", suppressUpdates = TRUE)
+biocLite("outliers", suppressUpdates = TRUE)
+biocLite("RColorBrewer", suppressUpdates = TRUE)
+biocLite("R2HTML", suppressUpdates = TRUE)
+biocLite("svDialogs", suppressUpdates = TRUE)
+biocLite("vegan", suppressUpdates = TRUE)
+biocLite("WGCNA", suppressUpdates = TRUE)
 
 install.packages("devtools")
 library(devtools)
@@ -295,7 +297,7 @@ install_github(c('slidify', 'slidifyLibraries'), 'ramnathv', ref = 'dev')
 install_github('rCharts', 'ramnathv')
 install_github('shiny', 'rstudio')
 
-biocLite("impute")
+biocLite("impute", suppressUpdates = TRUE)
 install.packages("lawstat")
 install.packages("animation") 
 install.packages(c("psych", "GPArotation")) # factor analyses
@@ -347,11 +349,11 @@ devtools::install_github("hadley/babynames")
 install.packages("rjson")
 install.packages("permute")
 install.packages("ade4")
-biocLite("df2json")
+biocLite("df2json", suppressUpdates = TRUE)
 install.packages("fastcluster")
 install.packages("vegan")
-biocLite("BiocCheck")
-biocLite("phyloseq")
+biocLite("BiocCheck", suppressUpdates = TRUE)
+biocLite("phyloseq", suppressUpdates = TRUE)
 install.packages("tau")
 install.packages("ggmap")
 install.packages("pROC")
@@ -379,7 +381,7 @@ install.packages(c('pbdZMQ', 'repr', 'devtools'))  # repr is already on CRAN
 # RMySQL
 #system("wget http://cran.r-project.org/src/contrib/RMySQL_0.9-3.tar.gz")
 install.packages("RMySQL")
-biocLite("DBI") #RMySQL is a dependency?, AnnBuilder
+biocLite("DBI", suppressUpdates = TRUE) #RMySQL is a dependency?, AnnBuilder
 
 install_github("antagomir/RPA")
 install.packages("openxlsx")
@@ -422,7 +424,7 @@ install.packages("reldist")
 install.packages("leaflet")
 install.packages("highcharter")
 install.packages("dygraphs")
-biocLite("classInt")
+biocLite("classInt", suppressUpdates = TRUE)
 install.packages("packfor", repos="http://R-Forge.R-project.org")
 install.packages("bookdown")
 install.packages("plotROC")
@@ -434,14 +436,14 @@ install.packages("tm")
 install.packages("viridis")
 install.packages("tidyverse")
 install.packages("dplyr")
-biocLite("impute")
-biocLite("GO.db")
+biocLite("impute", suppressUpdates = TRUE)
+biocLite("GO.db", suppressUpdates = TRUE)
 install.packages("moments")
 install.packages("WGCNA")
 install.packages("caper")
 install.packages("http://prof.beuth-hochschule.de/fileadmin/user/groemping/downloads/relaimpo_2.2-2.tar.gz", type = "source")
-biocLite("DirichletMultinomial") # DMMs; may require libgsl0-dev
-biocLite("EMDomics")
+biocLite("DirichletMultinomial", suppressUpdates = TRUE) # DMMs; may require libgsl0-dev
+biocLite("EMDomics", suppressUpdates = TRUE)
 install.packages("readxl")
 #install.extras("NMF")
 install_github("mtennekes/tmaptools")
@@ -457,9 +459,9 @@ install.packages("structSSI")
 install_github("briatte/ggnet")
 install_github("antagomir/netresponse")
 install_github("zdk123/SpiecEasi")
-biocLite("limma")
-biocLite("DESeq2")
-biocLite("FD")
+biocLite("limma", suppressUpdates = TRUE)
+biocLite("DESeq2", suppressUpdates = TRUE)
+biocLite("FD", suppressUpdates = TRUE)
 install_github("ggobi/GGally")
 install_github("cboettig/knitcitations")
 
