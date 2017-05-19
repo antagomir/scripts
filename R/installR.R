@@ -437,7 +437,6 @@ install.packages("WGCNA")
 install.packages("caper")
 install.packages("http://prof.beuth-hochschule.de/fileadmin/user/groemping/downloads/relaimpo_2.2-2.tar.gz", type = "source")
 biocLite("DirichletMultinomial", suppressUpdates = TRUE) # DMMs; may require libgsl0-dev
-biocLite("EMDomics", suppressUpdates = TRUE)
 install.packages("readxl")
 #install.extras("NMF")
 install_github("mtennekes/tmaptools")
@@ -469,3 +468,4 @@ install.packages("ggROC")
 install.packages("fpc") # Prediction strength
 install.packages("plotROC")
 install.packages("ggrepel")
+biocLite("EMDomics", suppressUpdates = TRUE)
