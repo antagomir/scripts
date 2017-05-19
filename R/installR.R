@@ -387,7 +387,6 @@ install.packages("untb")
 install.packages("Voss")
 install.packages("stinepack")
 install.packages("geigen")
-install.packages("ggrepel")
 install.packages("rio")
 
 # Some problem
@@ -469,3 +468,4 @@ install.packages("pROC")
 install.packages("ggROC")
 install.packages("fpc") # Prediction strength
 install.packages("plotROC")
+install.packages("ggrepel")
