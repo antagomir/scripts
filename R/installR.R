@@ -469,3 +469,4 @@ install.packages("ggROC")
 install.packages("fpc") # Prediction strength
 install.packages("plotROC")
 install.packages("ggrepel")
+install.packages("rcrossref")
