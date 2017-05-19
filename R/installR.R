@@ -469,3 +469,4 @@ install.packages("fpc") # Prediction strength
 install.packages("plotROC")
 install.packages("ggrepel")
 biocLite("EMDomics", suppressUpdates = TRUE)
+install.packages("rcrossref")
