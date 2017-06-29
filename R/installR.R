@@ -454,6 +454,8 @@ biocLite("DESeq2", suppressUpdates = TRUE)
 biocLite("FD", suppressUpdates = TRUE)
 install_github("ggobi/GGally")
 install_github("cboettig/knitcitations")
+install_github("ropensci/genderdata")
+
 
 install.packages("gcookbook")
 install.packages("hrbrthemes")
@@ -466,6 +468,7 @@ install.packages("ggROC")
 install.packages("fpc") # Prediction strength
 install.packages("plotROC")
 install.packages("ggrepel")
+install.packages("babynames")
 biocLite("EMDomics", suppressUpdates = TRUE)
 install.packages("rcrossref")
 install.packages("captioner")
