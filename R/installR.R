@@ -477,6 +477,7 @@ install.packages("FSA")
 biocLite("BiocCheck", suppressUpdates = TRUE)
 biocLite("phyloseq", suppressUpdates = TRUE)
 install.packages("classInt")
+install.packages("cowplot")
 
 install_github("earlywarningtoolbox/earlywarnings-R/earlywarnings")
 install.packages("tsne")
