@@ -273,7 +273,7 @@ install.packages("sapa")
 install.packages("wmtsa")
 install.packages("scatterplot3d")
 library(devtools)
-install_github(repo = "earlywarnings-R", username = "earlywarningtoolbox", subdir = "earlywarnings")
+
 
 # RStan
 install.packages('inline')
@@ -478,3 +478,5 @@ install.packages("FSA")
 biocLite("BiocCheck", suppressUpdates = TRUE)
 biocLite("phyloseq", suppressUpdates = TRUE)
 install.packages("classInt")
+
+install_github(repo = "earlywarnings-R", username = "earlywarningtoolbox/earlywarnings")
