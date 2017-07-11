@@ -464,7 +464,6 @@ install.packages("hrbrthemes")
 install.packages("intergraph")
 install.packages("prettydoc")
 install.packages("Rtsne")
-install.packages("tsne")
 install.packages("pROC")
 install.packages("ggROC")
 install.packages("fpc") # Prediction strength
@@ -480,4 +479,5 @@ biocLite("phyloseq", suppressUpdates = TRUE)
 install.packages("classInt")
 
 install_github("earlywarningtoolbox/earlywarnings-R/earlywarnings")
+install.packages("tsne")
 
