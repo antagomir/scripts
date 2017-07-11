@@ -479,4 +479,5 @@ biocLite("BiocCheck", suppressUpdates = TRUE)
 biocLite("phyloseq", suppressUpdates = TRUE)
 install.packages("classInt")
 
-install_github(repo = "earlywarnings-R", username = "earlywarningtoolbox/earlywarnings")
+install_github("earlywarningtoolbox/earlywarnings-R/earlywarnings")
+
