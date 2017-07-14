@@ -436,8 +436,8 @@ install.packages("http://prof.beuth-hochschule.de/fileadmin/user/groemping/downl
 biocLite("DirichletMultinomial", suppressUpdates = TRUE) # DMMs; may require libgsl0-dev
 install.packages("readxl")
 #install.extras("NMF")
-#install_github("mtennekes/tmaptools")
-install.packages("mtennekes/tmap")
+install.packages("tmap")
+install.packages("tmaptools")
 install_github("reptalex/phylofactor")
 install_github("joey711/phyloseq")
 install.packages("testthat")
