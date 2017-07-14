@@ -455,6 +455,7 @@ biocLite("DESeq2", suppressUpdates = TRUE)
 biocLite("FD", suppressUpdates = TRUE)
 install_github("ggobi/GGally")
 install_github("cboettig/knitcitations")
+install_github("hadley/pkgdown")
 
 install.packages("gcookbook")
 install.packages("hrbrthemes")
