@@ -185,7 +185,7 @@ install.packages("multcomp")
 install.packages("mvnormtest")
 install.packages("mvtnorm") #contains rmvnorm for multivariate normal sampling 
 install.packages("network")
-install.packages("NMFN") # NMF
+install.packages("NMF") # NMF
 install.packages("nortest")
 install.packages("nws")
 install.packages("openxlsx")
