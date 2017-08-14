@@ -2,6 +2,9 @@ source('http://www.bioconductor.org/biocLite.R')
 update.packages()
 biocLite()
 
+install.packages("devtools"); 
+library(devtools)
+
 biocLite("affy", suppressUpdates = TRUE)
 biocLite("ape", suppressUpdates = TRUE) # circular hclust dendrograms etc
 biocLite("Biobase", suppressUpdates = TRUE)
@@ -60,6 +63,8 @@ biocLite("tikzDevice", suppressUpdates = TRUE)
 biocLite("vegan", suppressUpdates = TRUE)
 biocLite("WGCNA", suppressUpdates = TRUE)
 biocLite("XML", suppressUpdates = TRUE) # libxml2-dev, xml2 with synaptic
+
+library(devtools)
 install_github("antagomir/netresponse")
 install_github("antagomir/RPA")
 install_github("briatte/ggnet")
@@ -106,8 +111,6 @@ install.packages("countrycode")
 install.packages("cowplot")
 install.packages("data.table")
 install.packages("deSolve")
-install.packages("devtools")
-install.packages("devtools"); library(devtools)
 install.packages("diptest")
 install.packages("dlstats")
 install.packages("dmt")
@@ -290,7 +293,7 @@ install.packages("XLConnect")
 install.packages("xlsx")
 install.packages("xlsxjars")
 install.packages("xtable")
-library(devtools)
+
 library(extrafont); font_import()
 options(repos = c(getOption("repos"), rstan = "http://wiki.rstan-repo.googlecode.com/git/"))
 install.extras("NMF")
