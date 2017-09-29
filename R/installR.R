@@ -299,3 +299,5 @@ install.packages("stringi")
 install.packages("pkgmaker") 
 install.packages("NMF") 
 install.extras("NMF")
+
+biocUpgrade()
