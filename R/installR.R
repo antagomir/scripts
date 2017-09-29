@@ -187,7 +187,6 @@ install.packages("multcomp")
 install.packages("mvnormtest")
 install.packages("mvtnorm") #contains rmvnorm for multivariate normal sampling 
 install.packages("network")
-install.packages("NMF") # NMF
 install.packages("nortest")
 install.packages("nws")
 install.packages("openxlsx")
@@ -295,4 +294,8 @@ install.packages("xtable")
 
 library(extrafont); font_import()
 options(repos = c(getOption("repos"), rstan = "http://wiki.rstan-repo.googlecode.com/git/"))
+
+install.packages("stringi")
+install.packages("pkgmaker") 
+install.packages("NMF") 
 install.extras("NMF")
