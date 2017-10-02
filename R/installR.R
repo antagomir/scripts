@@ -298,6 +298,6 @@ options(repos = c(getOption("repos"), rstan = "http://wiki.rstan-repo.googlecode
 install.packages("stringi")
 install.packages("pkgmaker") 
 install.packages("NMF") 
-install.extras("NMF")
+library(NMF); install.extras("NMF")
 
 biocUpgrade()
