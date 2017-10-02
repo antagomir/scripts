@@ -4,6 +4,7 @@ biocLite()
 
 install.packages("devtools"); 
 library(devtools)
+install.packages("stringi")
 
 biocLite("affy", suppressUpdates = TRUE)
 biocLite("ape", suppressUpdates = TRUE) # circular hclust dendrograms etc
@@ -65,6 +66,7 @@ biocLite("WGCNA", suppressUpdates = TRUE)
 biocLite("XML", suppressUpdates = TRUE) # libxml2-dev, xml2 with synaptic
 
 library(devtools)
+
 install_github("antagomir/netresponse")
 install_github("antagomir/RPA")
 install_github("briatte/ggnet")
@@ -90,6 +92,7 @@ install_github("rstudio/rmarkdown")
 install_github('rstudio/shiny')
 install_github("wch/webshot")
 install_github("zdk123/SpiecEasi")
+
 install.packages("abind")
 install.packages("ade4")
 install.packages("akima")
@@ -295,7 +298,6 @@ install.packages("xtable")
 library(extrafont); font_import()
 options(repos = c(getOption("repos"), rstan = "http://wiki.rstan-repo.googlecode.com/git/"))
 
-install.packages("stringi")
 install.packages("pkgmaker") 
 install.packages("NMF") 
 library(NMF); install.extras("NMF")
