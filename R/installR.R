@@ -35,6 +35,7 @@ biocLite("DPpackage", suppressUpdates = TRUE) # Dirichlet Processes / topic mode
 biocLite("EMDomics", suppressUpdates = TRUE)
 biocLite("FD", suppressUpdates = TRUE)
 biocLite("genefilter", suppressUpdates = TRUE)
+biocLite("ggiraph", suppressUpdates = TRUE)
 biocLite("glmnet", suppressUpdates = TRUE) # Lasso, elastic net, regularized generalized linear models
 biocLite("GO.db", suppressUpdates = TRUE)
 biocLite("graph", suppressUpdates = TRUE)
