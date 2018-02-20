@@ -1,0 +1,39 @@
+---
+title: "Numbering of figures and tables"
+author: "Leo Lahti et al."
+date: "`r Sys.Date()`"
+output:
+  pdf_document:
+  word_document:
+    fig_caption: yes
+  bookdown::html_document2:
+    fig_caption: yes
+  bookdown::word_document2:
+    fig_caption: yes    
+---
+
+
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
+require(bookdown)
+library(captioner)
+tbls <- captioner(prefix="Table")
+figs <- captioner(prefix="Fig.")
+subtbls <- captioner(prefix="Supplementary Table")
+subfigs <- captioner(prefix="Supplementary Fig.")
+```
+
+
+Look at Fig. `r subfigs("tsne",display="num")`. 
+
+For more info on numbering of Tables and Figures, see [here](http://derekogle.com/fishR/2015-09-17-Figure-Table-Captions-in-Markdown)
+
+```{r example, echo=FALSE, fig.height=8, fig.width=20, warning=FALSE}
+data(iris)
+library(ggplot2)
+p <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) + geom_point()
+print(p)
+```
+
+`r figs("example","Hello world.")`
+
+
