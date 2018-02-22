@@ -2,7 +2,7 @@ library("ggplot2")
 library("dlstats")
 library(dplyr)
 
-x <- cran_stats(c("eurostat", "sotkanet", "dmt", "pxweb", "earlywarnings"))
+x <- cran_stats(c("eurostat", "sotkanet", "dmt", "pxweb", "earlywarnings", "fmi"))
 x$year <- format(as.Date(x$start), format="%Y")
 
 theme_set(theme_bw(20))
