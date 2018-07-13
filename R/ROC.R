@@ -24,7 +24,7 @@ roc <- function (ordered.results, P) {
 
 roc.plot <- function(ordered.results, P,line=F,maintext="") {
 	res<-roc(ordered.results, P)
-	plot(res$fpr,res$tpr,lty=1,type='l',xlab="False positive rate",ylab="True positive rate",xlim=c(0,1),ylim=c(0,1),main=paste("ROC curve",maintext))
+	plot(res$fpr,res$tpr,lty=1,type='l',xlab="False positive rate",ylab="True positive rate",xlim=c(0,1),ylim=c(0,1),main=maintext)
 	if (line) {
 		#Draw 45 angle line
 		lines(c(0,1),c(0,1))
