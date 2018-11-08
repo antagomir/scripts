@@ -2,37 +2,6 @@
 ```r
 # Example data
 library(microbiome)
-```
-
-```
-## Loading required package: phyloseq
-```
-
-```
-## Loading required package: ggplot2
-```
-
-```
-## 
-## microbiome R package (microbiome.github.com)
-##     
-## 
-## 
-##  Copyright (C) 2011-2018 Leo Lahti et al. <microbiome.github.io>
-```
-
-```
-## 
-## Attaching package: 'microbiome'
-```
-
-```
-## The following object is masked from 'package:base':
-## 
-##     transform
-```
-
-```r
 library(reshape2)
 library(scales)
 data(atlas1006)

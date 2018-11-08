@@ -1,4 +1,4 @@
-```{r densityheatmap}
+```{r densityheatmap, message=FALSE}
 # Example data
 library(microbiome)
 library(reshape2)
