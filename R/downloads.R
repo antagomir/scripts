@@ -9,25 +9,34 @@ pkgs <- sort(unique(c("eurostat", "sotkanet", "pxweb", "fmi", "helsinki", "gisfi
 x <- cran_stats(pkgs)
 
 
-x$year <- format(as.Date(x$start), format="%Y")
-x$month <- format(as.Date(x$start), format="%M")
+x$year <- as.numeric(format(as.Date(x$start), format="%Y"))
+x$month <- as.numeric(gsub("^0+", "", format(as.Date(x$start), format="%m")))
+x <- dplyr::rename(x, Package = package)
 
 theme_set(theme_bw(20))
-p1 <- ggplot(x, aes(end, downloads, group=package, color=package)) +
+# Downloads per month
+p1 <- ggplot(x, aes(end, downloads, group=Package, color=Package)) +
     geom_line() + geom_label(aes(label=downloads))
 
-x2 <- x %>% group_by(year, package) %>% summarise(n = sum(downloads))
-p2 <- ggplot(x2, aes(year, n, group=package, color=package)) +
-    geom_line() + geom_label(aes(label=n))
+# Downloads per year
+x2 <- x %>% group_by(year, Package) %>%
+            summarise(n = sum(downloads)) %>%
+	    # Exclude current year (non-complete)
+	    filter(year < as.numeric(format(Sys.time(), "%Y")))
+
+p2 <- ggplot(x2, aes(year, n, group=Package, color=Package)) +
+    geom_line(size = 3) +
+    scale_y_log10() +
+    geom_label(aes(label=n))
 
 library(gridExtra)
 grid.arrange(p1, p2, nrow = 2)
 
 
-df <- x %>% group_by(package) %>% summarise(total = sum(downloads)) %>% arrange(desc(total))
+df <- x %>% group_by(Package) %>% summarise(total = sum(downloads)) %>% arrange(desc(total))
 
-df2017 <- x %>% filter(year == 2017) %>% group_by(package, month) %>% summarise(total = sum(downloads), monthly = sum(downloads)/n()) %>% select(package, total, monthly)  %>% arrange(desc(total))
-df2018 <- x %>% filter(year == 2018) %>% group_by(package, month) %>% summarise(total = sum(downloads), monthly = sum(downloads)/n()) %>% select(package, total, monthly)  %>% arrange(desc(total))
+df2017 <- x %>% filter(year == 2017) %>% group_by(Package, month) %>% summarise(total = sum(downloads), monthly = sum(downloads)/n()) %>% select(Package, total, monthly)  %>% arrange(desc(total))
+df2018 <- x %>% filter(year == 2018) %>% group_by(Package, month) %>% summarise(total = sum(downloads), monthly = sum(downloads)/n()) %>% select(Package, total, monthly)  %>% arrange(desc(total))
 
 
 library(knitr)
@@ -35,8 +44,8 @@ kable(df)
 
 
 
-df2017$package <- factor(df2017$package, levels = rev(unique(df2017$package)))
-p <- ggplot(df2017, aes(x = package, y = total)) +
+df2017$Package <- factor(df2017$Package, levels = rev(unique(df2017$Package)))
+p <- ggplot(df2017, aes(x = Package, y = total)) +
        geom_bar(stat = "identity") +
        labs(x = "", y = "Downloads (2017)",
          title = paste0("CRAN downloads (", sum(df2017$total), ")")) + 
