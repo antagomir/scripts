@@ -44,15 +44,15 @@ kable(df)
 
 
 
-df2017$Package <- factor(df2017$Package, levels = rev(unique(df2017$Package)))
-p <- ggplot(df2017, aes(x = Package, y = total)) +
+df2018$Package <- factor(df2018$Package, levels = rev(unique(df2018$Package)))
+p <- ggplot(df2018, aes(x = Package, y = total)) +
        geom_bar(stat = "identity") +
-       labs(x = "", y = "Downloads (2017)",
-         title = paste0("CRAN downloads (", sum(df2017$total), ")")) + 
+       labs(x = "", y = "Downloads (2018)",
+         title = paste0("CRAN downloads (", sum(df2018$total), ")")) + 
        coord_flip() 
 print(p)
 
-png("ropengov2017dl.png")
+png("ropengov2018dl.png")
 print(p)
 dev.off()
 
