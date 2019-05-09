@@ -6,11 +6,11 @@ install.packages("devtools");
 library(devtools)
 install.packages("stringi")
 
-biocLite("affy", suppressUpdates = TRUE)
-biocLite("ape", suppressUpdates = TRUE) # circular hclust dendrograms etc
-biocLite("Biobase", suppressUpdates = TRUE)
-biocLite("BiocCheck", suppressUpdates = TRUE)
-biocLite("BiocStyle", suppressUpdates = TRUE)
+biocLite("affy", suppressUpdates = FALSE)
+biocLite("ape", suppressUpdates = FALSE) # circular hclust dendrograms etc
+biocLite("Biobase", suppressUpdates = FALSE)
+biocLite("BiocCheck", suppressUpdates = FALSE)
+biocLite("BiocStyle", suppressUpdates = FALSE)
 
 # Requires installing curl and setting curl-config path
 # see locate libcurl and locate curl-config and
@@ -23,52 +23,52 @@ biocLite("BiocStyle", suppressUpdates = TRUE)
 # and isntalling "libcurl-ocaml-dev" with synaptic
 #I got RCurl installed with:
 #~/local/R/R-2.12.0/bin/R CMD INSTALL ~/local/R/packages/RCurl_1.5-0.tar.gz
-biocLite("biomaRt", suppressUpdates = TRUE)# Requires RCurl
+biocLite("biomaRt", suppressUpdates = FALSE)# Requires RCurl
 
-biocLite("cMAP", suppressUpdates = TRUE)
-biocLite("dada2", suppressUpdates = TRUE) 
-biocLite("DBI", suppressUpdates = TRUE) #RMySQL is a dependency?, AnnBuilder
-biocLite("DESeq2", suppressUpdates = TRUE)
-biocLite("df2json", suppressUpdates = TRUE)
-biocLite("DirichletMultinomial", suppressUpdates = TRUE) # DMMs; may require libgsl0-dev
-biocLite("DPpackage", suppressUpdates = TRUE) # Dirichlet Processes / topic models et
-biocLite("EMDomics", suppressUpdates = TRUE)
-biocLite("FD", suppressUpdates = TRUE)
-biocLite("genefilter", suppressUpdates = TRUE)
-biocLite("ggiraph", suppressUpdates = TRUE)
-biocLite("glmnet", suppressUpdates = TRUE) # Lasso, elastic net, regularized generalized linear models
-biocLite("GO.db", suppressUpdates = TRUE)
-biocLite("graph", suppressUpdates = TRUE)
-biocLite("impute", suppressUpdates = TRUE)
-biocLite("kohonen", suppressUpdates = TRUE) # better than 'som' package
-biocLite("limma", suppressUpdates = TRUE)
-biocLite("MASS", suppressUpdates = TRUE)
-biocLite("Matrix", suppressUpdates = TRUE) # boosting matrix calculations
-biocLite("minet", suppressUpdates = TRUE)
-biocLite("NCIgraph", suppressUpdates = TRUE)
-biocLite("nlme", suppressUpdates = TRUE)
-biocLite("oligo", suppressUpdates = TRUE)
-biocLite("outliers", suppressUpdates = TRUE)
-biocLite("pamr", suppressUpdates = TRUE)
-biocLite("phyloseq", suppressUpdates = TRUE)
-biocLite("preprocessCore", suppressUpdates = TRUE)
-biocLite("qvalue", suppressUpdates = TRUE)
-biocLite("R2HTML", suppressUpdates = TRUE)
-biocLite("RbcBook1", suppressUpdates = TRUE)
-biocLite("RColorBrewer", suppressUpdates = TRUE)
-biocLite("Rgraphviz", suppressUpdates = TRUE) # graphviz and its dependencies
-biocLite("RSQLite", suppressUpdates = TRUE)
-biocLite("RSVGTipsDevice", suppressUpdates = TRUE) 
-biocLite("sva", suppressUpdates = TRUE)
-biocLite("svDialogs", suppressUpdates = TRUE)
-biocLite("tikzDevice", suppressUpdates = TRUE)
-biocLite("vegan", suppressUpdates = TRUE)
-biocLite("WGCNA", suppressUpdates = TRUE)
-biocLite("XML", suppressUpdates = TRUE) # libxml2-dev, xml2 with synaptic
+biocLite("cMAP", suppressUpdates = FALSE)
+biocLite("dada2", suppressUpdates = FALSE) 
+biocLite("DBI", suppressUpdates = FALSE) #RMySQL is a dependency?, AnnBuilder
+biocLite("DESeq2", suppressUpdates = FALSE)
+biocLite("df2json", suppressUpdates = FALSE)
+biocLite("DirichletMultinomial", suppressUpdates = FALSE) # DMMs; may require libgsl0-dev
+biocLite("DPpackage", suppressUpdates = FALSE) # Dirichlet Processes / topic models et
+biocLite("EMDomics", suppressUpdates = FALSE)
+biocLite("FD", suppressUpdates = FALSE)
+biocLite("genefilter", suppressUpdates = FALSE)
+biocLite("ggiraph", suppressUpdates = FALSE)
+biocLite("glmnet", suppressUpdates = FALSE) # Lasso, elastic net, regularized generalized linear models
+biocLite("GO.db", suppressUpdates = FALSE)
+biocLite("graph", suppressUpdates = FALSE)
+biocLite("impute", suppressUpdates = FALSE)
+biocLite("kohonen", suppressUpdates = FALSE) # better than 'som' package
+biocLite("limma", suppressUpdates = FALSE)
+biocLite("MASS", suppressUpdates = FALSE)
+biocLite("Matrix", suppressUpdates = FALSE) # boosting matrix calculations
+biocLite("minet", suppressUpdates = FALSE)
+biocLite("NCIgraph", suppressUpdates = FALSE)
+biocLite("nlme", suppressUpdates = FALSE)
+biocLite("oligo", suppressUpdates = FALSE)
+biocLite("outliers", suppressUpdates = FALSE)
+biocLite("pamr", suppressUpdates = FALSE)
+biocLite("phyloseq", suppressUpdates = FALSE)
+biocLite("preprocessCore", suppressUpdates = FALSE)
+biocLite("qvalue", suppressUpdates = FALSE)
+biocLite("R2HTML", suppressUpdates = FALSE)
+biocLite("RbcBook1", suppressUpdates = FALSE)
+biocLite("RColorBrewer", suppressUpdates = FALSE)
+biocLite("Rgraphviz", suppressUpdates = FALSE) # graphviz and its dependencies
+biocLite("RSQLite", suppressUpdates = FALSE)
+biocLite("RSVGTipsDevice", suppressUpdates = FALSE) 
+biocLite("sva", suppressUpdates = FALSE)
+biocLite("svDialogs", suppressUpdates = FALSE)
+biocLite("tikzDevice", suppressUpdates = FALSE)
+biocLite("vegan", suppressUpdates = FALSE)
+biocLite("WGCNA", suppressUpdates = FALSE)
+biocLite("XML", suppressUpdates = FALSE) # libxml2-dev, xml2 with synaptic
 
 library(devtools)
 
-install_github("antagomir/netresponse")
+# install_github("antagomir/netresponse")
 install_github("antagomir/RPA")
 install_github("briatte/ggnet")
 install_github("cboettig/knitcitations")
@@ -86,7 +86,7 @@ install_github("thomasp85/patchwork")
 install_github('ramnathv/rCharts')
 install_github('ramnathv/slidify')
 install_github('ramnathv/slidifyLibraries')
-install_github("reptalex/phylofactor")
+# install_github("reptalex/phylofactor")
 install_github("ropengov/gisfin")
 install_github("ropensci/gender")
 install_github("ropensci/genderdata")
@@ -170,7 +170,7 @@ install.packages("hrbrthemes")
 install.packages("http://prof.beuth-hochschule.de/fileadmin/user/groemping/downloads/relaimpo_2.2-2.tar.gz", type = "source")
 install.packages("httr")
 install.packages("ifultools")
-install.packages("igraph", suppressUpdates = TRUE) #see http://cneurocvs.rmki.kfki.hu/igraph/download.html
+install.packages("igraph", suppressUpdates = FALSE) #see http://cneurocvs.rmki.kfki.hu/igraph/download.html
 install.packages('inline')
 install.packages("intergraph")
 install.packages("Kendall")
