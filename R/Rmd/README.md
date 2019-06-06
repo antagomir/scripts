@@ -5,6 +5,8 @@ Rmd document.
 
 Run [main.R](main.R) in R to generate the PDF report with Rmarkdown.
 
-The results looks [like this](include.md).
+This generates the output in two different formats:
+ * [include.md](include.md)
+ * [include.pdf](include.pdf) 
 
 
