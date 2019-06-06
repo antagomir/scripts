@@ -5,5 +5,6 @@ Rmd document.
 
 Run [main.R](main.R) in R to generate the PDF report with Rmarkdown.
 
+The results looks [like this](include.md).
 
 
