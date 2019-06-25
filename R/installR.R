@@ -132,7 +132,6 @@ install.packages("e1071") # SVM and many other machine learning tools
 install.packages("ellipse")
 install.packages("energy")
 install.packages("entropy")
-install.packages("extrafont")
 install.packages("fastcluster")
 install.packages("fastICA")
 install.packages("FGN")
@@ -315,6 +314,7 @@ install.packages("xlsx")
 install.packages("xlsxjars")
 install.packages("xtable")
 
+install.packages("extrafont")
 library(extrafont); font_import()
 options(repos = c(getOption("repos"), rstan = "http://wiki.rstan-repo.googlecode.com/git/"))
 
