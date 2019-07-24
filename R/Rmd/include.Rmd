@@ -1,0 +1,19 @@
+```{r setup, echo=FALSE}
+opts_chunk$set(echo = FALSE, cache=FALSE)
+read_chunk('code.R')
+```
+
+
+Title
+=====
+
+Foo bar baz...
+
+```{r part1}
+```
+
+More foo...
+
+```{r part2}
+```
+

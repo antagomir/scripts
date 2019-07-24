@@ -1,16 +1,19 @@
-source('http://www.bioconductor.org/biocLite.R')
-update.packages()
-biocLite()
+#source('http://www.bioconductor.org/biocLite.R')
+#update.packages()
+#biocLite()
+
+install.packages("BiocManager")
+
 
 install.packages("devtools"); 
 library(devtools)
 install.packages("stringi")
 
-biocLite("affy", suppressUpdates = FALSE)
-biocLite("ape", suppressUpdates = FALSE) # circular hclust dendrograms etc
-biocLite("Biobase", suppressUpdates = FALSE)
-biocLite("BiocCheck", suppressUpdates = FALSE)
-biocLite("BiocStyle", suppressUpdates = FALSE)
+BiocManager::install("affy", suppressUpdates = FALSE)
+BiocManager::install("ape", suppressUpdates = FALSE) # circular hclust dendrograms etc
+BiocManager::install("Biobase", suppressUpdates = FALSE)
+BiocManager::install("BiocCheck", suppressUpdates = FALSE)
+BiocManager::install("BiocStyle", suppressUpdates = FALSE)
 
 # Requires installing curl and setting curl-config path
 # see locate libcurl and locate curl-config and
@@ -23,53 +26,53 @@ biocLite("BiocStyle", suppressUpdates = FALSE)
 # and isntalling "libcurl-ocaml-dev" with synaptic
 #I got RCurl installed with:
 #~/local/R/R-2.12.0/bin/R CMD INSTALL ~/local/R/packages/RCurl_1.5-0.tar.gz
-biocLite("biomaRt", suppressUpdates = FALSE)# Requires RCurl
+BiocManager::install("biomaRt", suppressUpdates = FALSE)# Requires RCurl
 
-biocLite("cMAP", suppressUpdates = FALSE)
-biocLite("dada2", suppressUpdates = FALSE) 
-biocLite("DBI", suppressUpdates = FALSE) #RMySQL is a dependency?, AnnBuilder
-biocLite("DESeq2", suppressUpdates = FALSE)
-biocLite("df2json", suppressUpdates = FALSE)
-biocLite("DirichletMultinomial", suppressUpdates = FALSE) # DMMs; may require libgsl0-dev
-biocLite("DPpackage", suppressUpdates = FALSE) # Dirichlet Processes / topic models et
-biocLite("EMDomics", suppressUpdates = FALSE)
-biocLite("FD", suppressUpdates = FALSE)
-biocLite("genefilter", suppressUpdates = FALSE)
-biocLite("ggiraph", suppressUpdates = FALSE)
-biocLite("glmnet", suppressUpdates = FALSE) # Lasso, elastic net, regularized generalized linear models
-biocLite("GO.db", suppressUpdates = FALSE)
-biocLite("graph", suppressUpdates = FALSE)
-biocLite("impute", suppressUpdates = FALSE)
-biocLite("kohonen", suppressUpdates = FALSE) # better than 'som' package
-biocLite("limma", suppressUpdates = FALSE)
-biocLite("MASS", suppressUpdates = FALSE)
-biocLite("Matrix", suppressUpdates = FALSE) # boosting matrix calculations
-biocLite("minet", suppressUpdates = FALSE)
-biocLite("NCIgraph", suppressUpdates = FALSE)
-biocLite("nlme", suppressUpdates = FALSE)
-biocLite("oligo", suppressUpdates = FALSE)
-biocLite("outliers", suppressUpdates = FALSE)
-biocLite("pamr", suppressUpdates = FALSE)
-biocLite("phyloseq", suppressUpdates = FALSE)
-biocLite("preprocessCore", suppressUpdates = FALSE)
-biocLite("qvalue", suppressUpdates = FALSE)
-biocLite("R2HTML", suppressUpdates = FALSE)
-biocLite("RbcBook1", suppressUpdates = FALSE)
-biocLite("RColorBrewer", suppressUpdates = FALSE)
-biocLite("Rgraphviz", suppressUpdates = FALSE) # graphviz and its dependencies
-biocLite("RSQLite", suppressUpdates = FALSE)
-biocLite("RSVGTipsDevice", suppressUpdates = FALSE) 
-biocLite("sva", suppressUpdates = FALSE)
-biocLite("svDialogs", suppressUpdates = FALSE)
-biocLite("tikzDevice", suppressUpdates = FALSE)
-biocLite("vegan", suppressUpdates = FALSE)
-biocLite("WGCNA", suppressUpdates = FALSE)
-biocLite("XML", suppressUpdates = FALSE) # libxml2-dev, xml2 with synaptic
+BiocManager::install("cMAP", suppressUpdates = FALSE)
+BiocManager::install("dada2", suppressUpdates = FALSE) 
+BiocManager::install("DBI", suppressUpdates = FALSE) #RMySQL is a dependency?, AnnBuilder
+BiocManager::install("DESeq2", suppressUpdates = FALSE)
+BiocManager::install("df2json", suppressUpdates = FALSE)
+BiocManager::install("DirichletMultinomial", suppressUpdates = FALSE) # DMMs; may require libgsl0-dev
+BiocManager::install("DPpackage", suppressUpdates = FALSE) # Dirichlet Processes / topic models et
+BiocManager::install("EMDomics", suppressUpdates = FALSE)
+BiocManager::install("FD", suppressUpdates = FALSE)
+BiocManager::install("genefilter", suppressUpdates = FALSE)
+BiocManager::install("ggiraph", suppressUpdates = FALSE)
+BiocManager::install("glmnet", suppressUpdates = FALSE) # Lasso, elastic net, regularized generalized linear models
+BiocManager::install("GO.db", suppressUpdates = FALSE)
+BiocManager::install("graph", suppressUpdates = FALSE)
+BiocManager::install("impute", suppressUpdates = FALSE)
+BiocManager::install("kohonen", suppressUpdates = FALSE) # better than 'som' package
+BiocManager::install("limma", suppressUpdates = FALSE)
+BiocManager::install("MASS", suppressUpdates = FALSE)
+BiocManager::install("Matrix", suppressUpdates = FALSE) # boosting matrix calculations
+BiocManager::install("minet", suppressUpdates = FALSE)
+BiocManager::install("NCIgraph", suppressUpdates = FALSE)
+BiocManager::install("nlme", suppressUpdates = FALSE)
+BiocManager::install("oligo", suppressUpdates = FALSE)
+BiocManager::install("outliers", suppressUpdates = FALSE)
+BiocManager::install("pamr", suppressUpdates = FALSE)
+BiocManager::install("phyloseq", suppressUpdates = FALSE)
+BiocManager::install("preprocessCore", suppressUpdates = FALSE)
+BiocManager::install("qvalue", suppressUpdates = FALSE)
+BiocManager::install("R2HTML", suppressUpdates = FALSE)
+BiocManager::install("RbcBook1", suppressUpdates = FALSE)
+BiocManager::install("RColorBrewer", suppressUpdates = FALSE)
+BiocManager::install("Rgraphviz", suppressUpdates = FALSE) # graphviz and its dependencies
+BiocManager::install("RSQLite", suppressUpdates = FALSE)
+BiocManager::install("RSVGTipsDevice", suppressUpdates = FALSE) 
+BiocManager::install("sva", suppressUpdates = FALSE)
+BiocManager::install("svDialogs", suppressUpdates = FALSE)
+BiocManager::install("tikzDevice", suppressUpdates = FALSE)
+BiocManager::install("vegan", suppressUpdates = FALSE)
+BiocManager::install("WGCNA", suppressUpdates = FALSE)
+BiocManager::install("XML", suppressUpdates = FALSE) # libxml2-dev, xml2 with synaptic
 
 library(devtools)
 
 # install_github("antagomir/netresponse")
-install_github("antagomir/RPA")
+install_github("microbiome/RPA")
 install_github("briatte/ggnet")
 install_github("cboettig/knitcitations")
 install_github("cttobin/ggthemr")
@@ -80,7 +83,7 @@ install_github("ggobi/GGally")
 install_github("hadley/pkgdown")
 install_github("joey711/phyloseq")
 install_github("kalimu/genderizeR")
-install_github("microbiome/HITChipDB")
+#install_github("microbiome/HITChipDB")
 install_github("microbiome/microbiome")
 install_github("thomasp85/patchwork")
 install_github('ramnathv/rCharts')
@@ -115,6 +118,7 @@ install.packages("compositions")
 install.packages("countrycode")
 install.packages("cowplot")
 install.packages("data.table")
+install.packages("DataCombine")
 install.packages("deSolve")
 install.packages("diptest")
 install.packages("dlstats")
@@ -128,7 +132,6 @@ install.packages("e1071") # SVM and many other machine learning tools
 install.packages("ellipse")
 install.packages("energy")
 install.packages("entropy")
-install.packages("extrafont")
 install.packages("fastcluster")
 install.packages("fastICA")
 install.packages("FGN")
@@ -152,14 +155,17 @@ install.packages("ggigraph")
 install.packages("ggm")
 install.packages("ggmap")
 install.packages("ggplot2")
+install.packages("ggpmisc")
+install.packages("ggspectra")
 install.packages("ggpubr")
 install.packages("ggrepel")
 install.packages("ggROC")
 install.packages("ggthemes")
+install.packages("gghighlight")
+install.packages("ggfortify")
 install.packages('googleVis')
 install.packages("googleViz")
 install.packages("GPArotation")
-install.packages('GPArotation') # required by psych pkg
 install.packages("gpclib")
 install.packages("gplots")
 install.packages("gridExtra")
@@ -192,12 +198,14 @@ install.packages("mixtools")
 install.packages("moments")
 install.packages("multcomp")
 install.packages("mvnormtest")
-install.packages("mvtnorm") #contains rmvnorm for multivariate normal sampling 
+install.packages("mvtnorm") #contains rmvnorm for multivariate normal sampling
+install.packages("netdiffuseR")
 install.packages("network")
 install.packages("nortest")
 install.packages("nws")
 install.packages("openxlsx")
 install.packages("outliers")
+install.packages("ows4R")
 install.packages("packfor", repos="http://R-Forge.R-project.org")
 install.packages('pbdZMQ') 
 install.packages("PerformanceAnalytics")
@@ -212,6 +220,7 @@ install.packages("pROC")
 install.packages("psych")
 install.packages('psych') # factor analysis with BIC & RMSEA
 install.packages("pxR")
+install.packages("qdap")
 install.packages("quadprog")
 install.packages("quantmod")
 install.packages("randomForest")
@@ -297,6 +306,7 @@ install.packages('VGAM')
 install.packages("viridis")
 install.packages("Voss")
 install.packages("WDI")
+install.packages("wesanderson")
 install.packages("WGCNA")
 install.packages("wmtsa")
 install.packages("wordcloud")
@@ -305,6 +315,7 @@ install.packages("xlsx")
 install.packages("xlsxjars")
 install.packages("xtable")
 
+install.packages("extrafont")
 library(extrafont); font_import()
 options(repos = c(getOption("repos"), rstan = "http://wiki.rstan-repo.googlecode.com/git/"))
 
