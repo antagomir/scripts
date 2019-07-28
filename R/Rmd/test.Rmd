@@ -1,0 +1,82 @@
+---
+title: "My title"
+author: "Me"
+output: 
+  bookdown::pdf_document2:
+    number_sections: TRUE
+    fig_caption: TRUE
+bibliography: 
+  - my.bib
+biblio-style: "apalike"
+link-citations: true
+csl: ieee.csl
+---
+
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+library(bookdown)
+library(captioner)
+knitr::opts_chunk$set(echo=FALSE)
+table_nums <- captioner::captioner(prefix = "Table")
+fig_nums <- captioner::captioner(prefix = "Fig.")
+tab <- function(x) {
+  stringr::str_extract(table_nums(x), "[^:]*")
+}
+fig <- function(x) {
+  stringr::str_extract(fig_nums(x), "[^:]*")
+}
+
+# Bibtex
+library(knitcitations)
+cleanbib()
+options("citation_format" = "pandoc")
+bib <- read.bibtex("my.bib", check = TRUE)
+```
+
+```{r plot1,fig.cap="Here is my caption for this amazing graph."}
+x <- 1:10
+y <- rnorm(10)
+plot(x,y)
+```
+
+
+
+```{r plot2, fig.cap="Here is my caption for another amazing graph."}
+plot(y,x)
+```
+
+```{r table1}
+knitr::kable(mtcars[1:5, 1:5], caption = "Here is an amazing table")
+```
+
+
+# First section
+
+Citing `r tab("tab_1")`.
+
+Citing `r fig("plot1")`.
+
+Citing `r fig("plot2")`.
+
+## Sub section
+
+Literature citation to  `r citep(bib[c("Falony2018")])` or even easier: @Falony2018
+
+# References
+
+```{r, echo=FALSE, message=FALSE}
+#You can embed citations, for example: `r citep(bib[["lahti14natcomm"]])`
+#You can embed citations, for example2: @lahti14natcomm
+#Cite with DOI: `r citep("10.1890/11-0011.1")`
+#Cite URL `r citep("http://knowledgeblog.org/greycite")`
+#For automated markdown citations, check [this](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html), [this](https://github.com/cboettig/knitcitations), and [this](http://www.carlboettiger.info/2012/03/24/citations-in-markdown-using-knitr.html).
+# "text", "Bibtex", "citation", "html", "latex", "textVersion", "R", "Biblatex", "markdown", "yaml"
+# write.bibtex(bib, file="my2.bib")
+```
+
+```{r, echo=FALSE, message=FALSE, results='asis'}
+cite_options(citation_format="pandoc", cite.style = "numeric", super = TRUE) 
+```
+
+
+
