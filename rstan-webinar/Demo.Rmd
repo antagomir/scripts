@@ -1,0 +1,229 @@
+---
+title: "Introduction to Bayesian Computation Using the rstanarm R Package"
+author: Ben Goodrich of Stan Group (http://stan.fit)
+date: "November 22, 2016"
+autosize: true
+output: 
+  ioslides_presentation:
+    widescreen: true
+---
+
+```{r, setup, include = FALSE}
+suppressPackageStartupMessages(library(knitr))
+suppressPackageStartupMessages(library(png))
+suppressPackageStartupMessages(library(grid))
+
+opts_chunk$set(dev.args = list(pointsize = 18), 
+               warning = FALSE, message = TRUE)
+```
+
+## Obligatory Disclosure
+
+* Ben is an employee of Columbia University, which has received several research grants to develop Stan
+* Ben is also a cofounder of Stan Group (http://stan.fit), which provides support, consulting, etc. for 
+  businesses using Stan
+* According to Columbia University policy, any such employee who has any equity stake in, a title (such as 
+  officer or director) with, or is expected to earn at least $\$5,000.00$ per year from a 
+  private company is required to disclose these facts in presentations
+
+## Installation of the rstanarm R Package
+
+* Try simply executing
+```{r, eval = FALSE}
+install.packages("rstanarm", repos = "https://cloud.r-project.org", dependencies = TRUE)
+```
+* It may ask you if you want to install a newer version (2.13.1) of rstanarm "from source", in which
+  case you should press n (for no) unless you are quite certain that you have a C++ compiler installed
+  and configured correctly
+
+## What is Stan?
+
+* Includes a high-level
+  [probabilistic programming language](https://en.wikipedia.org/wiki/Probabilistic_programming_language)
+  that overlaps a lot with https://cran.r-project.org/view=Distributions
+* Includes a translator of high-level Stan syntax to somewhat low-level C++
+* Includes a matrix and scalar math library that supports autodifferentiation
+* Includes new (and old) gradient-based algorithms for statistical inference
+* Includes interfaces from R, such as the **rstanarm** package, and other high-level software
+* Includes (not Stan specific) post-estimation R functions
+* Includes a large community of users and many developers
+
+## What Is the **rstanarm** R Package
+
+* An R interface to a handful of pre-written, pre-compiled Stan programs
+* Syntax mirrors that of popular model-fitting functions in R, including 
+    * `lm` and `aov`
+    * `glm` and `MASS::glm.nb`
+    * `MASS::polr`
+    * `lme4::lmer` and `lme4::glmer`
+    * `gamm4::gamm4`
+* You can use Stan without knowing the Stan language
+* Minimal installation requirements; i.e. no C++ compiler
+
+# Why Should You Use Stan for Bayesian Inference?
+
+## Basics of Bayesian Decision Theory
+
+* Quantitative estimation in academia and business / policy differs 
+    * In complexity but more importantly 
+    * Academics rarely use the estimates to make a potentially costly decision
+* Business have to make decisions to maximize _expected_ profit, netting out costs and revenues
+* Taking expectations averages over uncertainty in the unknowns
+
+## The Only Four Sources of Uncertainty
+
+1. __Model uncertainty__: Which model(s) should be used?
+2. __Parameter uncertainty__: What are the parameter values in the model(s)?
+3. __Systematic uncertainty__: What system of reasoning should be used to evaluate the implications of the
+  good model(s)?
+4. __Software uncertainty__: Does the software successfully estimate the parameters?
+
+* Bayesian approach accounts for the first 3. Probability is the system of reasoning so both model and
+  parameter uncertainty are expressed in terms of probability. Stan substantially mitigates (4).
+* Supervised learning approaches leave (3) open, typically ignore (2), focus on the _choice_ of the best 
+  model but do not quantify model uncertainty
+* Frequentist approach uses probability for (3) but interprets it over repeated applications of the 
+  estimator to independent samples from the same population. So, it does not really quantify model or 
+  parameter uncertainty
+
+## The Only Four Sources of Uncertainty
+
+* To update your beliefs using Bayes' rule you need four things:
+    1. A probability distribution for the data-generating process that typically depends on parameters
+    2. A description of your current beliefs about those parameters using probability distributions
+    3. Data, although it need not be a random sample from a well-defined population
+    4. An algorithm to draw from the implied posterior distribution
+    
+* Stan does (4) very well for many differentiable posterior distributions but you are on your own for 1 -- 3
+* The **rstanarm** R package provides a menu of choices for 1 and 2
+
+## Baysian Workflow
+```{r fig.width=10, fig.height=5.3, echo=FALSE}
+img <- readPNG("bayesian_workflow.png")
+ grid.raster(img)
+```
+
+# Example with data from LendingClub.com
+
+## LendingClub.com Data
+
+```{r}
+source("get_data.R", verbose = FALSE)
+Loans <- get_loans_data()
+dim(Loans)
+training <- Loans[1:10000, ]
+testing  <- Loans[-c(1:10000), ]
+table(training$y)
+```
+
+## Continuous Predictors
+
+```{r}
+summary(training[,c("loan_amnt", "annual_inc")])
+```
+
+## Binary Predictors
+
+```{r}
+with(training, table(term, home_ownership, emp_length != 0))
+```
+
+## Loading the **rstanarm** R Package
+
+```{r}
+library(rstanarm)
+options(mc.cores = parallel::detectCores())
+```
+
+
+## Fitting to Simulated Data
+
+```{r}
+y_tilde <- with(training, rbinom(nrow(training), size = 1, 
+                                prob = ifelse(emp_length == 0, 0.5, 0.1)))
+table(y_tilde)
+```
+
+```{r, eval = FALSE}
+post_sim <- stan_glm(y_tilde ~ I(training$emp_length != 0), 
+                     family = binomial(link = "logit"),
+                     prior = normal(), prior_intercept = normal())
+```
+
+## A Richer Model for Nonrepayment
+
+```{r, GLM, results='hide', cache=TRUE}
+post <- stan_glm(y ~ log(loan_amnt) + term + home_ownership +
+                   log(annual_inc) + I(emp_length != 0), 
+                 family = binomial(link = "logit"), data = training,
+                 prior = normal(), prior_intercept = normal(), QR = TRUE)
+```
+
+## Model Graphical Output
+
+```{r, message = FALSE}
+include <- c("log(loan_amnt)", "term 60 months", "home_ownershipOWN",
+              "home_ownershipRENT", "log(annual_inc)", "I(emp_length != 0)TRUE")
+plot(post, prob = 0.80, pars = include)
+```
+
+## Using Shinystan
+
+```{r, eval = FALSE}
+launch_shinystan(post)
+```
+
+## Update Your Beliefs about Residence Variables
+
+```{r, PVP2, message = FALSE, cache=TRUE}
+posterior_vs_prior(post, prob = 0.50, regex_pars = "^[h]")
+```
+
+## Calculating the Distribution of Profit
+
+* Assume for simplicity (and conservatism) that if a loan is defaulted on, 
+  lender gets no interest & loses all principal
+
+```{r}
+ppd <- posterior_predict(post, newdata = testing, draws = 500)
+profit <- sapply(1:ncol(ppd), FUN = function(i) {
+  ifelse(ppd[,i] == 1, -testing$loan_amnt[i], testing$installment[i] *
+           ifelse(testing$term[i] == "36 months", 36, 60) -
+         testing$loan_amnt[i])
+})
+```
+
+## Plotting the Distribution of Profit Margin
+
+```{r}
+par(mar = c(5,4,1,1), las = 1)
+hist(rowSums(profit) / sum(testing$loan_amnt), prob = TRUE, main = "Testing Dataset", 
+     xlab = "Profit Margin")
+```
+
+## Model Comparison with the loo Package {.smaller}
+
+```{r, comparison, cached = TRUE}
+post2 <- update(post, formula. = . ~ . - I(emp_length != 0))
+loo(post)
+loo(post2)
+```
+
+## Wrapup
+
+* Learned a bit about Bayesian theory
+* Estimated a relevant model using the **rstanarm** package
+* Looked at plots of the model output
+* Looked at functions of model output for business decisions
+* The **rstanarm** package provides a few models; almost any model can be estimated
+  with Bayesian methos if you write it in the Stan language
+
+## Where to Start / Get Help?
+
+* Textbook: http://xcelab.net/rm/statistical-rethinking/
+* Forthcoming (in 2017) second edition of textbook using __rstanarm__: http://www.stat.columbia.edu/~gelman/arm/
+* User manual: http://mc-stan.org/documentation/
+* Examples of Stan programs: https://github.com/stan-dev/example-models
+* Mailing list: https://groups.google.com/forum/#!forum/stan-users
+* Stan conference: http://mc-stan.org/events/stancon.html
+* Commercial support / training: askus@stan.fit
