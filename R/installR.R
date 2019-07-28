@@ -2,19 +2,18 @@
 #update.packages()
 #biocLite()
 
-install.packages("BiocManager")
-
-
+# install.packages("BiocManager")
 install.packages("devtools"); 
 library(devtools)
-install.packages("stringi")
+
+install.packages("BiocManager"); 
+library(BiocManager)
 
 BiocManager::install("affy", suppressUpdates = FALSE)
 BiocManager::install("ape", suppressUpdates = FALSE) # circular hclust dendrograms etc
 BiocManager::install("Biobase", suppressUpdates = FALSE)
 BiocManager::install("BiocCheck", suppressUpdates = FALSE)
 BiocManager::install("BiocStyle", suppressUpdates = FALSE)
-
 # Requires installing curl and setting curl-config path
 # see locate libcurl and locate curl-config and
 # http://www.omegahat.org/RCurl/FAQ.html
@@ -27,7 +26,6 @@ BiocManager::install("BiocStyle", suppressUpdates = FALSE)
 #I got RCurl installed with:
 #~/local/R/R-2.12.0/bin/R CMD INSTALL ~/local/R/packages/RCurl_1.5-0.tar.gz
 BiocManager::install("biomaRt", suppressUpdates = FALSE)# Requires RCurl
-
 BiocManager::install("cMAP", suppressUpdates = FALSE)
 BiocManager::install("dada2", suppressUpdates = FALSE) 
 BiocManager::install("DBI", suppressUpdates = FALSE) #RMySQL is a dependency?, AnnBuilder
@@ -69,8 +67,6 @@ BiocManager::install("vegan", suppressUpdates = FALSE)
 BiocManager::install("WGCNA", suppressUpdates = FALSE)
 BiocManager::install("XML", suppressUpdates = FALSE) # libxml2-dev, xml2 with synaptic
 
-library(devtools)
-
 # install_github("antagomir/netresponse")
 install_github("microbiome/RPA")
 install_github("briatte/ggnet")
@@ -91,7 +87,7 @@ install_github('ramnathv/rCharts')
 install_github('ramnathv/slidify')
 install_github('ramnathv/slidifyLibraries')
 # install_github("reptalex/phylofactor")
-install_github("ropengov/gisfin")
+#install_github("ropengov/gisfin")
 install_github("ropensci/gender")
 install_github("ropensci/genderdata")
 install_github('rstudio/markdown')
@@ -203,6 +199,8 @@ install.packages("mvnormtest")
 install.packages("mvtnorm") #contains rmvnorm for multivariate normal sampling
 install.packages("netdiffuseR")
 install.packages("network")
+install.packages("NMF")
+library(NMF); install.extras("NMF")
 install.packages("nortest")
 install.packages("nws")
 install.packages("openxlsx")
@@ -213,6 +211,7 @@ install.packages('pbdZMQ')
 install.packages("PerformanceAnalytics")
 install.packages("permute")
 install.packages("phytools")
+install.packages("pkgmaker") 
 install.packages("plotly")
 install.packages("plotrix")
 install.packages("plotROC")
@@ -237,15 +236,7 @@ install.packages("readxl")
 install.packages("reldist")
 install.packages('repr') 
 install.packages("reshape2")
-
-# Geographical information
-# required installation of 
-# geos-dev with synaptic and 
-# PROJ.4 from http://trac.osgeo.org/proj/wiki/WikiStart#Download
-# in practice through 
-# ~/Louhos/takomo/installation/sorvi-install-dependencies-debian.sh
 install.packages("rgdal")
-
 install.packages("rgeos") # install GEOS first from http://trac.osgeo.org/geos/
 install.packages("rgl")
 install.packages("RgoogleMaps")
@@ -272,7 +263,6 @@ install.packages("rworldmap")
 install.packages("rworldxtra")
 install.packages("sapa")
 install.packages("scatterplot3d")
-install.packages("scimapClient", repos="http://scisoft-net-map.isri.cmu.edu/static/R")
 install.packages('sde')
 install.packages('shiny')
 install.packages("sna")
@@ -283,6 +273,7 @@ install.packages("spdep")
 install.packages("splus2R")
 install.packages("stinepack")
 install.packages("stringdist")
+install.packages("stringi")
 install.packages("stringr")
 install.packages("structSSI")
 install.packages("survey")
@@ -320,9 +311,3 @@ install.packages("xtable")
 install.packages("extrafont")
 library(extrafont); font_import()
 options(repos = c(getOption("repos"), rstan = "http://wiki.rstan-repo.googlecode.com/git/"))
-
-install.packages("pkgmaker") 
-install.packages("NMF") 
-library(NMF); install.extras("NMF")
-
-# biocUpgrade()
