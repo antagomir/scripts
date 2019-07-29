@@ -36,6 +36,7 @@ BiocManager::install("DPpackage", suppressUpdates = FALSE) # Dirichlet Processes
 BiocManager::install("EMDomics", suppressUpdates = FALSE)
 BiocManager::install("FD", suppressUpdates = FALSE)
 BiocManager::install("genefilter", suppressUpdates = FALSE)
+BiocManager::install("ggbio", suppressUpdates = FALSE)
 BiocManager::install("ggiraph", suppressUpdates = FALSE)
 BiocManager::install("glmnet", suppressUpdates = FALSE) # Lasso, elastic net, regularized generalized linear models
 BiocManager::install("GO.db", suppressUpdates = FALSE)
