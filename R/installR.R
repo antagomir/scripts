@@ -172,6 +172,7 @@ install.packages("highcharter")
 install.packages('highlight')
 install.packages("hrbrthemes")
 install.packages("http://prof.beuth-hochschule.de/fileadmin/user/groemping/downloads/relaimpo_2.2-2.tar.gz", type = "source")
+install.packages("httptest")
 install.packages("httr")
 install.packages("ifultools")
 install.packages("igraph", suppressUpdates = FALSE) #see http://cneurocvs.rmki.kfki.hu/igraph/download.html
