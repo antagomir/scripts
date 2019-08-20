@@ -114,6 +114,7 @@ install.packages(c("gender", "genderdata"), repos = "http://packages.ropensci.or
 install.packages("classInt")
 install.packages("compositions")
 install.packages("countrycode")
+install.packages("covr")
 install.packages("cowplot")
 install.packages("data.table")
 install.packages("DataCombine")
