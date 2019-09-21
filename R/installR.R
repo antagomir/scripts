@@ -225,6 +225,7 @@ install.packages("pROC")
 install.packages('psych') # factor analysis with BIC & RMSEA
 install.packages("pxR")
 install.packages("qdap")
+install.packages("qpdf")
 install.packages("quadprog")
 install.packages("quantmod")
 install.packages("randomForest")
