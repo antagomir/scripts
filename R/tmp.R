@@ -1,4 +1,10 @@
-install_github('rstudio/shiny')
+df$abundance <- abundances(x)[cm[[1]],]
+p <- ggplot(df,
+         aes(x = days_since_experiment_start, y = abundance)) +
+       geom_smooth() +
+       geom_point()
+
+print(p)install_github('rstudio/shiny')
 install_github("wch/webshot")
 install_github("zdk123/SpiecEasi")
 
