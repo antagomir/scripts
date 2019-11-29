@@ -1,4 +1,5 @@
-```{r heatdensity, echo=FALSE, warning=FALSE}
+
+```{r heatdensity, echo=TRUE, warning=FALSE}
 library(vegan)
 library(reshape2)
 library(microbiome)
