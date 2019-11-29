@@ -39,4 +39,4 @@
 ##     transform
 ```
 
-![plot of chunk setup](figure/setup-1.png)
+![plot of chunk heatdensity](figure/heatdensity-1.png)

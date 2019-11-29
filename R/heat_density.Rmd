@@ -1,4 +1,4 @@
-```{r setup, echo=FALSE}
+```{r heatdensity, echo=FALSE}
 library(vegan)
 library(reshape2)
 library(microbiome)
