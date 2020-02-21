@@ -250,6 +250,7 @@ install.packages("rgdal")
 install.packages("rgeos") # install GEOS first from http://trac.osgeo.org/geos/
 install.packages("rgl")
 install.packages("rhub")
+install.packages("rjstat")
 install.packages("RgoogleMaps")
 install.packages("rio")
 install.packages("rJava")
