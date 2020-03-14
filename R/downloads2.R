@@ -1,19 +1,19 @@
 library("ggplot2")
 library("dlstats")
 library(dplyr)
-
-#x <- cran_stats(c("eurostat", "sotkanet", "dmt", "pxweb", "earlywarnings", "fmi"))
+library(knitr)
+kable(df)
 
 # ropengov selected
 pkgs <- sort(unique(c("dmt", "earlywarnings")))
+# c("eurostat", "sotkanet", "dmt", "pxweb", "earlywarnings", "fmi")
 x <- cran_stats(pkgs)
-
-
 x$year <- as.numeric(format(as.Date(x$start), format="%Y"))
 x$month <- as.numeric(gsub("^0+", "", format(as.Date(x$start), format="%m")))
 x <- dplyr::rename(x, Package = package)
 
 theme_set(theme_bw(20))
+
 # Downloads per month
 p1 <- ggplot(x, aes(end, downloads, group=Package, color=Package)) +
     geom_line() + geom_label(aes(label=downloads))
@@ -33,25 +33,21 @@ library(gridExtra)
 grid.arrange(p1, p2, nrow = 2)
 
 
-df <- x %>% group_by(Package) %>% summarise(total = sum(downloads)) %>% arrange(desc(total))
+df <- x %>% group_by(Package) %>%
+            summarise(total = sum(downloads)) %>%
+	    arrange(desc(total))
 
-df2018 <- x %>% filter(year == 2018) %>% group_by(Package) %>% summarise(total = sum(downloads)) %>% arrange(desc(total))
+df2019 <- x %>% filter(year == 2019) %>% group_by(Package) %>% summarise(total = sum(downloads)) %>% arrange(desc(total))
 
-
-library(knitr)
-kable(df)
-
-
-
-df2018$Package <- factor(df2018$Package, levels = rev(unique(df2018$Package)))
-p <- ggplot(df2018, aes(x = Package, y = total)) +
+df2019$Package <- factor(df2019$Package, levels = rev(unique(df2019$Package)))
+p <- ggplot(df2019, aes(x = Package, y = total)) +
        geom_bar(stat = "identity") +
-       labs(x = "", y = "Downloads (2018)",
-         title = paste0("CRAN downloads (", sum(df2018$total), ")")) + 
+       labs(x = "", y = "Downloads (2019)",
+         title = paste0("CRAN downloads (", sum(df2019$total), ")")) + 
        coord_flip() 
 print(p)
 
-png("ropengov2018dl.png")
+png("ropengov2019dl.png")
 print(p)
 dev.off()
 
