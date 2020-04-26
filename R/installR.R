@@ -248,6 +248,7 @@ install.packages('repr')
 install.packages("reshape2")
 install.packages("rgdal")
 install.packages("rgeos") # install GEOS first from http://trac.osgeo.org/geos/
+install.packages("rgexf")
 install.packages("rgl")
 install.packages("rhub")
 install.packages("rjstat")
