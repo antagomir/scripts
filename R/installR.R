@@ -69,7 +69,7 @@ BiocManager::install("vegan", suppressUpdates = FALSE)
 BiocManager::install("WGCNA", suppressUpdates = FALSE)
 BiocManager::install("XML", suppressUpdates = FALSE) # libxml2-dev, xml2 with synaptic
 
-# install_github("antagomir/netresponse")
+BiocManager::install("antagomir/netresponse")
 install_github("briatte/ggnet")
 install_github("cboettig/knitcitations")
 install_github("cttobin/ggthemr")
