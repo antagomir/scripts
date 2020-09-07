@@ -1,5 +1,6 @@
 # https://plot.ly/r/
 
+
 library(plotly)
 set.seed(100)
 d <- diamonds[sample(nrow(diamonds), 1000), ]
