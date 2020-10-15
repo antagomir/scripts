@@ -5,7 +5,9 @@ library(dplyr)
 #x <- cran_stats(c("eurostat", "sotkanet", "dmt", "pxweb", "earlywarnings", "fmi"))
 
 # ropengov selected
-pkgs <- sort(unique(c("eurostat", "sotkanet", "pxweb", "fmi", "helsinki", "gisfin", "osmar", "sorvi", "dkstat", "hansard", "pollstR", "recalls", "usbroadband", "rtimes", "rsunlight", "rqog", "enigma", "RPublica", "federalregister", "mpg")))
+#pkgs <- sort(unique(c("eurostat", "sotkanet", "pxweb", "fmi", "helsinki", "gisfin", "osmar", "sorvi", "dkstat", "hansard", "pollstR", "recalls", "usbroadband", "rtimes", "rsunlight", "rqog", "enigma", "RPublica", "federalregister", "mpg")))
+
+pkgs <- sort(unique(c("eurostat", "sotkanet")))
 x <- cran_stats(pkgs)
 
 
@@ -36,23 +38,20 @@ grid.arrange(p1, p2, nrow = 2)
 df <- x %>% group_by(Package) %>% summarise(total = sum(downloads)) %>% arrange(desc(total))
 
 df2017 <- x %>% filter(year == 2017) %>% group_by(Package, month) %>% summarise(total = sum(downloads), monthly = sum(downloads)/n()) %>% select(Package, total, monthly)  %>% arrange(desc(total))
-df2018 <- x %>% filter(year == 2018) %>% group_by(Package, month) %>% summarise(total = sum(downloads), monthly = sum(downloads)/n()) %>% select(Package, total, monthly)  %>% arrange(desc(total))
-
+df2019 <- x %>% filter(year == 2019) %>% group_by(Package, month) %>% summarise(total = sum(downloads), monthly = sum(downloads)/n()) %>% select(Package, total, monthly)  %>% arrange(desc(total))
 
 library(knitr)
 kable(df)
 
-
-
-df2018$Package <- factor(df2018$Package, levels = rev(unique(df2018$Package)))
-p <- ggplot(df2018, aes(x = Package, y = total)) +
+df2019$Package <- factor(df2019$Package, levels = rev(unique(df2019$Package)))
+p <- ggplot(df2019, aes(x = Package, y = total)) +
        geom_bar(stat = "identity") +
-       labs(x = "", y = "Downloads (2018)",
-         title = paste0("CRAN downloads (", sum(df2018$total), ")")) + 
+       labs(x = "", y = "Downloads (2019)",
+         title = paste0("CRAN downloads (", sum(df2019$total), ")")) + 
        coord_flip() 
 print(p)
 
-png("ropengov2018dl.png")
+png("ropengov2019dl.png")
 print(p)
 dev.off()
 

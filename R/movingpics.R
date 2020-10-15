@@ -19,7 +19,7 @@ dev.off()
 
 cm <- core_members(transform(x, "compositional"), detection = 0.1/100, prevalence = 80/100)
 df <- meta(x)
-df$abundance <- abundances(x)[cm[[1]],]
+df$abundance <- abundances(transform(x, "clr"))[cm[[1]],]
 p <- ggplot(df,
          aes(x = days_since_experiment_start, y = abundance)) +
        geom_smooth() +

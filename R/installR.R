@@ -2,7 +2,6 @@
 #update.packages()
 #biocLite()
 
-# install.packages("BiocManager")
 install.packages("devtools"); 
 library(devtools)
 
