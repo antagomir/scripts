@@ -7,7 +7,8 @@ library(dplyr)
 # ropengov selected
 #pkgs <- sort(unique(c("eurostat", "sotkanet", "pxweb", "fmi", "helsinki", "gisfin", "osmar", "sorvi", "dkstat", "hansard", "pollstR", "recalls", "usbroadband", "rtimes", "rsunlight", "rqog", "enigma", "RPublica", "federalregister", "mpg")))
 
-pkgs <- sort(unique(c("eurostat", "sotkanet")))
+#pkgs <- sort(unique(c("eurostat", "sotkanet")))
+pkgs <- sort(unique(c("pxR", "pxweb")))
 x <- cran_stats(pkgs)
 
 
@@ -35,10 +36,15 @@ library(gridExtra)
 grid.arrange(p1, p2, nrow = 2)
 
 
-df <- x %>% group_by(Package) %>% summarise(total = sum(downloads)) %>% arrange(desc(total))
+df <- x %>% group_by(Package) %>%
+            summarise(total = sum(downloads)) %>% arrange(desc(total))
 
-df2017 <- x %>% filter(year == 2017) %>% group_by(Package, month) %>% summarise(total = sum(downloads), monthly = sum(downloads)/n()) %>% select(Package, total, monthly)  %>% arrange(desc(total))
-df2019 <- x %>% filter(year == 2019) %>% group_by(Package, month) %>% summarise(total = sum(downloads), monthly = sum(downloads)/n()) %>% select(Package, total, monthly)  %>% arrange(desc(total))
+df2019 <- x %>% filter(year == 2019) %>%
+                group_by(Package, month) %>%
+		summarise(total = sum(downloads),
+		          monthly = sum(downloads)/n()) %>%
+	        select(Package, total, monthly)  %>%
+		arrange(desc(total))
 
 library(knitr)
 kable(df)
@@ -51,7 +57,12 @@ p <- ggplot(df2019, aes(x = Package, y = total)) +
        coord_flip() 
 print(p)
 
-png("ropengov2019dl.png")
-print(p)
-dev.off()
+p3 <- ggplot(x, aes(x = start, y = downloads, color = Package)) +
+          geom_point() +
+	  geom_smooth()
+print(p3)
+
+#png("ropengov2019dl.png")
+#print(p)
+#dev.off()
 
