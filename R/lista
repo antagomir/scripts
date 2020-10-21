@@ -1,0 +1,2 @@
+x <- subset_samples(phy, body_site == "UBERON:feces" & host_subject_id == "F4")
+k: 14, 17, 21
