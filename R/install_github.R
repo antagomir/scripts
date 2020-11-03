@@ -1,7 +1,7 @@
 install_github("briatte/ggnet")
 install_github("adw96/breakaway")
 install_github("cboettig/knitcitations")
-install_github("cttobin/ggthemr")
+# install_github("cttobin/ggthemr")
 install_github("christophergandrud/networkD3")
 install_github('decisionpatterns/tidyimpute')
 install_github("earlywarningtoolbox/earlywarnings-R/earlywarnings")
