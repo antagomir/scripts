@@ -40,6 +40,7 @@ BiocManager::install("MASS", suppressUpdates = FALSE)
 BiocManager::install("M3C")
 BiocManager::install("Matrix", suppressUpdates = FALSE) # boosting matrix calculations
 BiocManager::install("minet", suppressUpdates = FALSE)
+BiocManager::install("MultiAssayExperiment", suppressUpdates = FALSE)
 BiocManager::install("NCIgraph", suppressUpdates = FALSE)
 BiocManager::install("nlme", suppressUpdates = FALSE)
 BiocManager::install("oligo", suppressUpdates = FALSE)
