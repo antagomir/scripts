@@ -2,7 +2,7 @@
 #update.packages()
 #biocLite()
 
-install.packages(BiocManager)
+install.packages("BiocManager")
 library(BiocManager)
 source("install_bioc.R")
 source("install_cran.R")
