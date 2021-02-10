@@ -5,10 +5,10 @@ library(dplyr)
 #x <- cran_stats(c("eurostat", "sotkanet", "dmt", "pxweb", "earlywarnings", "fmi"))
 
 # ropengov selected
-#pkgs <- sort(unique(c("eurostat", "sotkanet", "pxweb", "fmi", "helsinki", "gisfin", "osmar", "sorvi", "dkstat", "hansard", "pollstR", "recalls", "usbroadband", "rtimes", "rsunlight", "rqog", "enigma", "RPublica", "federalregister", "mpg")))
+pkgs <- sort(unique(c("eurostat", "sotkanet", "pxweb", "fmi", "osmar", "dmt", "dkstat", "hansard", "pollstR", "recalls", "usbroadband", "rtimes", "rsunlight", "rqog", "enigma", "RPublica", "federalregister", "mpg", "hetu", "earlywarnings")))
 
 #pkgs <- sort(unique(c("eurostat", "sotkanet")))
-pkgs <- sort(unique(c("pxR", "pxweb")))
+#pkgs <- sort(unique(c("pxR", "pxweb")))
 x <- cran_stats(pkgs)
 
 
@@ -39,21 +39,26 @@ grid.arrange(p1, p2, nrow = 2)
 df <- x %>% group_by(Package) %>%
             summarise(total = sum(downloads)) %>% arrange(desc(total))
 
-df2019 <- x %>% filter(year == 2019) %>%
+df2020 <- x %>% filter(year == 2020) %>%
                 group_by(Package, month) %>%
 		summarise(total = sum(downloads),
 		          monthly = sum(downloads)/n()) %>%
 	        select(Package, total, monthly)  %>%
 		arrange(desc(total))
 
+df2020total <- x %>% filter(year == 2020) %>%
+                group_by(Package) %>%
+		summarise(total = sum(downloads)) %>%
+		arrange(desc(total))
+
 library(knitr)
 kable(df)
 
-df2019$Package <- factor(df2019$Package, levels = rev(unique(df2019$Package)))
-p <- ggplot(df2019, aes(x = Package, y = total)) +
+df2020$Package <- factor(df2020$Package, levels = rev(unique(df2020$Package)))
+p <- ggplot(df2020, aes(x = Package, y = total)) +
        geom_bar(stat = "identity") +
-       labs(x = "", y = "Downloads (2019)",
-         title = paste0("CRAN downloads (", sum(df2019$total), ")")) + 
+       labs(x = "", y = "Downloads (2020)",
+         title = paste0("CRAN downloads (", sum(df2020$total), ")")) + 
        coord_flip() 
 print(p)
 
@@ -62,7 +67,7 @@ p3 <- ggplot(x, aes(x = start, y = downloads, color = Package)) +
 	  geom_smooth()
 print(p3)
 
-#png("ropengov2019dl.png")
+#png("ropengov2020dl.png")
 #print(p)
 #dev.off()
 
