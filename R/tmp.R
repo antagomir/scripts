@@ -1,20 +1,14 @@
-x <- subset_samples(phy, body_site == "UBERON:feces" & host_subject_id == "M3")
-
-df <- meta(x)
-#cm <- core_members(transform(x, "compositional"), detection = 0.1/100, prevalence = 80/100)
-#df$diversity <- microbiome::diversity(x, "shannon")$shannon
-cm <- rownames(tax_table(x)[grep("Prevotella", tax_table(x)[, 6]),])
-df$abundance <- abundances(transform(x, "clr"))[cm[[k]],]
-tax <- paste(tax_table(x)[cm[[k]],6:7], collapse = " ")
-p1 <- ggplot(df,
-         aes(x = days_since_experiment_start, y = abundance)) +
-       geom_line() +
-       geom_point()
-
-p2 <- ggplot(df, aes(x = abundance)) +
-        geom_density() +
-	labs(title = tax)
-
-library(gridExtra)
-grid.arrange(p1, p2, nrow = 1)
-
+install_github('ramnathv/rCharts')
+install_github('ramnathv/slidify')
+install_github('ramnathv/slidifyLibraries')
+# install_github("reptalex/phylofactor")
+install_github("ropengov/pxweb")
+#install_github("ropensci/gender")
+install_github('rstudio/markdown')
+install_github("rstudio/rmarkdown")
+# install_github('rstudio/shiny')
+install_github("thomasp85/patchwork")
+install_github("twbattaglia/MicrobeDS")
+install_github("wch/webshot")
+install_github("zdk123/SpiecEasi")
+install_github("FelixErnst/SEtup")
