@@ -94,6 +94,7 @@ install.packages("igraph", suppressUpdates = FALSE) #see http://cneurocvs.rmki.k
 install.packages('inline')
 install.packages("intergraph")
 install.packages("janitor")
+install.packages("kableExtra")
 install.packages("Kendall")
 install.packages("knitcitations")
 install.packages("knitr")
