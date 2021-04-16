@@ -5,7 +5,45 @@ library(dplyr)
 #x <- cran_stats(c("eurostat", "sotkanet", "dmt", "pxweb", "earlywarnings", "fmi"))
 
 # ropengov selected
-pkgs <- sort(unique(c("eurostat", "sotkanet", "pxweb", "fmi", "osmar", "dmt", "dkstat", "hansard", "pollstR", "recalls", "usbroadband", "rtimes", "rsunlight", "rqog", "enigma", "RPublica", "federalregister", "mpg", "hetu", "earlywarnings")))
+#pkgs <- sort(unique(c("eurostat", "sotkanet", "pxweb", "fmi", "osmar", "dmt", "dkstat", "hansard", "pollstR", "recalls", "usbroadband", "rtimes", "rsunlight", "rqog", "enigma", "RPublica", "federalregister", "mpg", "hetu", "earlywarnings")))
+
+# ropengov all
+pkgs <- sort(unique(c(
+  "dkstat",
+  "digitransit",  
+  "enigma",  
+  "eurostat",
+  "europarl",  
+  "federalregister",  
+  "fmi2",
+  "geofi",  
+  "hansard",
+  "helsinki",
+  "hetu",
+  "iotables",      
+  "mpg",
+  "openthl",
+  "ogdindiar",  
+  "osmar",  
+  "pollstR",
+  "psData",  
+  "pxweb",  
+  "recalls",
+  "regions",  
+  "rqog",
+  "rwfs",  
+  "RPublica",  
+  "rsunlight",  
+  "rtimes",
+  "sorvi",
+  "sotkanet",
+  "usbroadband",
+  "vipunen"  
+  )))
+
+
+other <- c("dmt")
+
 
 #pkgs <- sort(unique(c("eurostat", "sotkanet")))
 #pkgs <- sort(unique(c("pxR", "pxweb")))
