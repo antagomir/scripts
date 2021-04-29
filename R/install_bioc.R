@@ -2,6 +2,7 @@
 
 BiocManager::install("affy", suppressUpdates = FALSE)
 BiocManager::install("ALDEx2", suppressUpdates = FALSE)
+BiocManager::install("ANCOMBC", suppressUpdates = FALSE)
 BiocManager::install("ape", suppressUpdates = FALSE) # circular hclust dendrograms etc
 BiocManager::install("Biobase", suppressUpdates = FALSE)
 BiocManager::install("BiocCheck", suppressUpdates = FALSE)
@@ -31,6 +32,7 @@ BiocManager::install("ExperimentHubData", suppressUpdates = FALSE)
 BiocManager::install("FD", suppressUpdates = FALSE)
 BiocManager::install("genefilter", suppressUpdates = FALSE)
 BiocManager::install("ggbio", suppressUpdates = FALSE)
+BiocManager::install("ggtree", suppressUpdates = FALSE)
 BiocManager::install("ggiraph", suppressUpdates = FALSE)
 BiocManager::install("glmnet", suppressUpdates = FALSE) # Lasso, elastic net, regularized generalized linear models
 BiocManager::install("GO.db", suppressUpdates = FALSE)
