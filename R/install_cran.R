@@ -36,6 +36,7 @@ install.packages("dplyr")
 install.packages("DT")
 install.packages("dygraphs")
 install.packages("e1071") # SVM and many other machine learning tools
+install.packages("ecodist")
 install.packages("ellipse")
 install.packages("energy")
 install.packages("entropy")
