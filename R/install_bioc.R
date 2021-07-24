@@ -57,6 +57,7 @@ BiocManager::install("qvalue", suppressUpdates = FALSE)
 BiocManager::install("R2HTML", suppressUpdates = FALSE)
 BiocManager::install("RbcBook1", suppressUpdates = FALSE)
 BiocManager::install("RColorBrewer", suppressUpdates = FALSE)
+BiocManager::install("rebook", suppressUpdates = FALSE)
 BiocManager::install("Rgraphviz", suppressUpdates = FALSE) # graphviz and its dependencies
 BiocManager::install("RSQLite", suppressUpdates = FALSE)
 BiocManager::install("RSVGTipsDevice", suppressUpdates = FALSE)
