@@ -1,6 +1,7 @@
 
 
 BiocManager::install("affy", suppressUpdates = FALSE)
+BiocManager::install("affydata", suppressUpdates = FALSE)
 BiocManager::install("ALDEx2", suppressUpdates = FALSE)
 BiocManager::install("ANCOMBC", suppressUpdates = FALSE)
 BiocManager::install("ape", suppressUpdates = FALSE) # circular hclust dendrograms etc

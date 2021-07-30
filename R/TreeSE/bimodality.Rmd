@@ -1,0 +1,136 @@
+```{r, echo=FALSE}
+# Use
+rmarkdown::render("bimodality.Rmd", output_format="pdf_document")
+
+knitr::opts_chunk$set(cache = FALSE,
+                      fig.width = 9,
+                      message = FALSE,
+                      warning = FALSE)
+```
+
+# Prepare data
+
+```{r, fig.height=10, fig.width=10, echo=FALSE}
+library(mia)
+library(miaViz)
+library(microbiomeDataSets)
+
+# Read genus level data
+tse <- atlas1006()
+tse <- transformSamples(tse, method="relabundance")
+tse <- transformSamples(tse, method="clr", pseudocount=1)
+prevalent <- getPrevalentTaxa(tse,
+                               rank = "Genus",
+			       abund_values="relabundance",
+                               detection = 0.1/100,
+                               prevalence = 5/100,
+                               as_relative = FALSE)
+
+tse <- tse[prevalent,]
+```
+
+
+
+# Check bimodality
+
+```{r, fig.height=10, fig.width=10, echo=FALSE, out.width="25%"}
+set.seed(25435)
+library(microbiome)
+bim <- rev(sort(bimodality(assay(tse, "clr"),
+         method = "potential_analysis",
+	 bs.iter        = 20,
+	 bw.adjust      = 1,
+	 peak.threshold = 5,
+	 min.density    = 8)))
+
+# Bimodal taxa
+taxa.bimodal <- names(bim)[bim>0.8]
+taxa.unimodal <- setdiff(prevalent, taxa.bimodal)
+
+# Plot bimodality scores
+plot(bim, main = "Bimodality scores", xlab = "index", ylab = "Bimodality score")
+```
+
+
+# Bimodal and unimodal prevalent genera
+
+```{r, fig.height=10, fig.width=8, echo=FALSE}
+p1 <- plotAbundanceDensity(tse[taxa.bimodal,],  abund_values = "clr", n=length(taxa.bimodal),  layout="density")
+p2 <- plotAbundanceDensity(tse[taxa.unimodal,], abund_values = "clr", n=length(taxa.unimodal), layout="density")
+library(patchwork)
+p1 + p2
+```
+
+
+# Density minima
+
+```{r, out.width="20%",echo=FALSE}
+# Calculate density minima
+tips <- c()
+tip.relab <- c() # Relative abundance that corresponds to the density min
+for (tax in taxa.bimodal) {
+  mm <- multimodality(as.vector(assay(tse[tax,], "clr")),
+	 bs.iter        = 20,
+	 bw.adjust      = 1,
+	 peak.threshold = 5,
+	 min.density    = 8)
+  tips[[tax]] <- mm$results$minima
+  big <- names(which((assay(tse[tax,], "clr") > tips[[tax]][[1]])[1,]))
+  tip.relab[[tax]] <- min(assay(tse[tax,big], "relabundance")) 
+}
+
+theme_set(theme_bw(20))
+for (tax in taxa.bimodal) {
+  # Show the first density minum
+  tip <- tips[[tax]][[1]]
+  x <- assay(tse, "clr")[tax,]
+  df <- data.frame(clr=x)
+  p <- ggplot(df, aes(x = clr)) +
+         geom_density(fill="lightgray") +
+	 labs(title=paste(tax)) +
+	 geom_vline(xintercept=tip, color="gray") +
+	 geom_vline(xintercept=tips[[tax]][[1]],color="black")	 
+  print(p)	  
+}
+```
+
+Location of the first density minimum; relative abundances are in unit interval.
+
+```{r, echo=FALSE}
+library(dplyr)
+library(knitr)
+d <- data.frame(tax=names(tip.relab),
+                relab=sapply(tip.relab, function (x) {x[[1]]}),
+		clr=sapply(tips, function (x) {x[[1]]}))
+d <- d %>% arrange(desc(relab))
+rownames(d) <- NULL
+kable(d)
+```
+
+
+
+# Abundance heatmap
+
+With random sample subset (to speed up)
+
+```{r, echo=FALSE,fig.width=10,fig,height=5}
+x <- assay(transformFeatures(tse, method="z", abund_values="clr", name="ZCLR"),"ZCLR")
+set.seed(252)
+xo <- neat(x[taxa.bimodal, sample(ncol(x), 500)], method = "NMDS", distance = "euclidean") 
+dfm <- reshape2::melt(xo)
+colnames(dfm) <- c("Taxa", "Sample", "value")
+heat(dfm, "Sample", "Taxa", "value")
+```
+
+Correlations between bimodal taxa
+
+```{r, echo=FALSE}
+# cors <- cor(t(assay(tse[taxa.bimodal,], "clr")), method="pearson")
+# hist(cors)
+# heatmap(cors)
+
+#sorted.rows <- neatsort(abundances(pseqz), "rows", method = "NMDS", distance = "euclidean") 
+#tmp <- runDMN(tse, name = "DMN", k = 1:5)
+#plotDMNFit(tmp, type = "laplace")
+#library(microbiome)
+```
