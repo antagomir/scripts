@@ -21,6 +21,7 @@ BiocManager::install("BiocStyle", suppressUpdates = FALSE)
 #~/local/R/R-2.12.0/bin/R CMD INSTALL ~/local/R/packages/RCurl_1.5-0.tar.gz
 BiocManager::install("biomaRt", suppressUpdates = FALSE)# Requires RCurl
 BiocManager::install("cMAP", suppressUpdates = FALSE)
+BiocManager::install("curatedMetagenomicData", suppressUpdates = FALSE)
 BiocManager::install("dada2", suppressUpdates = FALSE) 
 BiocManager::install("DBI", suppressUpdates = FALSE) #RMySQL is a dependency?, AnnBuilder
 BiocManager::install("DESeq2", suppressUpdates = FALSE)
@@ -57,6 +58,7 @@ BiocManager::install("qvalue", suppressUpdates = FALSE)
 BiocManager::install("R2HTML", suppressUpdates = FALSE)
 BiocManager::install("RbcBook1", suppressUpdates = FALSE)
 BiocManager::install("RColorBrewer", suppressUpdates = FALSE)
+BiocManager::install("rebook", suppressUpdates = FALSE)
 BiocManager::install("Rgraphviz", suppressUpdates = FALSE) # graphviz and its dependencies
 BiocManager::install("RSQLite", suppressUpdates = FALSE)
 BiocManager::install("RSVGTipsDevice", suppressUpdates = FALSE)
