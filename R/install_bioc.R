@@ -1,6 +1,7 @@
 
 
 BiocManager::install("affy", suppressUpdates = FALSE)
+BiocManager::install("affydata", suppressUpdates = FALSE)
 BiocManager::install("ALDEx2", suppressUpdates = FALSE)
 BiocManager::install("ANCOMBC", suppressUpdates = FALSE)
 BiocManager::install("ape", suppressUpdates = FALSE) # circular hclust dendrograms etc
@@ -53,6 +54,7 @@ BiocManager::install("nlme", suppressUpdates = FALSE)
 BiocManager::install("oligo", suppressUpdates = FALSE)
 BiocManager::install("outliers", suppressUpdates = FALSE)
 BiocManager::install("pamr", suppressUpdates = FALSE)
+BiocManager::install("pheatmap", suppressUpdates = FALSE)
 BiocManager::install("phyloseq", suppressUpdates = FALSE)
 BiocManager::install("preprocessCore", suppressUpdates = FALSE)
 BiocManager::install("qvalue", suppressUpdates = FALSE)
