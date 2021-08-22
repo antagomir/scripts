@@ -19,6 +19,7 @@ BiocManager::install("BiocStyle", suppressUpdates = FALSE)
 #I got RCurl installed with:
 #~/local/R/R-2.12.0/bin/R CMD INSTALL ~/local/R/packages/RCurl_1.5-0.tar.gz
 BiocManager::install("biomaRt", suppressUpdates = FALSE)# Requires RCurl
+BiocManager::install("bluster", suppressUpdates = FALSE)
 BiocManager::install("cMAP", suppressUpdates = FALSE)
 BiocManager::install("curatedMetagenomicData", suppressUpdates = FALSE)
 BiocManager::install("dada2", suppressUpdates = FALSE) 
@@ -41,6 +42,7 @@ BiocManager::install("graph", suppressUpdates = FALSE)
 BiocManager::install("impute", suppressUpdates = FALSE)
 BiocManager::install("kohonen", suppressUpdates = FALSE) # better than 'som' package
 BiocManager::install("limma", suppressUpdates = FALSE)
+BiocManager::install("Maaslin2", suppressUpdates = FALSE)
 BiocManager::install("MASS", suppressUpdates = FALSE)
 BiocManager::install("M3C")
 BiocManager::install("Matrix", suppressUpdates = FALSE) # boosting matrix calculations
