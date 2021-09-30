@@ -50,6 +50,7 @@ BiocManager::install("M3C", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("Matrix", suppressUpdates = suppressUpdate, update=update) # boosting matrix calculations
 BiocManager::install("microsim", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("minet", suppressUpdates = suppressUpdate, update=update)
+BiocManager::install("mixOmics", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("MultiAssayExperiment", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("NCIgraph", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("nlme", suppressUpdates = suppressUpdate, update=update)
