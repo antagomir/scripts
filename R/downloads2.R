@@ -6,6 +6,7 @@ kable(df)
 
 # ropengov selected
 pkgs <- sort(unique(c("dmt", "earlywarnings")))
+
 # c("eurostat", "sotkanet", "dmt", "pxweb", "earlywarnings", "fmi")
 x <- cran_stats(pkgs)
 x$year <- as.numeric(format(as.Date(x$start), format="%Y"))
@@ -37,17 +38,17 @@ df <- x %>% group_by(Package) %>%
             summarise(total = sum(downloads)) %>%
 	    arrange(desc(total))
 
-df2019 <- x %>% filter(year == 2019) %>% group_by(Package) %>% summarise(total = sum(downloads)) %>% arrange(desc(total))
+df2020 <- x %>% filter(year == 2020) %>% group_by(Package) %>% summarise(total = sum(downloads)) %>% arrange(desc(total))
 
-df2019$Package <- factor(df2019$Package, levels = rev(unique(df2019$Package)))
-p <- ggplot(df2019, aes(x = Package, y = total)) +
+df2020$Package <- factor(df2020$Package, levels = rev(unique(df2020$Package)))
+p <- ggplot(df2020, aes(x = Package, y = total)) +
        geom_bar(stat = "identity") +
-       labs(x = "", y = "Downloads (2019)",
-         title = paste0("CRAN downloads (", sum(df2019$total), ")")) + 
+       labs(x = "", y = "Downloads (2020)",
+         title = paste0("CRAN downloads (", sum(df2020$total), ")")) + 
        coord_flip() 
 print(p)
 
-png("ropengov2019dl.png")
+png("ropengov2020dl.png")
 print(p)
 dev.off()
 
