@@ -1,3 +1,8 @@
+#github_pat(1)
+#Sys.getenv("GITHUB_PAT")
+#Sys.unsetenv("GITHUB_PAT")
+#Sys.getenv("GITHUB_PAT")
+
 library(devtools)
 install_github("briatte/ggnet")
 install_github("cboettig/knitcitations")
