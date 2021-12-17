@@ -1,0 +1,15 @@
+library(mia)
+library(microbiomeDataSets)
+
+x <- atlas1006()
+x <- transformCounts(x, abund_values="counts", method="clr", pseudocount=1)
+A <- t(assay(x, "clr"))
+As <- scale(A)
+pca <- princomp(A)
+pca.scaled <- princomp(As)
+
+par(mfrow=c(2, 2))
+plot(pca$scores[, 1:2], main="Scores unscaled")
+plot(pca.scaled$scores[, 1:2], main="Scores scaled")
+barplot(sort(pca$loadings[, 1]), main="Loadings unscaled", horiz=TRUE, las=1)
+barplot(sort(pca.scaled$loadings[, 1]), main="Loadings scaled", horiz=TRUE, las=1)
