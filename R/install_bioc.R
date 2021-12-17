@@ -23,6 +23,7 @@ BiocManager::install("BiocStyle", suppressUpdates = suppressUpdate, update=updat
 BiocManager::install("biomaRt", suppressUpdates = suppressUpdate, update=update)# Requires RCurl
 BiocManager::install("bluster", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("cMAP", suppressUpdates = suppressUpdate, update=update)
+BiocManager::install("ComplexHeatmap", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("curatedMetagenomicData", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("dada2", suppressUpdates = suppressUpdate, update=update) 
 BiocManager::install("DBI", suppressUpdates = suppressUpdate, update=update) #RMySQL is a dependency?, AnnBuilder
