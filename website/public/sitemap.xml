@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://datascience.utu.fi/blog/</loc>
+    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/categories/</loc>
+    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/tags/golang/</loc>
+    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/tags/hugo/</loc>
+    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/blog/2015/10/02/linked-post/</loc>
+    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/tags/programming/</loc>
+    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/categories/programming/</loc>
+    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/tags/</loc>
+    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/tags/theme/</loc>
+    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/</loc>
+    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/tags/go/</loc>
+    <lastmod>2015-09-17T13:47:08+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/blog/2015/09/17/go-is-for-lovers/</loc>
+    <lastmod>2015-09-17T13:47:08+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/blog/2015/08/03/hugo-is-for-lovers/</loc>
+    <lastmod>2015-08-03T13:39:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/categories/pseudo/</loc>
+    <lastmod>2015-08-03T13:39:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/blog/2015/07/23/2015-07-23-r-rmarkdown/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/tags/plot/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/categories/r/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/tags/r-markdown/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/tags/regression/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/blog/2015/06/24/creating-a-new-theme/</loc>
+    <lastmod>2015-06-24T13:50:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/categories/starting/</loc>
+    <lastmod>2015-06-24T13:50:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/readme/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/aboutwebsite/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/blog/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/code/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/cost_ca18131/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/cv/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/faq/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/tags/ipsum/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/leo_lahti/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/licensing/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/categories/lorem/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/media/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/blog/1/01/01/migrate-from-jekyll/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/allnews/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/recruit/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/404/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/publications/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/publishing_code/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/research/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/seminar/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/edu/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/team/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/docs/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/home/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/vacancies/</loc>
+  </url>
+  
+  <url>
+    <loc>http://datascience.utu.fi/expectations/</loc>
+  </url>
+  
+</urlset>

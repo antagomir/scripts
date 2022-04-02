@@ -1,0 +1,2 @@
+e <- attr(reducedDim(se, "MDS_BC"), "eig");
+rel_eig <- e/sum(e[e>0])	

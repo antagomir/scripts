@@ -1,0 +1,107 @@
+baseurl: http://datascience.utu.fi
+title: Universal
+theme: hugo-universal-theme
+languageCode: en-us
+defaultContentLanguage: en
+disqusShortname: devcows
+googleAnalytics: ''
+paginate: 10
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 1
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight: 2
+    - identifier: faq
+      name: FAQ
+      url: /faq/
+      weight: 3
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 4
+  topbar:
+    - name: GitHub
+      pre: <i class='fab fa-2x fa-github'></i>
+      url: https://github.com/devcows/hugo-universal-theme
+      weight: 1
+    - name: Twitter
+      pre: <i class='fab fa-2x fa-twitter'></i>
+      url: http://twitter.com/antagomir
+      weight: 3
+    - name: Email
+      pre: <i class='fas fa-2x fa-envelope'></i>
+      url: mailto:leo.lahti@utu.fi
+      weight: 4
+params:
+  about_us: <p>Turku Data Science Group.</p>
+  address: "<p class=\"text-uppercase\"><strong>Universal Ltd.</strong>\n        <br>13/25
+    New Avenue\n        <br>Newtown upon River\n        <br>45Y 73J\n        <br>England\n
+    \       <br>\n        <strong>Great Britain</strong>\n      </p>\n      "
+  author: DevCows
+  carousel:
+    enable: yes
+  clients:
+    enable: yes
+    subtitle: ''
+    title: Our Clients
+  contact_form_ajax: no
+  copyright: Copyright (c) 2020, Leo Lahti; some rights reserved.
+  date_format: November 20, 2020
+  default_sharing_image: img/sharing-default.png
+  defaultDescription: Site template made by devcows using hugo
+  defaultKeywords:
+    - devows
+    - hugo
+    - go
+  enableGoogleMaps: yes
+  facebook_site: ''
+  features:
+    enable: yes
+  formspree_action: https://formspree.io/sample/of/endpoint
+  googleMapsApiKey: AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y
+  latitude: '-12.043333'
+  logo: img/logo.png
+  logo_small: img/logo-small.png
+  longitude: '-77.028333'
+  mainSections: blog
+  recent_posts:
+    enable: yes
+    subtitle: Pellentesque habitant morbi tristique senectus et netus et malesuada
+      fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+      tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+      ultricies mi vitae est. Mauris placerat eleifend leo.
+    title: From our blog
+  see_more:
+    enable: yes
+    icon: far fa-file-alt
+    link_text: Check other homepages
+    link_url: '#'
+    subtitle: We have prepared for you more than 40 different HTML pages, including
+      5 variations of homepage.
+    title: Do you want to see more?
+  style: default
+  testimonials:
+    enable: yes
+    subtitle: We have worked with many clients and we always like to hear they come
+      out from the cooperation happy and satisfied. Have a look what our clients said
+      about us.
+    title: Testimonials
+  topbar:
+    enable: yes
+    text: "<p class=\"hidden-sm hidden-xs\">Contact us on +420 777 555 333 or hello@universal.com.</p>\n
+      \     <p class=\"hidden-md hidden-lg\"><a href=\"#\" data-animate-hover=\"pulse\"><i
+      class=\"fas fa-phone\"></i></a>\n      <a href=\"#\" data-animate-hover=\"pulse\"><i
+      class=\"fas fa-envelope\"></i></a>\n      </p>\n      "
+  twitter_site: GoHugoIO
+  viewMorePostLink: /blog/
+  widgets:
+    categories: yes
+    search: yes
+    tags: yes
+Permalinks:
+  blog: /blog/:year/:month/:day/:filename/

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Universal</title>
+    <link>http://datascience.utu.fi/</link>
+    <description>Recent content on Universal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 02 Oct 2015 21:49:20 +0200</lastBuildDate><atom:link href="http://datascience.utu.fi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linked post</title>
+      <link>http://datascience.utu.fi/blog/2015/10/02/linked-post/</link>
+      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
+      
+      <guid>http://datascience.utu.fi/blog/2015/10/02/linked-post/</guid>
+      <description>I&amp;rsquo;m a linked post in the menu. You can add other posts by adding the following line to the frontmatter:
+menu = &amp;quot;main&amp;quot;  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mauris nulla, vestibulum vel auctor sed, posuere eu lorem. Aliquam consequat augue ut accumsan mollis. Suspendisse malesuada sodales tincidunt. Vivamus sed erat ac augue bibendum porta sed id ipsum. Ut mollis mauris eget ligula sagittis cursus. Aliquam id pharetra tellus.</description>
+    </item>
+    
+    <item>
+      <title>Go is for lovers</title>
+      <link>http://datascience.utu.fi/blog/2015/09/17/go-is-for-lovers/</link>
+      <pubDate>Thu, 17 Sep 2015 13:47:08 +0200</pubDate>
+      
+      <guid>http://datascience.utu.fi/blog/2015/09/17/go-is-for-lovers/</guid>
+      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
+This document is a brief primer on using go templates.</description>
+    </item>
+    
+    <item>
+      <title>Hugo is for lovers</title>
+      <link>http://datascience.utu.fi/blog/2015/08/03/hugo-is-for-lovers/</link>
+      <pubDate>Mon, 03 Aug 2015 13:39:46 +0200</pubDate>
+      
+      <guid>http://datascience.utu.fi/blog/2015/08/03/hugo-is-for-lovers/</guid>
+      <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at installing hugo
+Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
+Follow the following steps:
+ Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+    </item>
+    
+    <item>
+      <title>Hello R Markdown</title>
+      <link>http://datascience.utu.fi/blog/2015/07/23/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>http://datascience.utu.fi/blog/2015/07/23/2015-07-23-r-rmarkdown/</guid>
+      <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.</description>
+    </item>
+    
+    <item>
+      <title>Creating a new theme</title>
+      <link>http://datascience.utu.fi/blog/2015/06/24/creating-a-new-theme/</link>
+      <pubDate>Wed, 24 Jun 2015 13:50:46 +0200</pubDate>
+      
+      <guid>http://datascience.utu.fi/blog/2015/06/24/creating-a-new-theme/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://datascience.utu.fi/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/readme/</guid>
+      <description>Custom Jekyll Theme This site is being developed in the devel branch. Deploy to master with ./deploy.sh - expect some minutes of delay sometimes
+Re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is update.d
+Jekyll also offers powerful support for code snippets:</description>
+    </item>
+    
+    <item>
+      <title>About the website</title>
+      <link>http://datascience.utu.fi/aboutwebsite/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/aboutwebsite/</guid>
+      <description>Make your own Jekyll website for your academic research group This website is powered by Jekyll and uses some Bootstrap and Bootswatch. The page borrows open source code from Allan Lab. The site is simple yet adaptable.
+All pages are written in markdown for easy editing, and Jekyll uses Liquid for the data-driven pages. The publication list is automatically generated from bibtex, and requires the jekyll-scholar plugin. The news items, and group members are stored as .</description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>http://datascience.utu.fi/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Code and data</title>
+      <link>http://datascience.utu.fi/code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/code/</guid>
+      <description>Open research data and software . Mature open source projects are listed below.
+Digital Humanities and Computational Social Science rOpenGov R package ecosystem for open data and computational social science (R/GitHub) includes 20+ R packages. Introduced and NIPS Machine Learning Open Source Software workshop in 2013. Tools for Eurostat open data, Sotkanet database of National Institute for Health and Welfare (Finland), PX-web API used by the Statistical authorities in many countries, Finnish geospatial data, Finnish open government data, and other tools.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://datascience.utu.fi/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/contact/</guid>
+      <description>Contact Welcome to contact us to discuss research/study positions and collaboration opportunities.
+Email leo.lahti@iki.fiTwitter Follow us in Twitter
+Mail Department of Future Technologies. Faculty of Natural Sciences and Engineering, Yliopistonmäki, FI-20014, University of Turku, Finland
+Visiting address Agora, 4th floor, room 452E. Yliopistonmäki, Turku (Map)Tel: +358 (0)50 436 4626</description>
+    </item>
+    
+    <item>
+      <title>COST Action CA18131</title>
+      <link>http://datascience.utu.fi/cost_ca18131/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/cost_ca18131/</guid>
+      <description>European Network for statistical and machine learning techniques in human microbiome studies Finland has joined the new COST Action Statistical and machine learning techniques in human microbiome studies
+In recent years, the human microbiome has been characterised in great detail in several large-scale studies as a key player in intestinal and non-intestinal diseases, e.g. inflammatory bowel disease, diabetes and liver cirrhosis, along with brain development and behaviour. As more associations between microbiome and phenotypes are elucidated, research focus is now shifting towards causality and clinical use for diagnostics, prognostics and therapeutics, where some promising applications have recently been showcased.</description>
+    </item>
+    
+    <item>
+      <title>CV</title>
+      <link>http://datascience.utu.fi/cv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/cv/</guid>
+      <description>I embed a current version of my CV below. You can also download the PDF here.
+{% include embedpdf.html code=&amp;ldquo;30ah9tgxevj1vl9/svm-cv.pdf&amp;rdquo; width=100 height=800 %}</description>
+    </item>
+    
+    <item>
+      <title>FAQ</title>
+      <link>http://datascience.utu.fi/faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/faq/</guid>
+      <description>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+1. WHAT TO DO IF I HAVE STILL NOT RECEIVED THE ORDER? Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</description>
+    </item>
+    
+    <item>
+      <title>Leo Lahti</title>
+      <link>http://datascience.utu.fi/leo_lahti/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/leo_lahti/</guid>
+      <description>Links to academic services online: Leo Lahti Researcher profiles, networks, publication databases and impact altmetrics
+ University of Turku Research Portal University of Helsinki TUHAT publication database ResearchGate ORCID: 0000-0001-5537-637X ResearcherID: G-3170-2010 ScienceOpen CiteUlike PubMed Google Scholar Scopus Publon reviewer profile ImpactStory Depsy research software impact Loop    </description>
+    </item>
+    
+    <item>
+      <title>Licensing</title>
+      <link>http://datascience.utu.fi/licensing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/licensing/</guid>
+      <description>Open licensing of scientific material This memo gives recommendations for selecting open source license for scientific material, including software, data and documents. Let us continue to make the newest computational techniques easily available to spark new applications and further development!
+Recommended open licenses for academic publishing Software and source code The modified BSD licenses (in particular FreeBSD) and MIT license set minimal restrictions on the end user, and have therefore been recommended for academic purposes, for instance at ICML/MLOSS workshop 2010 (V.</description>
+    </item>
+    
+    <item>
+      <title>Media</title>
+      <link>http://datascience.utu.fi/media/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/media/</guid>
+      <description>Versus - online journal Versus is an online research forum published by Society for Regional and Environmental Studies, Finnish Society for Environmental Social Science, and Geographical Society of Finland. It aims to make research more visible and effective by publishing popularized versions of scholarly work and providing an academic discussion forum. Editorial board.
+Video lectures and interviews Presentation slides, posters and other material available via Github.
+11/2019 Integrating open science in the humanities: the case of computational history Springer-Nature blog post and links to the streamed presentations.</description>
+    </item>
+    
+    <item>
+      <title>Migrate from Jekyll</title>
+      <link>http://datascience.utu.fi/blog/1/01/01/migrate-from-jekyll/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/blog/1/01/01/migrate-from-jekyll/</guid>
+      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>News</title>
+      <link>http://datascience.utu.fi/allnews/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/allnews/</guid>
+      <description>News {% for article in site.data.news %}</description>
+    </item>
+    
+    <item>
+      <title>Open positions</title>
+      <link>http://datascience.utu.fi/recruit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/recruit/</guid>
+      <description>Open positions Applications for trainee/MSc/PhD/Postdoc positions from outstanding students are welcome. Please contact the PI to discuss the opportunities in more details. The topics are in data science methodology and applications in biosciences, social sciences and humanities.</description>
+    </item>
+    
+    <item>
+      <title>Page Not Found</title>
+      <link>http://datascience.utu.fi/404/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/404/</guid>
+      <description>Sorry, but the page you were trying to view does not exist.</description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>http://datascience.utu.fi/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/publications/</guid>
+      <description>Publications The complete bibliography is available in BibTex. You can find most papers and other outputs from here, or just ask by email.
+For code, data, and audiovisual material see the separate code and media pages.
+Selected papers {% bibliography &amp;ndash;file bibtex/lahti &amp;ndash;query @*[keywords=highlight] %}
+Computational biosciences {% bibliography &amp;ndash;file bibtex/lahti &amp;ndash;query @[status=bioscience] %} {% bibliography &amp;ndash;file bibtex/lahti &amp;ndash;query @[status=datascience] %}
+Digital humanities and computational social science {% bibliography &amp;ndash;file bibtex/lahti &amp;ndash;query @*[status=dh] %}</description>
+    </item>
+    
+    <item>
+      <title>Publishing data and code</title>
+      <link>http://datascience.utu.fi/publishing_code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/publishing_code/</guid>
+      <description>How to publish and archive research software or source code   Choose open license The code is not really &amp;ldquo;open&amp;rdquo; without an open license. Common ones include MIT, FreeBSD and GPL3. The MIT license is often recommended due to its simplicity. See Quick guide to software licensing for a scientist programmer. See also the brief memo on open licensing of scientific material.
+  Add version number
+  Document the experiments.</description>
+    </item>
+    
+    <item>
+      <title>Research</title>
+      <link>http://datascience.utu.fi/research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/research/</guid>
+      <description>Research topics We carry out research on the theory, methods and applications of modern statistical data analysis. Our focus is on data-rich application fields including microbial ecology, functional genomics, and computational history. There is a great demand for targeted algorithmic methods for extracting information from vast data collections with minimal human intervention. By combining information across multiple, complementary sources it is possible to overcome some of the limitations and statistical uncertainties associated with individual data sets.</description>
+    </item>
+    
+    <item>
+      <title>Research seminar</title>
+      <link>http://datascience.utu.fi/seminar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/seminar/</guid>
+      <description>Seminar on machine learning and data science We are running a weekly research seminar and journal club on machine learning and data science in University of Turku, Finland. These are open and informal events. The exact location and topics may vary, so contact us if you&amp;rsquo;re interested!
+Research seminar / Reading circle Thursdays 10-11:30am (2018-2019). We cover material from the following books, a chapter per week.
+Machine learning - a probabilistic perspective (K.</description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>http://datascience.utu.fi/edu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/edu/</guid>
+      <description>Courses and seminars 2020 Research seminar on probabilistic data analysis in University of Turku, Finland.
+Apr 20-23, 2020. Hasselt University, Limburg, Belgium. Microbiome Data Analysis Workshop
+3-4/2020 University of Turku. Machine Learning and Algorithmics Seminar (TKO_3121 5 op).
+2018-2019 Research seminar on probabilistic machine learning. University of Turku, Finland based on Machine learning - a probabilistic perspective (K. Muprhy). PDF.
+Dec 16-20, 2019 Pune, India Modern statistics for microbiome bioinformatics.</description>
+    </item>
+    
+    <item>
+      <title>Team</title>
+      <link>http://datascience.utu.fi/team/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/team/</guid>
+      <description>Research team Welcome to contact us to discuss research/study positions and collaboration. See also open positions
+leo.lahti@iki.fiPostdocs {% assign number_printed = 0 %} {% for member in site.data.postdocs %}
+{% assign even_odd = number_printed | modulo: 2 %}
+{% if even_odd == 0 %}
+{% if member.number_educ == 1 %}
+{% if member.number_educ == 2 %}
+{% if member.number_educ == 3 %}
+{% if member.number_educ == 4 %}
+{% assign number_printed = number_printed | plus: 1 %}</description>
+    </item>
+    
+    <item>
+      <title>Turku Data Science</title>
+      <link>http://datascience.utu.fi/docs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/docs/</guid>
+      <description>Turku Data Science group site has moved to datascience.</description>
+    </item>
+    
+    <item>
+      <title>Turku Data Science Group - Home</title>
+      <link>http://datascience.utu.fi/home/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/home/</guid>
+      <description>Modern data analysis from theory to practice
+We carry out research on theory, methods and applications of modern algorithmic data analysis, blending elements from various fields including statistical machine learning/AI, probabilistic programming, data science, and information engineering.
+Our methodologically oriented research is motivated by data-rich applications that range from molecular life sciences to computational social sciences and humanities (SSH) research. Turku Data Science Group is led by Associate Prof. Leo Lahti.</description>
+    </item>
+    
+    <item>
+      <title>Vacancies</title>
+      <link>http://datascience.utu.fi/vacancies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/vacancies/</guid>
+      <description>Open positions We are always looking for new group members with passion, talent, and grit!
+PhD and Postdoc positions If you are interested in working with us as a PhD student or postdoc, please send me an email. State briefly why you are interested and attach a CV, including information about the grades you had as an undergraduate. Important: please insert &amp;ldquo;Application PhD&amp;rdquo; or &amp;ldquo;Application Postdoc&amp;rdquo; in the subject line.</description>
+    </item>
+    
+    <item>
+      <title>Welcome</title>
+      <link>http://datascience.utu.fi/expectations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://datascience.utu.fi/expectations/</guid>
+      <description>Welcome to the Lab! Mission Statement The lab has three central goals:
+ Carry out high-quality research Develop each lab member as a successful researcher Promote a collegial and intellectually stimulating environment  The more senior members of the group, and in particular me as the group leader, will provide the mentorship and training needed to help you develop into an independent scientist. To accomplish this, it is important that we establish effective communication and align expectations with each other.</description>
+    </item>
+    
+  </channel>
+</rss>
