@@ -1,2 +1,0 @@
-# scripts
-Script utilities

@@ -37,6 +37,7 @@ pkgs <- sort(unique(c(
   "rtimes",
   "sorvi",
   "sotkanet",
+  "sweidnumbr",  
   "usbroadband",
   "vipunen"  
   )))

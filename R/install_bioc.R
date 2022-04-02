@@ -4,6 +4,7 @@ update=FALSE
 BiocManager::install("affy", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("affydata", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("ALDEx2", suppressUpdates = suppressUpdate, update=update)
+BiocManager::install("alto", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("ANCOMBC", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("ape", suppressUpdates = suppressUpdate, update=update) # circular hclust dendrograms etc
 BiocManager::install("Biobase", suppressUpdates = suppressUpdate, update=update)
@@ -20,9 +21,11 @@ BiocManager::install("BiocStyle", suppressUpdates = suppressUpdate, update=updat
 # and isntalling "libcurl-ocaml-dev" with synaptic
 #I got RCurl installed with:
 #~/local/R/R-2.12.0/bin/R CMD INSTALL ~/local/R/packages/RCurl_1.5-0.tar.gz
+BiocManager::install("biclust", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("biomaRt", suppressUpdates = suppressUpdate, update=update)# Requires RCurl
 BiocManager::install("bluster", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("cMAP", suppressUpdates = suppressUpdate, update=update)
+BiocManager::install("cobiclust", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("ComplexHeatmap", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("curatedMetagenomicData", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("dada2", suppressUpdates = suppressUpdate, update=update) 
@@ -35,6 +38,7 @@ BiocManager::install("EMDomics", suppressUpdates = suppressUpdate, update=update
 BiocManager::install("ExperimentHub", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("ExperimentHubData", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("FD", suppressUpdates = suppressUpdate, update=update)
+BiocManager::install("fido", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("genefilter", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("ggbio", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("ggtree", suppressUpdates = suppressUpdate, update=update)
@@ -59,6 +63,7 @@ BiocManager::install("oligo", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("outliers", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("pamr", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("pheatmap", suppressUpdates = suppressUpdate, update=update)
+BiocManager::install("philr", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("phyloseq", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("preprocessCore", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("qvalue", suppressUpdates = suppressUpdate, update=update)

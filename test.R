@@ -1,18 +1,20 @@
-load("AtlasFull.RData")
+drops <- c(4944, 4961, 4979, 4997, 5017, 5035, 5054, 5071, 5094, 5114, 5131)
 
-library(HITChipDB);
-pet = read_hitchip("~/proj/pet14/data/")
-pet$probedata
-petL2A = otu_table(tax_glom(pet$pseq, "L2"))
-petL2B = read.csv("~/proj/pet14/data/L2-frpa.tab", sep = "\t", row.names = 1)
+# Original
+origin <- c(5597, 5421)
+bottle <- c(1430, 1730)
+bottle.total <- 4300   # 4200-4400
+bottle.content <- 2500 # 2400-2600
 
+fill  <- max(drops) - min(drops)
+out <- diff(origin)
+error <- c((abs(out) - fill)/fill, (abs(out) - fill)/abs(out))
+print(paste("Fill:", fill, "/ Out:", out, "Error:", error))
 
-comc = intersect(colnames(petL2A), colnames(petL2B))
-#comr = intersect(rownames(petL2A), rownames(petL2B))
-plot(as.vector(petL2A[, comc]), as.vector(unlist(petL2B[, comc])), pch = "."); abline(0,1)
+hist(diff(drops), main=paste("Mean: ", round(mean(diff(drops)), 1)), 25)
+print(range(diff(drops)))
 
-b = pet$probedata
-a = atlas$oligo[, match(colnames(pet$probedata), atlas.metadata[["MySQL-sampleID"]])]
-k = sample(nrow(a), 1)
-plot(a[k, ], b[k, ])
-plot(as.vector(a), log10(as.vector(unlist(b))), pch = "."); abline(0,1)
+# Alc: 820 -> 5947
+# New d: 20
+
+5947 - max(drops)
