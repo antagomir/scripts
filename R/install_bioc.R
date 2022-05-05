@@ -79,11 +79,11 @@ BiocManager::install("sva", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("svDialogs", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("tikzDevice", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("scater", suppressUpdates = suppressUpdate, update=update)
+BiocManager::install("SEtools", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("vegan", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("WGCNA", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("XML", suppressUpdates = suppressUpdate, update=update) # libxml2-dev, xml2 with synaptic
 BiocManager::install("netresponse", suppressUpdates = suppressUpdate, update=update)
-
 BiocManager::install("SummarizedExperiment", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("tidySummarizedExperiment", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("TreeSummarizedExperiment", suppressUpdates = suppressUpdate, update=update)
