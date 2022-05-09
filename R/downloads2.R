@@ -2,12 +2,12 @@ library("ggplot2")
 library("dlstats")
 library(dplyr)
 library(knitr)
-kable(df)
+# kable(df)
 
 # ropengov selected
 pkgs <- sort(unique(c("dmt", "earlywarnings")))
-
 # c("eurostat", "sotkanet", "dmt", "pxweb", "earlywarnings", "fmi")
+
 x <- cran_stats(pkgs)
 x$year <- as.numeric(format(as.Date(x$start), format="%Y"))
 x$month <- as.numeric(gsub("^0+", "", format(as.Date(x$start), format="%m")))
@@ -33,22 +33,21 @@ p2 <- ggplot(x2, aes(year, n, group=Package, color=Package)) +
 library(gridExtra)
 grid.arrange(p1, p2, nrow = 2)
 
-
 df <- x %>% group_by(Package) %>%
             summarise(total = sum(downloads)) %>%
 	    arrange(desc(total))
 
-df2020 <- x %>% filter(year == 2020) %>% group_by(Package) %>% summarise(total = sum(downloads)) %>% arrange(desc(total))
+df2021 <- x %>% filter(year == 2021) %>% group_by(Package) %>% summarise(total = sum(downloads)) %>% arrange(desc(total))
 
-df2020$Package <- factor(df2020$Package, levels = rev(unique(df2020$Package)))
-p <- ggplot(df2020, aes(x = Package, y = total)) +
+df2021$Package <- factor(df2021$Package, levels = rev(unique(df2021$Package)))
+p <- ggplot(df2021, aes(x = Package, y = total)) +
        geom_bar(stat = "identity") +
-       labs(x = "", y = "Downloads (2020)",
-         title = paste0("CRAN downloads (", sum(df2020$total), ")")) + 
+       labs(x = "", y = "Downloads (2021)",
+         title = paste0("CRAN downloads (", sum(df2021$total), ")")) + 
        coord_flip() 
 print(p)
 
-png("ropengov2020dl.png")
+png("ropengov2021dl.png")
 print(p)
 dev.off()
 
