@@ -113,6 +113,7 @@ install.packages("matrixStats")
 install.packages("mclust") # Gaussian mixture EM and other useful stuff
 install.packages("MCMCpack")
 install.packages("memisc")
+install.packages("mikropml")
 install.packages("missForest")
 install.packages("mitools")
 install.packages("mixOmics")
