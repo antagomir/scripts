@@ -1,3 +1,6 @@
+
+GITHUB API limit exceeded. See if number of pkgs can be reduceed.
+
 #source('http://www.bioconductor.org/biocLite.R')
 #update.packages()
 #biocLite()
