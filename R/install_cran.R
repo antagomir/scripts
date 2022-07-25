@@ -113,6 +113,7 @@ install.packages("matrixStats")
 install.packages("mclust") # Gaussian mixture EM and other useful stuff
 install.packages("MCMCpack")
 install.packages("memisc")
+install.packages("MicrobiomeStat")
 install.packages("mikropml")
 install.packages("missForest")
 install.packages("mitools")
@@ -121,7 +122,7 @@ install.packages("mixtools")
 install.packages("moments")
 install.packages("multcomp")
 install.packages("mvnormtest")
-install.packages("mvtnorm") #contains rmvnorm for multivariate normal sampling
+install.packages("mvtnorm") # contains rmvnorm for multivariate normal sampling
 install.packages("netdiffuseR")
 install.packages("network")
 install.packages("NMF")
