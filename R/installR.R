@@ -7,4 +7,5 @@ library(BiocManager)
 source("install_bioc.R")
 source("install_cran.R")
 source("install_github.R")
+upgrade.packages()
 
