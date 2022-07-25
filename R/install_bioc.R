@@ -78,6 +78,8 @@ BiocManager::install("RSVGTipsDevice", suppressUpdates = suppressUpdate, update=
 BiocManager::install("sva", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("svDialogs", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("tikzDevice", suppressUpdates = suppressUpdate, update=update)
+BiocManager::install("tidySummarizedExperiment", suppressUpdates = suppressUpdate, update=update)
+BiocManager::install("tidySingleCellExperiment", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("scater", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("SEtools", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("vegan", suppressUpdates = suppressUpdate, update=update)
