@@ -1,5 +1,5 @@
 
-GITHUB API limit exceeded. See if number of pkgs can be reduceed.
+# GITHUB API limit exceeded. See if number of pkgs can be reduceed.
 
 #source('http://www.bioconductor.org/biocLite.R')
 #update.packages()
@@ -11,4 +11,4 @@ source("install_bioc.R")
 source("install_cran.R")
 source("install_github.R")
 upgrade.packages()
-
+update.packages(checkBuilt=TRUE)
