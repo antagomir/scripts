@@ -70,7 +70,7 @@ BiocManager::install("qvalue", suppressUpdates = suppressUpdate, update=update)
 # BiocManager::install("R2HTML", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("RbcBook1", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("RColorBrewer", suppressUpdates = suppressUpdate, update=update)
-# BiocManager::install("rebook", suppressUpdates = suppressUpdate, update=update)
+BiocManager::install("rebook", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("remotes", suppressUpdates = suppressUpdate, update=update)
 BiocManager::install("Rgraphviz", suppressUpdates = suppressUpdate, update=update) # graphviz and its dependencies
 BiocManager::install("RSQLite", suppressUpdates = suppressUpdate, update=update)
