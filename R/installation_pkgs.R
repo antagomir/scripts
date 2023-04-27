@@ -55,6 +55,7 @@ bioc.pkgs <- c(
 "remotes", 
 "Rgraphviz",  # graphviz and its dependencies
 "RSQLite", 
+"sechm",
 "sva", 
 "tikzDevice", 
 "tidySummarizedExperiment", 
@@ -98,6 +99,7 @@ cran.pkgs <- c(
 "captioner",
 # c("gender", "genderdata",, repos = "http://packages.ropensci.org", type = "source",
 "classInt",
+"cobiclust",
 "compositions",
 "countrycode",
 "covr",
@@ -202,6 +204,7 @@ cran.pkgs <- c(
 "mvnormtest",
 "mvtnorm", # contains rmvnorm for multivariate normal sampling
 #"netdiffuseR",
+"NbClust",
 "network",
 "NMF",
 # library(NMF,install.extras("NMF",
