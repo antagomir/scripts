@@ -1,6 +1,6 @@
 
-R version 4.0.3 (2020-10-10) -- "Bunny-Wunnies Freak Out"
-Copyright (C) 2020 The R Foundation for Statistical Computing
+R version 4.3.0 alpha (2023-03-24 r84048)
+Copyright (C) 2023 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -17,6 +17,9 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 'help.start()' for an HTML browser interface to help.
 Type 'q()' to quit R.
 
+> 
+> # GITHUB API limit exceeded. See if number of pkgs can be reduceed.
+> 
 > #source('http://www.bioconductor.org/biocLite.R')
 > #update.packages()
 > #biocLite()
