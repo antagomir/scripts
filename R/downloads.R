@@ -85,7 +85,7 @@ df <- x %>% group_by(Package) %>%
             summarise(total = sum(downloads)) %>% arrange(desc(total))
 
 
-df2020 <- x %>% filter(year == 2020) %>%
+df2022 <- x %>% filter(year == 2022) %>%
                 group_by(Package) %>%
 		summarise(total = sum(downloads)) %>%
 		arrange(desc(total))
@@ -104,19 +104,19 @@ print(p3)
 
 
 df4 <- x2 %>% group_by(year) %>% summarize(n=sum(n))
-p4 <- df4 %>% ggplot(aes(x = year, y = n)) + geom_line() + geom_point() + labs(x = "Year", y = "Downloads (n)", title="rOpenGov package downloads 2016-2020")
+p4 <- df4 %>% ggplot(aes(x = year, y = n)) + geom_line() + geom_point() + labs(x = "Year", y = "Downloads (n)", title="rOpenGov package downloads 2016-2022")
 
 #-----------------------------------------
 
-df2020$Package <- factor(df2020$Package, levels = rev(unique(df2020$Package)))
-p5 <- ggplot(df2020, aes(x = Package, y = total)) +
+df2022$Package <- factor(df2022$Package, levels = rev(unique(df2022$Package)))
+p5 <- ggplot(df2022, aes(x = Package, y = total)) +
        geom_bar(stat = "identity") +
-       labs(x = "", y = "Downloads (2020)",
-         title = paste0("CRAN downloads (", sum(df2020$total), ")")) + 
+       labs(x = "", y = "Downloads (2022)",
+         title = paste0("CRAN downloads (", sum(df2022$total), ")")) + 
        coord_flip() 
 print(p5)
 
-pdf("ropengov2020dl.pdf")
+pdf("ropengov2022dl.pdf")
 print(p5)
 dev.off()
 
