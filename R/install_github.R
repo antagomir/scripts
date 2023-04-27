@@ -4,40 +4,26 @@
 #Sys.getenv("GITHUB_PAT")
 
 library(devtools)
-install_github("briatte/ggnet")
-# install_github("cboettig/knitcitations")
-# install_github("earlywarningtoolbox/earlywarnings-R/earlywarnings")
-install_github("GuillemSalazar/EcolUtils")
-install_github('edwindj/whisker')
-install_github("ggobi/GGally")
-# install_github("jsilve24/fido")
-# install_github("kalimu/genderizeR")
-install_github("MilesMcBain/markdrive")
-install_github("mikemc/speedyseq")
-install_github("microbiome/RPA")
-install_github("microbiome/microbiome")
-install_github('ramnathv/rCharts')
-install_github('ramnathv/slidify')
-install_github('ramnathv/slidifyLibraries')
-install_github('r-lib/cli')
-# install_github("reptalex/phylofactor")
-install_github("ropengov/eurostat")
-install_github("ropengov/geofi")
-install_github("ropengov/fmi2")
-install_github("ropengov/helsinki")
-install_github("ropengov/hetu")
-install_github("ropengov/iotables")
-install_github("ropengov/pxweb")
-install_github("ropengov/sotkanet")
-install_github("ropengov/regions")
-#install_github("ropensci/gender")
-remotes::install_github("ROpenSci/bibtex")
-install_github('rstudio/markdown')
-install_github("rstudio/rmarkdown")
+
+github_pkgs <- c("briatte/ggnet","GuillemSalazar/EcolUtils","edwindj/whisker","ggobi/GGally","MilesMcBain/markdrive","mikemc/speedyseq","microbiome/RPA","microbiome/microbiome",'ramnathv/rCharts','ramnathv/slidify','ramnathv/slidifyLibraries','r-lib/cli',"ropengov/eurostat","ropengov/geofi","ropengov/fmi2","ropengov/helsinki","ropengov/hetu","ropengov/iotables","ropengov/pxweb","ropengov/sotkanet","ropengov/regions","ROpenSci/bibtex",'rstudio/markdown',"rstudio/rmarkdown","thomasp85/patchwork" ,"twbattaglia/MicrobeDS")
+
+
+for (pkg in github_pkgs) {
+  if( !require(pkg) ){
+    print(pkg)
+    remotes::install_github(pkg)
+  }
+
+}
+
 # install_github('rstudio/shiny')
-install_github("thomasp85/patchwork")
-install_github("twbattaglia/MicrobeDS")
+# install_github("ropensci/gender")
 # install_github("wch/webshot")
 # install_github("zdk123/SpiecEasi")
 # install_github("FelixErnst/SEtup")
 # install_github("microbiome/microbiome")
+# install_github("cboettig/knitcitations")
+# install_github("earlywarningtoolbox/earlywarnings-R/earlywarnings")
+# install_github("jsilve24/fido")
+# install_github("kalimu/genderizeR")
+# install_github("reptalex/phylofactor")
