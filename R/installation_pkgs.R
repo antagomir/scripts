@@ -71,6 +71,7 @@ bioc.pkgs <- c(
 "TreeSummarizedExperiment", 
 "SingleCellExperiment", 
 "SEtools",
+"tidySingleCellExperiment",
 "miaViz", 
 "miaSim", 
 "microbiomeDataSets",
