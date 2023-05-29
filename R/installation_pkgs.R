@@ -102,6 +102,7 @@ cran.pkgs <- c(
 # c("gender", "genderdata",, repos = "http://packages.ropensci.org", type = "source",
 "classInt",
 "cobiclust",
+"colourvalues",
 "compositions",
 "countrycode",
 "covr",
