@@ -27,7 +27,7 @@ update <- FALSE
 for (pkg in pkgs) {
   if( !require(pkg) ){
     print(pkg)
-    BiocManager::install(pkg, suppressUpdates = suppressUpdate, update=update)
+    BiocManager::install(pkg, suppressUpdates = suppressUpdate, update=update, version="devel")
   }
 }
 
