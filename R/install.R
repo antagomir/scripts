@@ -16,6 +16,8 @@
 #update.packages()
 #biocLite()
 
+bioc.version <- "3.18"
+
 install.packages("BiocManager")
 library(BiocManager)
 source("installation_pkgs.R")
@@ -23,11 +25,11 @@ pkgs <- c(cran.pkgs, bioc.pkgs)
 
 suppressUpdate <- TRUE
 update <- FALSE
-BiocManager::install(version = 'devel')
+BiocManager::install(version = bioc.version)
 for (pkg in pkgs) {
   if( !require(pkg) ){
     print(pkg)
-    BiocManager::install(pkg, suppressUpdates = suppressUpdate, update=update, version="devel")
+    BiocManager::install(pkg, suppressUpdates = suppressUpdate, update=update, version=bioc.version)
   }
 }
 
