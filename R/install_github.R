@@ -15,8 +15,14 @@ for (pkg in github_pkgs) {
     print(pkg)
     remotes::install_github(pkg)
   }
-
 }
+
+
+install.packages(
+  "microViz",
+  repos = c(davidbarnett = "https://david-barnett.r-universe.dev", getOption("repos"))
+)
+
 
 # install_github('rstudio/shiny')
 # install_github("ropensci/gender")
