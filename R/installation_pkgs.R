@@ -180,6 +180,7 @@ cran.pkgs <- c(
 "inline",
 "intergraph",
 "janitor",
+"jtools",
 "kableExtra",
 "Kendall",
 "knitcitations",
@@ -217,6 +218,7 @@ cran.pkgs <- c(
 "outliers",
 "ows4R",
 "pbdZMQ", 
+"pdp",
 "PerformanceAnalytics",
 "permute",
 "pgirmess",
@@ -337,6 +339,7 @@ cran.pkgs <- c(
 "wordcloud",
 "XLConnect",
 "xtable",
+"xlsx",
 "quarto",
 "extrafont")
 
