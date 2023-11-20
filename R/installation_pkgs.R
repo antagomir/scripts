@@ -305,6 +305,7 @@ cran.pkgs <- c(
 "structSSI",
 "summarytools",
 "survey",
+"survminer",
 "synchronicity",
 "tau",
 "tensorA",
