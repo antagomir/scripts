@@ -3,7 +3,8 @@ bioc.pkgs <- c(
 "alto", 
 "ANCOMBC", 
 "ape",  # circular hclust dendrograms etc
-"Biobase", 
+"Biobase",
+"BiocBook",
 "BiocCheck", 
 "BiocStyle", 
 "biclust", 
@@ -206,6 +207,7 @@ cran.pkgs <- c(
 "mixOmics",
 "mixtools",
 "moments",
+"mt",
 "multcomp",
 "mvnormtest",
 "mvtnorm", # contains rmvnorm for multivariate normal sampling
@@ -297,6 +299,7 @@ cran.pkgs <- c(
 "sp",
 "spdep",
 "spelling",
+"splines2",
 "splus2R",
 "stinepack",
 "stringdist",
