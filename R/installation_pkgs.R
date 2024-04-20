@@ -37,6 +37,7 @@ bioc.pkgs <- c(
 "MASS", 
 "M3C", 
 "Matrix",  # boosting matrix calculations
+"mediation",
 "microsim", 
 "minet", 
 "mixOmics", 
