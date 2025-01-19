@@ -6,9 +6,10 @@ library(dplyr)
 
 # ropengov selected
 #pkgs <- sort(unique(c("eurostat", "sotkanet", "pxweb", "fmi", "osmar", "dmt", "dkstat", "hansard", "pollstR", "recalls", "usbroadband", "rtimes", "rsunlight", "rqog", "enigma", "RPublica", "federalregister", "mpg", "hetu", "earlywarnings")))
+pkgs <- sort(unique(c("hetu", "sweidnumbr")))
 
 # ropengov all
-pkgs <- sort(unique(c(
+pkgs.all <- sort(unique(c(
   "dkstat",
   "digitransit",  
   "enigma",  
@@ -65,14 +66,14 @@ p1 <- ggplot(x, aes(end, downloads, group=Package, color=Package)) +
 
 # Downloads per year
 x2 <- x %>% group_by(year, Package) %>%
-            filter(Package %in% c("eurostat", "sotkanet", "pxweb", "helsinki")) %>%
+            filter(Package %in% c("hetu", "sweidnumbr")) %>%
             summarise(n = sum(downloads)) %>%
 	    # Exclude current year (non-complete)
 	    filter(year < as.numeric(format(Sys.time(), "%Y")))
 
 p2 <- ggplot(x2, aes(year, n, group=Package, color=Package)) +
     geom_line(size = 2) +
-    scale_y_log10() +
+    #scale_y_log10() +
     geom_label(aes(label=n)) +
     labs(y = "Downloads (n)", x = "Year")
 
@@ -85,7 +86,7 @@ df <- x %>% group_by(Package) %>%
             summarise(total = sum(downloads)) %>% arrange(desc(total))
 
 
-df2022 <- x %>% filter(year == 2022) %>%
+df2024 <- x %>% filter(year == 2024) %>%
                 group_by(Package) %>%
 		summarise(total = sum(downloads)) %>%
 		arrange(desc(total))
@@ -104,19 +105,19 @@ print(p3)
 
 
 df4 <- x2 %>% group_by(year) %>% summarize(n=sum(n))
-p4 <- df4 %>% ggplot(aes(x = year, y = n)) + geom_line() + geom_point() + labs(x = "Year", y = "Downloads (n)", title="rOpenGov package downloads 2016-2022")
+p4 <- df4 %>% ggplot(aes(x = year, y = n)) + geom_line() + geom_point() + labs(x = "Year", y = "Downloads (n)", title="rOpenGov package downloads 2016-2024")
 
 #-----------------------------------------
 
-df2022$Package <- factor(df2022$Package, levels = rev(unique(df2022$Package)))
-p5 <- ggplot(df2022, aes(x = Package, y = total)) +
+df2024$Package <- factor(df2024$Package, levels = rev(unique(df2024$Package)))
+p5 <- ggplot(df2024, aes(x = Package, y = total)) +
        geom_bar(stat = "identity") +
-       labs(x = "", y = "Downloads (2022)",
-         title = paste0("CRAN downloads (", sum(df2022$total), ")")) + 
+       labs(x = "", y = "Downloads (2024)",
+         title = paste0("CRAN downloads (", sum(df2024$total), ")")) + 
        coord_flip() 
 print(p5)
 
-pdf("ropengov2022dl.pdf")
+pdf("ropengov2024dl.pdf")
 print(p5)
 dev.off()
 

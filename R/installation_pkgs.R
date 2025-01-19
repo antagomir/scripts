@@ -236,6 +236,7 @@ cran.pkgs <- c(
 "plotrix",
 "plotROC",
 "PMCMR",
+"polycor",
 "poweRlaw",
 "pracma",
 "prettydoc",
