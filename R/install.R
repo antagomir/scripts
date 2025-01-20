@@ -16,7 +16,7 @@
 #update.packages()
 #biocLite()
 
-bioc.version <- "3.18"
+bioc.version <- "3.20"
 
 install.packages("BiocManager")
 library(BiocManager)
@@ -36,9 +36,8 @@ for (pkg in pkgs) {
 library(extrafont, font_import())
 # options(repos = c(getOption("repos", rstan = "http://wiki.rstan-repo.googlecode.com/git/")))
 
-library("devtools")
 source("install_github.R")
 # source("install_universe.R")
 
 #upgrade.packages()
-update.packages(checkBuilt=TRUE)
+update.packages(checkBuilt=TRUE)n
