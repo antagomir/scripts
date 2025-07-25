@@ -24,6 +24,8 @@ install.packages(
 )
 
 
+tinytex::install_tinytex()
+
 # install_github('rstudio/shiny')
 # install_github("ropensci/gender")
 # install_github("wch/webshot")
