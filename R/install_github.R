@@ -3,11 +3,38 @@
 #Sys.unsetenv("GITHUB_PAT")
 #Sys.getenv("GITHUB_PAT")
 
-library(devtools)
+#library(devtools)
 
 github_pkgs <-
-c("briatte/ggnet","GuillemSalazar/EcolUtils","edwindj/whisker","ggobi/GGally","MilesMcBain/markdrive","mikemc/speedyseq","microbiome/RPA","microbiome/microbiome",'ramnathv/rCharts','ramnathv/slidify','ramnathv/slidifyLibraries','r-lib/cli',"ropengov/eurostat","ropengov/geofi","ropengov/fmi2","ropengov/helsinki","ropengov/hetu","ropengov/iotables","ropengov/pxweb","ropengov/sotkanet","ropengov/regions","ROpenSci/bibtex",'rstudio/markdown',"rstudio/rmarkdown","thomasp85/patchwork"
-,"twbattaglia/MicrobeDS", "fawda123/ggord", "mvuorre/brmstools")
+c("briatte/ggnet",
+   "GuillemSalazar/EcolUtils",
+   "edwindj/whisker",
+   "ggobi/GGally",
+   "MilesMcBain/markdrive",
+   "mikemc/speedyseq",
+   "microbiome/RPA",
+   "microbiome/microbiome",
+   'ramnathv/rCharts',
+   'ramnathv/slidify',
+   'ramnathv/slidifyLibraries',
+   'r-lib/cli',
+   "ropengov/eurostat",
+   "ropengov/geofi",
+   "ropengov/fmi2",
+   "ropengov/helsinki",
+   "ropengov/hetu",
+   "ropengov/iotables",
+   "ropengov/pxweb",
+   "ropengov/sotkanet",
+   "ropengov/regions",
+   "ROpenSci/bibtex",
+   'rstudio/markdown',
+   "rstudio/rmarkdown",
+   "thomasp85/patchwork",
+   "twbattaglia/MicrobeDS",
+   "fawda123/ggord"#,
+   # "mvuorre/brmstools"
+   )
 
 
 for (pkg in github_pkgs) {
