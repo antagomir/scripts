@@ -6,7 +6,9 @@ library(dplyr)
 
 # ropengov selected
 #pkgs <- sort(unique(c("eurostat", "sotkanet", "pxweb", "fmi", "osmar", "dmt", "dkstat", "hansard", "pollstR", "recalls", "usbroadband", "rtimes", "rsunlight", "rqog", "enigma", "RPublica", "federalregister", "mpg", "hetu", "earlywarnings")))
-pkgs <- sort(unique(c("hetu", "sweidnumbr")))
+#pkgs <- sort(unique(c("hetu", "sweidnumbr")))
+# pkgs <- sort(unique(c("hetu", "eurostat", "pxweb", "finna")))
+#pkgs <- sort(unique(c("hetu", "eurostat", "pxweb", "geofi", "europarl", "fmi2", "regions", "sotkanet")))
 
 # ropengov all
 pkgs.all <- sort(unique(c(
@@ -43,12 +45,9 @@ pkgs.all <- sort(unique(c(
   "vipunen"  
   )))
 
+pkgs <- pkgs.all
 
-other <- c("dmt")
-
-
-
-
+# other <- c("dmt")
 #pkgs <- sort(unique(c("eurostat", "sotkanet")))
 #pkgs <- sort(unique(c("pxR", "pxweb")))
 x <- cran_stats(pkgs)
@@ -87,6 +86,11 @@ df <- x %>% group_by(Package) %>%
 
 
 df2024 <- x %>% filter(year == 2024) %>%
+                group_by(Package) %>%
+		summarise(total = sum(downloads)) %>%
+		arrange(desc(total))
+
+df2025 <- x %>% filter(year == 2025) %>%
                 group_by(Package) %>%
 		summarise(total = sum(downloads)) %>%
 		arrange(desc(total))
